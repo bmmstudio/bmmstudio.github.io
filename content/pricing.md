@@ -1,5 +1,5 @@
 ---
-title: "Pricing"
+title: "Cennik"
 description: "Choose the perfect plan for your needs"
 layout: "pricing"
 ---
