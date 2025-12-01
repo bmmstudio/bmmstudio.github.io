@@ -1,4 +1,4 @@
-baseURL = "https://www.bmmstudio.pl/"
+baseURL = "https://www.bmmpolska.pl/"
 languageCode = "pl-pl"
 title = "BMM Studio"
 theme = "hugo-saasify-theme"
