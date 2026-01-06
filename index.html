@@ -37,6 +37,13 @@
         .animate-scroll {
             animation: scroll 20s linear infinite;
         }
+        
+        /* Timeline Active State */
+        .timeline-step.active .timeline-dot {
+            background-color: #10b981; /* emerald-500 */
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+            transform: scale(1.2);
+        }
     </style>
 <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style></head>
 <body class="antialiased selection:bg-white selection:text-black">
@@ -49,7 +56,6 @@
         <a href="#historia" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-zinc-400 transition">Nasza Historia</a>
         <a href="#oferta" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-zinc-400 transition">Jak Możemy Ci Pomóc</a>
         <a href="#portfolio" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-zinc-400 transition">Portfolio</a>
-        <a href="#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-zinc-400 transition">Wypożyczalnia Sprzętu</a>
         <a href="#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-zinc-400 transition">Kontakt</a>
     </div>
 
@@ -102,9 +108,12 @@
                 <a href="#portfolio" class="group flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300">
                     <span class="text-sm font-medium">Portfolio</span>
                 </a>
+<<<<<<< HEAD
                 <a href="#kontakt" class="group flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300">
                     <span class="text-sm font-medium">Wypożyczalnia Sprzętu</span>
                 </a>
+=======
+>>>>>>> abf00a0 (Update site content and photos)
                 <a href="mailto:kontakt@bmmpolska.pl" class="group flex items-center gap-2 hover:bg-zinc-200 transition duration-300 text-black bg-white rounded-full pt-3 pr-6 pb-3 pl-6">
                     <span class="text-sm font-medium">Kontakt</span>
                     <iconify-icon icon="lucide:message-circle"></iconify-icon>
@@ -153,10 +162,10 @@
     <section id="historia" class="py-24 max-w-7xl mx-auto px-6 overflow-hidden">
         <div class="grid lg:grid-cols-12 gap-12">
             <div class="lg:col-span-4 space-y-6">
-                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Nasza Historia</h2>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Od kreatywnej wizji do technologicznej precyzji.</h2>
                 <div class="space-y-4 text-zinc-400 leading-relaxed">
-                    <p>Rozpoczęliśmy naszą działalność z pasji do technologii i designu. Przez lata ewoluowaliśmy z małego studia graficznego w kompleksową agencję 360 stopni, obsługującą klientów z całego kraju.</p>
-                    <p>Wierzymy, że każdy projekt to nowa historia. Poniżej przedstawiamy wybrane realizacje, które zdefiniowały naszą drogę i pomogły naszym klientom osiągnąć sukces.</p>
+                    <p>Nasza podróż nie zaczęła się w wielkim biurowcu, ale od prostej idei: chcieliśmy wspierać firmy, które mają świetną wizję, ale nie wiedzą, jak o niej opowiedzieć. Zaczynaliśmy od marketingu, wierząc, że słowa i obrazy mają moc.</p>
+                    <p>Szybko jednak zrozumieliśmy, że w dzisiejszym świecie sama opowieść to za mało - potrzebuje ona solidnej sceny i niezawodnej technologii. Dlatego dziś BMM Studio to coś więcej. Łączymy kreatywność agencji z ekspercką wiedzą IT i własnym zapleczem sprzętowym. Nie tylko tworzymy historię Twojej marki, ale budujemy dla niej stabilne, cyfrowe fundamenty.</p>
                 </div>
                 
                 <div class="flex gap-2 pt-4">
@@ -170,17 +179,18 @@
             </div>
 
             <div class="lg:col-span-8 min-w-0">
+                <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-6">Efekty, które mówią głośniej niż słowa.</h2>
                 <!-- Snap Scroll Container -->
                 <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-8">
                     <!-- Case Study 1 -->
                     <div class="snap-center shrink-0 w-[85vw] sm:w-[300px] md:w-[350px] group">
                         <div class="bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden relative">
                             <div class="aspect-[4/3] bg-zinc-800 relative">
-                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="Restauracja">
+                                <img src="photos/amba.jpg" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="Frajda">
                                 <div class="bg-gradient-to-t from-zinc-900 to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
                                 <div class="absolute bottom-4 left-4">
-                                    <h3 class="text-lg font-medium text-white">Kampania Otwarcia</h3>
-                                    <p class="text-xs text-zinc-400">Gastronomia</p>
+                                    <h3 class="text-lg font-medium text-white">Od generalnego remontu do pełnego lokalu</h3>
+                                    <p class="text-xs text-zinc-400">Kampania otwarcia</p>
                                 </div>
                             </div>
                             <details class="group/details">
@@ -188,8 +198,15 @@
                                     Zobacz szczegóły
                                     <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open/details:rotate-180"></iconify-icon>
                                 </summary>
-                                <div class="px-4 pb-4 text-xs text-zinc-400 leading-relaxed border-t border-white/5 pt-3">
-                                    Kompleksowa obsługa otwarcia nowego lokalu. Stworzyliśmy identyfikację wizualną, poprowadziliśmy kampanię w social media oraz zorganizowaliśmy event otwarcia, który przyciągnął ponad 500 gości.
+                                <div class="px-4 pb-4 text-xs text-zinc-400 leading-relaxed border-t border-white/5 pt-3 space-y-2">
+                                    <p><strong>Wyzwanie:</strong> Jedna z popularnych miejscówek we Wrocławiu, przechodziła gruntowną rewitalizację. Naszym zadaniem nie było tylko poinformowanie o ponownym otwarciu, ale zbudowanie napięcia, odświeżenie wizerunku w social mediach i - co najważniejsze - zapewnienie wysokiej frekwencji podczas imprezy inauguracyjnej.</p>
+                                    <p><strong>Nasze działania:</strong> Jako BMM Studio podeszliśmy do tematu strategicznie, łącząc świat online z offline:</p>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li><strong>Rebranding i Content:</strong> Zrewitalizowaliśmy profile w social mediach, nadając im nowy, spójny charakter. Stworzyliśmy serię rolek oraz relacjonowaliśmy proces remontu.</li>
+                                        <li><strong>Aktywacja (Guerilla Marketing):</strong> Wspólnie z ekipą baru zorganizowaliśmy grę terenową - poszukiwanie voucherów ukrytych w mieście.</li>
+                                        <li><strong>Event Marketing:</strong> Opracowaliśmy strategię promocji wydarzenia, dbając o relację z finalnej imprezy.</li>
+                                    </ul>
+                                    <p><strong>Efekt:</strong> Strategia "budowania hype'u" zadziałała idealnie. Zwiększyliśmy liczbę obserwujących i zasięgi profili, ale najważniejszy wskaźnik sukcesu zobaczyliśmy na żywo: pełny lokal w dniu otwarcia.</p>
                                 </div>
                             </details>
                         </div>
@@ -199,11 +216,11 @@
                     <div class="snap-center shrink-0 w-[85vw] sm:w-[300px] md:w-[350px] group">
                         <div class="bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden relative">
                             <div class="aspect-[4/3] bg-zinc-800 relative">
-                                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="Oława">
+                                <img src="photos/wnetrze1.jpg" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="Restauracja w Oławie">
                                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
                                 <div class="absolute bottom-4 left-4">
                                     <h3 class="text-lg font-medium text-white">Restauracja w Oławie</h3>
-                                    <p class="text-xs text-zinc-400">Rebranding</p>
+                                    <p class="text-xs text-zinc-400">Klasa poza wielkim miastem</p>
                                 </div>
                             </div>
                             <details class="group/details">
@@ -211,8 +228,15 @@
                                     Zobacz szczegóły
                                     <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open/details:rotate-180"></iconify-icon>
                                 </summary>
-                                <div class="px-4 pb-4 text-xs text-zinc-400 leading-relaxed border-t border-white/5 pt-3">
-                                    Pełny rebranding istniejącej restauracji. Nowe menu, sesja zdjęciowa potraw oraz wdrożenie nowoczesnego systemu rezerwacji online. Wzrost obrotów o 30% w pierwszym kwartale.
+                                <div class="px-4 pb-4 text-xs text-zinc-400 leading-relaxed border-t border-white/5 pt-3 space-y-2">
+                                    <p><strong>Wyzwanie:</strong> Wprowadzenie na rynek nowego lokalu w Oławie, który standardem i ofertą dorównuje najlepszym restauracjom we Wrocławiu. Celem było przełamanie stereotypu, że miejsca z klasą powstają tylko w metropoliach.</p>
+                                    <p><strong>Nasze działania:</strong> W BMM Studio postawiliśmy na storytelling kulinarny. Zamiast standardowej reklamy, oddaliśmy głos tym, którzy tworzą serce tego miejsca - profesjonalnym kucharzom.</p>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li><strong>Content Marketing:</strong> Zrealizowaliśmy materiały video i foto pokazujące kunszt szefów kuchni.</li>
+                                        <li><strong>Relacje z wydarzeń:</strong> Towarzyszyliśmy gościom podczas ekskluzywnych kolacji degustacyjnych.</li>
+                                        <li><strong>Pozycjonowanie marki:</strong> Budowaliśmy obraz Nieba jako miejsca spotkań z duszą.</li>
+                                    </ul>
+                                    <p><strong>Efekt:</strong> Stworzyliśmy spójny, apetyczny i elegancki wizerunek lokalu, który przyciąga gości szukających autentycznych kulinarnych doznań.</p>
                                 </div>
                             </details>
                         </div>
@@ -222,11 +246,11 @@
                     <div class="snap-center shrink-0 w-[85vw] sm:w-[300px] md:w-[350px] group">
                         <div class="bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden relative">
                             <div class="aspect-[4/3] bg-zinc-800 relative">
-                                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="Wnętrza">
+                                <img src="photos/niebo.jpeg" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="Design w obiektywie">
                                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
                                 <div class="absolute bottom-4 left-4">
-                                    <h3 class="text-lg font-medium text-white">Sesja Wnętrz</h3>
-                                    <p class="text-xs text-zinc-400">Produkcja Foto</p>
+                                    <h3 class="text-lg font-medium text-white">Design w obiektywie</h3>
+                                    <p class="text-xs text-zinc-400">Sesja wnętrz</p>
                                 </div>
                             </div>
                             <details class="group/details">
@@ -234,8 +258,11 @@
                                     Zobacz szczegóły
                                     <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open/details:rotate-180"></iconify-icon>
                                 </summary>
-                                <div class="px-4 pb-4 text-xs text-zinc-400 leading-relaxed border-t border-white/5 pt-3">
-                                    Realizacja profesjonalnej sesji zdjęciowej dla biurowca klasy A. Wykorzystanie oświetlenia naturalnego i studyjnego do podkreślenia architektury.
+                                <div class="px-4 pb-4 text-xs text-zinc-400 leading-relaxed border-t border-white/5 pt-3 space-y-2">
+                                    <p><strong>Zadanie:</strong> Jeden z nowych konceptów na Wrocławskim rynku to perełka designu, która wymagała odpowiedniej oprawy wizualnej. Naszym celem było stworzenie sesji zdjęciowej wnętrz, która osiągnie poziom artystyczny pozwalający na publikację w ogólnopolskiej prasie branżowej.</p>
+                                    <p><strong>Realizacja:</strong> Skupiliśmy się na detalu, świetle i kompozycji. Stworzyliśmy wizualną opowieść o przestrzeni, która przyciąga oko estetów.</p>
+                                    <p><strong>Efekt:</strong> Jakość naszych fotografii została doceniona przez redakcje kultowych magazynów o designie i architekturze. Zdjęcia zrealizowane przez BMM Studio zostały opublikowane w Label Magazine oraz WhiteMAD Magazine.</p>
+                                    <p class="mt-2 pt-2 border-t border-white/10 text-emerald-400"><a href="https://www.whitemad.pl/frajda-nowa-miejscowka-na-gastronomicznej-mapie-wroclawia/" target="_blank" class="hover:underline">Wyróżnieni jako współautorzy projektu w WhiteMAD</a></p>
                                 </div>
                             </details>
                         </div>
@@ -245,11 +272,11 @@
                     <div class="snap-center shrink-0 w-[85vw] sm:w-[300px] md:w-[350px] group">
                         <div class="bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden relative">
                             <div class="aspect-[4/3] bg-zinc-800 relative">
-                                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="Kawa">
+                                <img src="photos/dj.jpg" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="Coffee Rave">
                                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
                                 <div class="absolute bottom-4 left-4">
                                     <h3 class="text-lg font-medium text-white">Coffee Rave</h3>
-                                    <p class="text-xs text-zinc-400">Event &amp; Social</p>
+                                    <p class="text-xs text-zinc-400">Jak obudziliśmy miasto</p>
                                 </div>
                             </div>
                             <details class="group/details">
@@ -257,8 +284,14 @@
                                     Zobacz szczegóły
                                     <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open/details:rotate-180"></iconify-icon>
                                 </summary>
-                                <div class="px-4 pb-4 text-xs text-zinc-400 leading-relaxed border-t border-white/5 pt-3">
-                                    Organizacja cyklicznego wydarzenia dla baristów. Opracowanie koncepcji wizualnej, obsługa video oraz transmisja live w mediach społecznościowych.
+                                <div class="px-4 pb-4 text-xs text-zinc-400 leading-relaxed border-t border-white/5 pt-3 space-y-2">
+                                    <p><strong>Cel:</strong> Wypromowanie popularnego konceptu Coffee Rave - porannej imprezy bez alkoholu, napędzanej kawą i muzyką.</p>
+                                    <p><strong>Realizacja:</strong> Postawiliśmy na autentyczność i energię. Nasza kampania obejmowała pełen cykl życia eventu:</p>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li><strong>Before:</strong> Budowaliśmy napięcie, pokazując kulisy przygotowań.</li>
+                                        <li><strong>Real-time:</strong> Relacja live, łapanie emocji w centrum akcji.</li>
+                                    </ul>
+                                    <p><strong>Wynik:</strong> Kawiarnia wypełniła się po brzegi, a Coffee Rave na stałe wpisało się w kalendarz wydarzeń.</p>
                                 </div>
                             </details>
                         </div>
@@ -396,9 +429,28 @@
                 </div>
             </div>
             <div class="portfolio-item relative group rounded-xl overflow-hidden aspect-[4/5]" data-category="interior">
-                <img src="photos/wnetrze1.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Realizacja wnętrza">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                    <span class="border border-white/20 bg-black/50 backdrop-blur px-4 py-2 rounded-full text-sm">Wnętrza</span>
+                <div class="gallery-slider w-full h-full flex overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
+                    <img src="photos/644.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 1">
+                    <img src="photos/576.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 2">
+                    <img src="photos/811.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 3">
+                    <img src="photos/969.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 4">
+                    <img src="photos/9789.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 5">
+                    <img src="photos/18.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 6">
+                    <img src="photos/9.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 7">
+                    <img src="photos/5.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 8">
+                    <img src="photos/9313.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 9">
+                    <img src="photos/9477.jpg" class="snap-center shrink-0 w-full h-full object-cover" alt="Wnętrza 10">
+                </div>
+                
+                <button onclick="scrollGallery(this, -300)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 text-white flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition z-20 hover:bg-black/80">
+                    <iconify-icon icon="lucide:chevron-left"></iconify-icon>
+                </button>
+                <button onclick="scrollGallery(this, 300)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 text-white flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition z-20 hover:bg-black/80">
+                    <iconify-icon icon="lucide:chevron-right"></iconify-icon>
+                </button>
+
+                <div class="absolute bottom-4 left-4 z-10 pointer-events-none">
+                    <span class="border border-white/20 bg-black/50 backdrop-blur px-4 py-2 rounded-full text-sm text-white">Wnętrza</span>
                 </div>
             </div>
             <div class="portfolio-item relative group rounded-xl overflow-hidden aspect-[4/5]" data-category="gastro">
@@ -425,38 +477,38 @@
                 <div class="absolute left-4 top-0 bottom-0 w-px bg-zinc-800"></div>
                 
                 <div class="space-y-12">
-                    <div class="relative pl-12 group">
-                        <div class="absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] group-hover:bg-white transition"></div>
+                    <div class="relative pl-12 group timeline-step">
+                        <div class="timeline-dot absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] transition duration-500"></div>
                         <h3 class="text-xl font-medium text-white mb-2">1. Konsultacja</h3>
                         <p class="text-zinc-400 text-sm">Poznajemy Twoje potrzeby i cele biznesowe.</p>
                     </div>
 
-                    <div class="relative pl-12 group">
-                        <div class="absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] group-hover:bg-white transition"></div>
+                    <div class="relative pl-12 group timeline-step">
+                        <div class="timeline-dot absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] transition duration-500"></div>
                         <h3 class="text-xl font-medium text-white mb-2">2. Analiza</h3>
                         <p class="text-zinc-400 text-sm">Audyt obecnych działań i badanie konkurencji.</p>
                     </div>
 
-                    <div class="relative pl-12 group">
-                        <div class="absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] group-hover:bg-white transition"></div>
+                    <div class="relative pl-12 group timeline-step">
+                        <div class="timeline-dot absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] transition duration-500"></div>
                         <h3 class="text-xl font-medium text-white mb-2">3. Strategia</h3>
                         <p class="text-zinc-400 text-sm">Opracowanie planu działania i dobór narzędzi.</p>
                     </div>
 
-                    <div class="relative pl-12 group">
-                        <div class="absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] group-hover:bg-white transition"></div>
+                    <div class="relative pl-12 group timeline-step">
+                        <div class="timeline-dot absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] transition duration-500"></div>
                         <h3 class="text-xl font-medium text-white mb-2">4. Wdrożenie</h3>
                         <p class="text-zinc-400 text-sm">Realizacja ustalonych działań i projektów.</p>
                     </div>
 
-                    <div class="relative pl-12 group">
-                        <div class="absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] group-hover:bg-white transition"></div>
+                    <div class="relative pl-12 group timeline-step">
+                        <div class="timeline-dot absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] transition duration-500"></div>
                         <h3 class="text-xl font-medium text-white mb-2">5. Optymalizacja</h3>
                         <p class="text-zinc-400 text-sm">Bieżący monitoring i wprowadzanie poprawek.</p>
                     </div>
 
-                    <div class="relative pl-12 group">
-                        <div class="absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] group-hover:bg-white transition"></div>
+                    <div class="relative pl-12 group timeline-step">
+                        <div class="timeline-dot absolute left-[11px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-800 ring-4 ring-[#09090b] transition duration-500"></div>
                         <h3 class="text-xl font-medium text-white mb-2">6. Raport</h3>
                         <p class="text-zinc-400 text-sm">Podsumowanie wyników i planowanie dalszych kroków.</p>
                     </div>
@@ -473,51 +525,58 @@
             <!-- Basic -->
             <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/20">
                 <div class="text-zinc-400 font-medium mb-4">Pakiet BASIC</div>
-                <div class="text-4xl font-bold tracking-tight mb-2">1 500 zł</div>
-                <div class="text-xs text-zinc-500 mb-8">netto / miesięcznie</div>
+                <div class="text-4xl font-bold tracking-tight mb-2">BASIC</div>
+                <div class="text-xs text-zinc-500 mb-8">Wsparcie na start</div>
                 <ul class="space-y-4 text-sm text-zinc-300 mb-8">
                     <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Prowadzenie 1 kanału SM</li>
-                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> 4 posty / miesiąc</li>
-                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Podstawowa grafika</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> 8 publikacji / msc</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Aktywność na stories</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Podstawowe działania graficzne</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Kwartalna strategia marketingowa</li>
                     <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Raport miesięczny</li>
                 </ul>
-                <a href="#kontakt" class="block w-full py-3 rounded-lg border border-white/10 text-center text-sm font-medium hover:bg-white hover:text-black transition">Wybierz Basic</a>
+                <a href="mailto:kontakt@bmmpolska.pl?subject=Zapytanie%20o%20Pakiet%20BASIC&body=Dzień%20Dobry%0AProszę%20o%20kontakt%20w%20sprawie%20pakietu%20BASIC%0A%0ATreść%20pakietu%3A%0A-%20Prowadzenie%201%20kanału%20SM%0A-%208%20publikacji%20%2F%20msc%0A-%20Aktywność%20na%20stories%0A-%20Podstawowe%20działania%20graficzne%0A-%20Kwartalna%20strategia%20marketingowa%0A-%20Raport%20miesięczny" class="block w-full py-3 rounded-lg border border-white/10 text-center text-sm font-medium hover:bg-white hover:text-black transition">Wybierz Basic</a>
             </div>
 
             <!-- Standard -->
             <div class="p-8 rounded-2xl border border-white/20 bg-zinc-900/80 relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-white text-black text-xs font-bold px-3 py-1 rounded-bl-lg">POPULARNY</div>
                 <div class="text-white font-medium mb-4">Pakiet STANDARD</div>
-                <div class="text-4xl font-bold tracking-tight mb-2">2 500 zł</div>
-                <div class="text-xs text-zinc-500 mb-8">netto / miesięcznie</div>
+                <div class="text-4xl font-bold tracking-tight mb-2">STANDARD</div>
+                <div class="text-xs text-zinc-500 mb-8">Dla rozwijających się</div>
                 <ul class="space-y-4 text-sm text-zinc-300 mb-8">
                     <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> Prowadzenie 2 kanałów SM</li>
-                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> 8 postów / miesiąc</li>
-                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> Sesja zdjęciowa (2h)</li>
-                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> Płatne kampanie (Ads)</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> 8 publikacji / msc</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> Kwartalna strategia marketingowa</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> Podstawowe działania graficzne</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> Audyt lub wizytówka Google</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> Audyt analityczny</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-white"></iconify-icon> Prowadzenie kampanii Ads</li>
                 </ul>
-                <a href="#kontakt" class="block w-full py-3 rounded-lg bg-white text-black text-center text-sm font-medium hover:bg-zinc-200 transition">Wybierz Standard</a>
+                <a href="mailto:kontakt@bmmpolska.pl?subject=Zapytanie%20o%20Pakiet%20STANDARD&body=Dzień%20Dobry%0AProszę%20o%20kontakt%20w%20sprawie%20pakietu%20STANDARD%0A%0ATreść%20pakietu%3A%0A-%20Prowadzenie%202%20kanałów%20SM%0A-%208%20publikacji%20%2F%20msc%0A-%20Kwartalna%20strategia%20marketingowa%0A-%20Podstawowe%20działania%20graficzne%0A-%20Audyt%20lub%20wizytówka%20Google%0A-%20Audyt%20analityczny%0A-%20Prowadzenie%20kampanii%20Ads" class="block w-full py-3 rounded-lg bg-white text-black text-center text-sm font-medium hover:bg-zinc-200 transition">Wybierz Standard</a>
             </div>
 
             <!-- Pro -->
             <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/20">
                 <div class="text-zinc-400 font-medium mb-4">Pakiet PRO</div>
-                <div class="text-4xl font-bold tracking-tight mb-2">10 000 zł</div>
-                <div class="text-xs text-zinc-500 mb-8">netto / miesięcznie</div>
+                <div class="text-4xl font-bold tracking-tight mb-2">PRO</div>
+                <div class="text-xs text-zinc-500 mb-8">Kompleksowa obsługa</div>
                 <ul class="space-y-4 text-sm text-zinc-300 mb-8">
-                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Pełna obsługa 360°</li>
-                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Nielimitowane posty</li>
-                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Pełna produkcja video</li>
-                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Obsługa strony WWW</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Pełna obsługa SM</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Kompletne działania analityczne</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Założenie i obsługa WWW</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Produkcja foto-video</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Prowadzenie wizytówki Google</li>
+                    <li class="flex items-center gap-3"><iconify-icon icon="lucide:check" class="text-zinc-600"></iconify-icon> Roczna strategia marketingowa</li>
                 </ul>
-                <a href="#kontakt" class="block w-full py-3 rounded-lg border border-white/10 text-center text-sm font-medium hover:bg-white hover:text-black transition">Wybierz Pro</a>
+                <a href="mailto:kontakt@bmmpolska.pl?subject=Zapytanie%20o%20Pakiet%20PRO&body=Dzień%20Dobry%0AProszę%20o%20kontakt%20w%20sprawie%20pakietu%20PRO%0A%0ATreść%20pakietu%3A%0A-%20Pełna%20obsługa%20SM%0A-%20Kompletne%20działania%20analityczne%0A-%20Założenie%20i%20obsługa%20WWW%0A-%20Produkcja%20foto-video%0A-%20Prowadzenie%20wizytówki%20Google%0A-%20Roczna%20strategia%20marketingowa" class="block w-full py-3 rounded-lg border border-white/10 text-center text-sm font-medium hover:bg-white hover:text-black transition">Wybierz Pro</a>
             </div>
         </div>
 
         <div class="mt-16 p-8 rounded-2xl bg-gradient-to-r from-zinc-900 to-zinc-800 border border-white/10 text-center">
             <h3 class="text-2xl font-semibold mb-4">Wybierz pakiet lub stwórzmy coś wspólnie</h3>
             <p class="text-zinc-400 mb-6">Każdy biznes jest inny. Skontaktuj się z nami, aby omówić indywidualne potrzeby.</p>
-            <a href="#kontakt" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-medium hover:scale-105 transition duration-300">
+            <a href="tel:+48507251412" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-medium hover:scale-105 transition duration-300">
                 Umów się na spotkanie
                 <iconify-icon icon="lucide:calendar"></iconify-icon>
             </a>
@@ -551,7 +610,10 @@
                         </div>
                         <div>
                             <div class="text-xs text-zinc-500 uppercase tracking-wider">Telefon</div>
-                            <a href="tel:+48721765630" class="hover:text-white transition text-lg font-medium">+48 721 765 630</a>
+                            <div class="flex flex-col">
+                                <a href="tel:+48721765630" class="hover:text-white transition text-lg font-medium">+48 721 765 630</a>
+                                <a href="tel:+48507251412" class="hover:text-white transition text-lg font-medium">+48 507 251 412</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -567,10 +629,13 @@
     <footer class="py-8 border-t border-white/5 text-center text-zinc-500 text-xs">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <div>© 2023 BMM Agency. Wszystkie prawa zastrzeżone.</div>
-            <div class="flex gap-4">
-                <a href="#" class="hover:text-white transition">Instagram</a>
-                <a href="#" class="hover:text-white transition">LinkedIn</a>
-                <a href="#" class="hover:text-white transition">Facebook</a>
+            <div class="flex gap-4 items-center">
+                <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                    <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram
+                </a>
+                <a href="https://www.facebook.com/bmmstudiowroc" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                    <iconify-icon icon="lucide:facebook" width="16"></iconify-icon> Facebook
+                </a>
             </div>
         </div>
     </footer>
@@ -601,6 +666,60 @@
                 }
             });
         }
+
+        // Gallery Infinite Scroll Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.querySelector('.gallery-slider');
+            if (gallery) {
+                // Clone images to create infinite loop effect
+                gallery.innerHTML += gallery.innerHTML;
+                
+                const scrollThreshold = 1; // Tolerance
+
+                gallery.addEventListener('scroll', () => {
+                    const maxScroll = gallery.scrollWidth / 2;
+                    
+                    if (gallery.scrollLeft >= maxScroll) {
+                        // User scrolled past the first set, jump back to start of second set (which is same as start of first)
+                        // Actually, we jump back to start of first set (0)
+                        gallery.scrollLeft = gallery.scrollLeft - maxScroll;
+                    } else if (gallery.scrollLeft <= 0) {
+                        // User scrolled to start, jump to start of second set
+                         gallery.scrollLeft = maxScroll;
+                    }
+                });
+            }
+        });
+
+        // Gallery Button Navigation (Updated)
+        function scrollGallery(button, offset) {
+            const container = button.parentElement.querySelector('.gallery-slider');
+            if (!container) return;
+            container.scrollBy({ left: offset, behavior: 'smooth' });
+        }
+
+        // Timeline Animation (Scroll Event)
+        document.addEventListener('scroll', () => {
+            const steps = document.querySelectorAll('.timeline-step');
+            const triggerBottom = window.innerHeight * 0.7; // Activate when element is in top 70% of screen
+
+            steps.forEach(step => {
+                const box = step.getBoundingClientRect();
+                if (box.top < triggerBottom) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+        });
+
+        // Init timeline check on load
+        window.dispatchEvent(new Event('scroll'));
     </script>
 
+<<<<<<< HEAD
 </body></html>
+=======
+
+</body></html>
+>>>>>>> abf00a0 (Update site content and photos)
