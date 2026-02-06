@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="pl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aplikacje webowe dla firm — MVP, panele, automatyzacje | BMM Studio</title>
+    <meta
+      name="description"
+      content="Projektujemy i budujemy aplikacje webowe: MVP, panele klienta i admina, systemy rezerwacji i automatyzacje. Integracje, bezpieczeństwo, rozwój etapami."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.bmmpolska.pl/aplikacje-web/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aplikacje webowe dla firm — MVP, panele, automatyzacje | BMM Studio" />
+    <meta
+      property="og:description"
+      content="Projektujemy i budujemy aplikacje webowe: MVP, panele klienta i admina, systemy rezerwacji i automatyzacje. Integracje, bezpieczeństwo, rozwój etapami."
+    />
+    <meta property="og:url" content="https://www.bmmpolska.pl/aplikacje-web/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona główna",
+                "item": "https://www.bmmpolska.pl/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Aplikacje webowe",
+                "item": "https://www.bmmpolska.pl/aplikacje-web/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Tworzenie aplikacji webowych dla firm",
+            "serviceType": "Aplikacje webowe",
+            "url": "https://www.bmmpolska.pl/aplikacje-web/",
+            "provider": {
+              "@type": "Organization",
+              "name": "BMM Studio",
+              "url": "https://www.bmmpolska.pl/"
+            },
+            "areaServed": { "@type": "Country", "name": "Poland" }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Ile trwa stworzenie aplikacji webowej (MVP)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Najczęściej od kilku do kilkunastu tygodni dla sensownie zdefiniowanego MVP. Największy wpływ ma złożoność procesów, integracje i liczba ról/uprawnień."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ile kosztuje aplikacja webowa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Koszt zależy od zakresu MVP, integracji, paneli administracyjnych i bezpieczeństwa. Dlatego zwykle dzielimy projekt na etapy, aby budżet był przewidywalny i powiązany z rezultatem."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czym różni się aplikacja webowa od strony internetowej?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Strona WWW głównie prezentuje treści i ofertę. Aplikacja webowa ma logikę, dane i procesy: konta użytkowników, role, panele, workflow, raporty i integracje."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy robicie MVP i rozwój etapami?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. MVP ma szybko przetestować hipotezę. Następnie rozwijamy aplikację w sprintach według roadmapy, uwzględniając dane i feedback użytkowników."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy mogę mieć panel administracyjny do zarządzania systemem?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — większość aplikacji webowych ma panel admina: użytkownicy, role, dane, raporty, eksporty i konfiguracje."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Jak podchodzicie do bezpieczeństwa danych?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Projektujemy role i uprawnienia, logowanie, kontrolę dostępu, historię zmian oraz zasady przechowywania danych. W zależności od projektu dobieramy dodatkowe zabezpieczenia (np. monitoring, kopie)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy integrujecie aplikacje z innymi narzędziami (API)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — integracje planujemy od początku: płatności, faktury, CRM, e-mail, kalendarze, zewnętrzne API oraz import/eksport danych."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kto jest właścicielem kodu i projektu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "W standardowym modelu komercyjnym kod i wytworzone elementy projektu są przekazywane klientowi zgodnie z ustaleniami umowy (repozytorium, dokumentacja, dostępy)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy po wdrożeniu zapewniacie utrzymanie i rozwój?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — możemy przejąć utrzymanie, aktualizacje, poprawki oraz rozwój nowych funkcji w cyklu sprintów."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy pomagacie zaprojektować UX i makiety przed kodowaniem?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — makiety i flow pozwalają ograniczyć liczbę zmian w development i skrócić czas wdrożenia."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy aplikacja może mieć wersję mobilną?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — aplikacje webowe projektujemy responsywnie. Jeśli potrzebujesz natywnej aplikacji, realizujemy ją jako osobny etap lub osobną usługę."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Co jest potrzebne, żeby zacząć projekt?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Wystarczy opis problemu i celu biznesowego, przykładowy proces „jak jest teraz” oraz informacja, kto będzie użytkownikiem systemu. Resztę doprecyzujemy na etapie discovery."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5MQV8J7Q");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #09090b; /* Zinc 950 */
+        color: #fafafa; /* Zinc 50 */
+      }
+    </style>
+  </head>
+
+  <body class="antialiased selection:bg-white selection:text-black">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a class="font-semibold tracking-tighter text-xl hover:text-zinc-200 transition" href="/">BMM</a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
+          <a href="/#oferta" class="hover:text-white transition">Oferta</a>
+          <a href="/#portfolio" class="hover:text-white transition">Portfolio</a>
+          <a href="/#kontakt" class="hover:text-white transition">Kontakt</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-28 pb-20">
+      <!-- HERO -->
+      <section class="max-w-5xl mx-auto px-6">
+        <div class="flex flex-col gap-10">
+          <div>
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300"
+            >
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              Development aplikacji webowych
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-semibold tracking-tighter text-white leading-[1.1] mt-6">
+              Aplikacje webowe dla firm — MVP, panele i automatyzacje
+            </h1>
+
+            <p class="text-zinc-400 text-lg mt-6 leading-relaxed">
+              Budujemy <strong>aplikacje webowe</strong>, które rozwiązują konkretne problemy biznesowe: porządkują procesy,
+              automatyzują obsługę, przyspieszają sprzedaż lub tworzą nowy produkt (MVP). Jeśli interesuje Cię
+              <strong>tworzenie aplikacji webowych</strong> od zera, zaczynamy od celu i zakresu minimum, projektujemy
+              przepływy użytkownika, wdrażamy role i bezpieczeństwo, a potem rozwijamy system etapami — tak, żeby
+              inwestycja miała sens od pierwszej wersji.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-8">
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                <p class="text-sm font-medium">MVP bez przepalania budżetu</p>
+                <p class="text-sm text-zinc-400 mt-2">Test rynku szybko i rozsądnie, z planem dalszego rozwoju.</p>
+              </div>
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                <p class="text-sm font-medium">Panele klienta i admina</p>
+                <p class="text-sm text-zinc-400 mt-2">Role, uprawnienia, raporty, eksporty i kontrola danych.</p>
+              </div>
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                <p class="text-sm font-medium">Integracje i automatyzacje</p>
+                <p class="text-sm text-zinc-400 mt-2">Mniej ręcznej pracy, więcej kontroli i przewidywalności.</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 mt-8">
+              <a
+                class="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300"
+                href="/#kontakt"
+              >
+                <span class="text-sm font-medium">Kontakt</span>
+                <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+              </a>
+              <a
+                class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition duration-300 text-zinc-300"
+                href="/#kontakt"
+              >
+                <span class="text-sm font-medium">Wycena / konsultacja</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- INTERNAL LINKS (mutual linking) -->
+          <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 md:p-8">
+            <div class="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
+              <div class="space-y-2">
+                <p class="text-xs tracking-widest uppercase text-zinc-500">Podstrony usług</p>
+                <p class="text-lg font-semibold tracking-tight">Zobacz też pozostałe usługi</p>
+                <p class="text-sm text-zinc-400">Wszystkie podstrony są ze sobą połączone linkami (dla UX i SEO).</p>
+              </div>
+              <a href="/" class="text-sm text-zinc-400 hover:text-white transition">Wróć na stronę główną →</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-mobile/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Aplikacje mobile</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4" href="/aplikacje-web/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium text-white">Aplikacje webowe</span>
+                  <span class="text-xs text-emerald-300">Tu jesteś</span>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/seo/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">SEO</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/strony-internetowe/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Strony internetowe</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sklepy-internetowe/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Sklepy internetowe</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/ui-ux/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">UI / UX</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="max-w-5xl mx-auto px-6 mt-14">
+        <div class="grid lg:grid-cols-12 gap-10">
+          <aside class="lg:col-span-4">
+            <div class="sticky top-24 rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+              <p class="text-xs tracking-widest uppercase text-zinc-500">Na tej stronie</p>
+              <div class="mt-4 flex flex-col gap-2 text-sm text-zinc-400">
+                <a class="hover:text-white transition" href="#jakie-tworzymy">Jakie aplikacje tworzymy</a>
+                <a class="hover:text-white transition" href="#dziala-biznesowo">Co jest kluczowe biznesowo</a>
+                <a class="hover:text-white transition" href="#zakres">Zakres wdrożenia</a>
+                <a class="hover:text-white transition" href="#technologia">Technologia i architektura</a>
+                <a class="hover:text-white transition" href="#proces">Proces współpracy</a>
+                <a class="hover:text-white transition" href="#realizacje">Przykłady realizacji</a>
+                <a class="hover:text-white transition" href="#koszt">Koszt i budżet</a>
+                <a class="hover:text-white transition" href="#faq">FAQ</a>
+                <!-- (CTA/brief + checklist removed) -->
+              </div>
+            </div>
+          </aside>
+
+          <div class="lg:col-span-8 space-y-12">
+            <section id="jakie-tworzymy" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Jakie aplikacje webowe tworzymy</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Aplikacja webowa to najlepszy wybór, gdy potrzebujesz logiki, danych i procesów — a nie tylko prezentacji
+                treści. Najczęściej realizujemy:
+              </p>
+
+              <div class="mt-6 space-y-6">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">MVP (test rynku)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Pierwsza wersja produktu, która pozwala szybko sprawdzić popyt i zebrać feedback. W MVP koncentrujemy
+                    się na kluczowej funkcji i mierzeniu użycia — żeby decyzje o rozwoju były oparte na danych, nie intuicji.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">Panele klienta (B2B/B2C)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Strefy logowania dla klientów: statusy, dokumenty, płatności, historie zamówień, konfiguracje, zgłoszenia.
+                    Rozwiązanie porządkuje obsługę i ogranicza liczbę kontaktów “na mailu”.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">Panele administracyjne i raportowanie</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Systemy do zarządzania ofertą, użytkownikami, zamówieniami, zadaniami, zasobami. Kluczowe są role,
+                    dzienniki zdarzeń, eksporty danych i czytelne raporty.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">Systemy rezerwacji / procesowe</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Jeśli masz procesy w firmie, które dziś żyją w arkuszach i wiadomościach — aplikacja webowa potrafi
+                    zamienić to w prosty workflow: rezerwacje, zlecenia, zatwierdzenia, harmonogramy, rozliczenia.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="dziala-biznesowo" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">
+                Co jest kluczowe, żeby aplikacja “działała biznesowo”
+              </h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                W aplikacjach wygrywa prostota: mniej kroków, mniej niepewności, lepsza kontrola danych. Dlatego projektujemy
+                aplikację nie od “funkcji”, tylko od przepływów i decyzji użytkownika.
+              </p>
+
+              <div class="mt-6 space-y-6">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">UX przepływów i ograniczanie tarcia</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Przed kodowaniem układamy: ścieżki użytkownika, ekrany krytyczne, momenty decyzji i punkty tarcia. Dzięki
+                    temu aplikacja jest intuicyjna i wdraża się szybciej w zespole.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Dane, role, bezpieczeństwo</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Ustalamy role (kto widzi co), uprawnienia, logowanie, reset dostępu, historię zmian. W systemach firmowych
+                    to często ważniejsze niż “ładny wygląd”.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Integracje i automatyzacje</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Aplikacja ma oszczędzać czas — więc integracje planujemy od początku: płatności, faktury, wysyłki maili,
+                    kalendarze, CRM, zewnętrzne API, import/eksport. To tutaj zwykle jest największy ROI.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="zakres" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Zakres wdrożenia — co dostajesz w standardzie</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Każdy projekt prowadzimy w trybie, który daje kontrolę nad budżetem i tempem rozwoju. Standard obejmuje:
+              </p>
+              <ul class="mt-4 space-y-2 text-zinc-300">
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Discovery / analiza: cel biznesowy, użytkownicy, zakres MVP, ryzyka i priorytety.</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Architektura informacji i UX: makiety kluczowych ekranów i przepływów.</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Specyfikacja funkcjonalna: co robimy teraz, a co w kolejnych etapach (roadmapa).</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Wdrożenie aplikacji: frontend + backend + baza danych (zgodnie z projektem).</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Role i uprawnienia: logowanie, dostęp do danych, administracja.</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Testy i stabilizacja: testy scenariuszy, poprawki, przygotowanie do wdrożenia.</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Wdrożenie produkcyjne: hosting, konfiguracja środowisk, monitoring (zależnie od modelu).</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Przekazanie i dokumentacja: repozytorium, instrukcja, dalszy plan rozwoju.</li>
+              </ul>
+
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 mt-6">
+                <p class="text-sm font-semibold tracking-tight">Opcjonalnie (częsty cross-sell)</p>
+                <ul class="mt-3 space-y-2 text-sm text-zinc-300">
+                  <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="mt-1 text-emerald-400"></iconify-icon>Landing / strona sprzedażowa produktu</li>
+                  <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="mt-1 text-emerald-400"></iconify-icon>SEO / kampanie do pozyskania użytkowników</li>
+                  <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="mt-1 text-emerald-400"></iconify-icon>Analityka i eventy produktowe (rejestracje, aktywacje, kluczowe akcje)</li>
+                </ul>
+              </div>
+            </section>
+
+            <section id="technologia" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Technologia i architektura (dobór pod cel)</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Technologię dobieramy do celu: czas, budżet, bezpieczeństwo, integracje i plan rozwoju. Dla aplikacji kluczowa
+                jest stabilna architektura i możliwość iteracji — bez przebudowy co 2 miesiące.
+              </p>
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 mt-6">
+                <p class="text-sm font-semibold tracking-tight">Przykładowe podejście (dopasujemy do projektu)</p>
+                <ul class="mt-3 space-y-2 text-sm text-zinc-300">
+                  <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="mt-1 text-emerald-400"></iconify-icon>Frontend: React / Next.js</li>
+                  <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="mt-1 text-emerald-400"></iconify-icon>Analityka: Google Analytics 4 + Google Tag Manager</li>
+                  <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="mt-1 text-emerald-400"></iconify-icon>Integracje: API, webhooks, automatyzacje, import/eksport danych</li>
+                </ul>
+              </div>
+            </section>
+
+            <section id="proces" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Proces współpracy i rozwój etapami</h2>
+              <ol class="mt-4 space-y-2 text-zinc-300 list-decimal pl-5">
+                <li>Brief i cel: co ma zmienić aplikacja (czas, koszty, sprzedaż, obsługa)</li>
+                <li>Discovery: użytkownicy, flow, zakres MVP, priorytety</li>
+                <li>UX / makiety: ekrany krytyczne, procesy, role</li>
+                <li>Plan etapów: MVP → wersja 2 → integracje → skalowanie</li>
+                <li>Development: implementacja + review + testy po każdym module</li>
+                <li>Wdrożenie: środowisko produkcyjne + monitoring</li>
+                <li>Rozwój i utrzymanie: sprinty rozwojowe, poprawki, optymalizacje</li>
+              </ol>
+            </section>
+
+            <section id="realizacje" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Przykłady realizacji</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Poniżej wybrane projekty. Każde case study pokazuje zakres, rozwiązania i logikę wdrożenia.
+              </p>
+              <div class="mt-6 grid sm:grid-cols-2 gap-3">
+                <a class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-6 hover:bg-zinc-900/70 transition" href="/#portfolio">
+                  <p class="text-sm font-medium">[NAZWA] — MVP + panel admina + role</p>
+                  <p class="text-sm text-zinc-400 mt-2">Cel: [cel]</p>
+                  <p class="text-xs text-zinc-500 mt-4">Docelowo: /portfolio/[slug]</p>
+                </a>
+                <a class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-6 hover:bg-zinc-900/70 transition" href="/#portfolio">
+                  <p class="text-sm font-medium">[NAZWA] — panel klienta B2B + automatyzacje</p>
+                  <p class="text-sm text-zinc-400 mt-2">Cel: [cel]</p>
+                  <p class="text-xs text-zinc-500 mt-4">Docelowo: /portfolio/[slug]</p>
+                </a>
+                <a class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-6 hover:bg-zinc-900/70 transition" href="/#portfolio">
+                  <p class="text-sm font-medium">[NAZWA] — system rezerwacji + raporty</p>
+                  <p class="text-sm text-zinc-400 mt-2">Cel: [cel]</p>
+                  <p class="text-xs text-zinc-500 mt-4">Docelowo: /portfolio/[slug]</p>
+                </a>
+                <a
+                  class="group rounded-2xl border border-white/10 bg-white/5 hover:bg-white hover:text-black transition p-6 flex items-center justify-between"
+                  href="/#portfolio"
+                >
+                  <span class="font-medium">Zobacz portfolio</span>
+                  <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+              </div>
+            </section>
+
+            <section id="koszt" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Ile kosztuje aplikacja webowa i od czego zależy budżet</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Budżet aplikacji webowej zależy głównie od: liczby ról i uprawnień, złożoności procesów, integracji z
+                zewnętrznymi systemami, jakości danych wejściowych oraz tego, czy budujemy MVP czy od razu wersję
+                rozbudowaną. Dlatego wyceniamy projekt na podstawie zakresu MVP i roadmapy — tak, abyś widział, co
+                dostajesz w danym etapie i jaki jest zwrot z inwestycji.
+              </p>
+              <div class="mt-6 grid md:grid-cols-3 gap-3">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-semibold">MVP</p>
+                  <p class="text-sm text-zinc-400 mt-2">Kluczowa funkcja + logowanie + podstawowy panel + wdrożenie</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-semibold">Growth</p>
+                  <p class="text-sm text-zinc-400 mt-2">Moduły, role, raporty, eksporty, integracje</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-semibold">Pro</p>
+                  <p class="text-sm text-zinc-400 mt-2">Automatyzacje, monitoring, rozwój sprintami, optymalizacja</p>
+                </div>
+              </div>
+            </section>
+
+            <section id="faq" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">FAQ — aplikacje webowe</h2>
+              <div class="mt-6 space-y-3">
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">1. Ile trwa stworzenie aplikacji webowej (MVP)?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Najczęściej od <strong>kilku</strong> do <strong>kilkunastu</strong> tygodni dla sensownie zdefiniowanego MVP. Największy wpływ ma złożoność procesów, integracje i liczba ról/uprawnień.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">2. Ile kosztuje aplikacja webowa?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Koszt zależy od zakresu MVP, integracji, paneli administracyjnych i bezpieczeństwa. Dlatego zwykle dzielimy projekt na etapy, aby budżet był przewidywalny i powiązany z rezultatem.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">3. Czym różni się aplikacja webowa od strony internetowej?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Strona WWW głównie prezentuje treści i ofertę. <strong>Aplikacja webowa</strong> ma logikę, dane i procesy: konta użytkowników, role, panele, workflow, raporty i integracje.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">4. Czy robicie MVP i rozwój etapami?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak. MVP ma szybko przetestować hipotezę. Następnie rozwijamy aplikację w sprintach według roadmapy, uwzględniając realne dane i feedback użytkowników.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">5. Czy mogę mieć panel administracyjny do zarządzania systemem?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — większość aplikacji webowych ma panel admina: użytkownicy, role, dane, raporty, eksporty i konfiguracje.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">6. Jak podchodzicie do bezpieczeństwa danych?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Projektujemy role i uprawnienia, logowanie, kontrolę dostępu, historię zmian oraz zasady przechowywania danych. W zależności od projektu dobieramy dodatkowe zabezpieczenia (np. audyty, monitoring, kopie).
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">7. Czy integrujecie aplikacje z innymi narzędziami (API)?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — integracje planujemy od początku: płatności, faktury, CRM, e-mail, kalendarze, zewnętrzne API, import/eksport danych.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">8. Kto jest właścicielem kodu i projektu?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    W standardowym modelu komercyjnym kod i wytworzone elementy projektu są przekazywane klientowi zgodnie z ustaleniami umowy (repozytorium, dokumentacja, dostępy).
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">9. Czy po wdrożeniu zapewniacie utrzymanie i rozwój?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — możemy przejąć utrzymanie, aktualizacje, poprawki oraz rozwój nowych funkcji w cyklu sprintów.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">10. Czy pomagacie zaprojektować UX i makiety przed kodowaniem?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — makiety i flow pozwalają ograniczyć liczbę zmian w development i skrócić czas wdrożenia. To zwykle najszybszy sposób, żeby projekt “dowiózł”.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">11. Czy aplikacja może mieć wersję mobilną?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — aplikacje webowe projektujemy responsywnie. Jeśli potrzebujesz natywnej aplikacji, to robimy to jako osobny etap lub osobną usługę.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">12. Co jest potrzebne, żeby zacząć projekt?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Wystarczy opis problemu i celu biznesowego, przykładowy proces “jak jest teraz” oraz informacja, kto będzie użytkownikiem systemu. Resztę doprecyzujemy na etapie discovery.
+                  </p>
+                </details>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

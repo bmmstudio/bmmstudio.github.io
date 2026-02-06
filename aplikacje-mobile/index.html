@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="pl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aplikacje mobilne iOS i Android — MVP, rozwój, integracje | BMM Studio</title>
+    <meta
+      name="description"
+      content="Projektujemy i budujemy aplikacje mobilne na iOS/Android: MVP, integracje (logowanie, płatności, push), testy, wdrożenie i rozwój etapami."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.bmmpolska.pl/aplikacje-mobile/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aplikacje mobilne iOS i Android — MVP, rozwój, integracje | BMM Studio" />
+    <meta
+      property="og:description"
+      content="Projektujemy i budujemy aplikacje mobilne na iOS/Android: MVP, integracje (logowanie, płatności, push), testy, wdrożenie i rozwój etapami."
+    />
+    <meta property="og:url" content="https://www.bmmpolska.pl/aplikacje-mobile/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona główna",
+                "item": "https://www.bmmpolska.pl/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Aplikacje mobilne",
+                "item": "https://www.bmmpolska.pl/aplikacje-mobile/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Tworzenie aplikacji mobilnych (iOS i Android)",
+            "serviceType": "Aplikacje mobilne",
+            "url": "https://www.bmmpolska.pl/aplikacje-mobile/",
+            "provider": {
+              "@type": "Organization",
+              "name": "BMM Studio",
+              "url": "https://www.bmmpolska.pl/"
+            },
+            "areaServed": { "@type": "Country", "name": "Poland" }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Ile trwa stworzenie aplikacji mobilnej (MVP)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Zwykle od kilku do kilkunastu tygodni, zależnie od liczby funkcji i integracji. MVP robimy tak, aby dało się je rozbudować bez przebudowy fundamentu."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ile kosztuje aplikacja mobilna?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Koszt wynika z zakresu MVP, integracji i wybranej technologii (PWA/hybrydowa/natywna). Najrozsądniej zacząć od MVP i roadmapy etapów."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "PWA czy aplikacja natywna — co lepsze?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie ma jednej odpowiedzi. PWA jest świetne na start i test, natywna bywa konieczna przy wymaganiach sprzętowych lub wydajnościowych. Pomagamy dobrać rozwiązanie do celu."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy robicie aplikacje na iOS i Android?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — projektujemy rozwiązanie tak, aby obejmowało oba systemy i było spójne UX-owo."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy pomagacie w publikacji w sklepach?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Jeśli obejmuje to zakres projektu, przygotowujemy wymagane elementy i przeprowadzamy przez proces publikacji w App Store i Google Play."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy aplikacja będzie miała panel administracyjny?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Jeśli jest potrzebny do zarządzania użytkownikami, treściami lub zamówieniami — tak. Panel admina często budujemy jako część rozwiązania."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy da się zrobić aplikację mobilną bez backendu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Czasem tak (proste MVP), ale większość aplikacji potrzebuje bazy danych i API (konta, historia, płatności, statusy). Dobór zależy od funkcji."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy wdrażacie powiadomienia push?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Projektujemy nie tylko technikę, ale i strategię: kiedy wysyłać, do kogo, po jakim zdarzeniu i jak mierzyć wpływ na retencję."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy wdrażacie płatności i subskrypcje?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — dobór zależy od modelu biznesowego. Subskrypcje wymagają dobrze zaprojektowanej logiki konta i dostępu."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Jak mierzycie, czy aplikacja działa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Wdrażamy analitykę zdarzeń: rejestracje, aktywacje, kluczowe akcje i retencję. Dzięki temu rozwój jest oparty na danych."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy mogę rozwijać aplikację etapami?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — to rekomendowany model. Najpierw MVP, potem kolejne moduły zgodnie z roadmapą i danymi z rynku."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kto jest właścicielem kodu i projektu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "W standardowym modelu komercyjnym przekazujemy klientowi wytworzone elementy zgodnie z umową: repozytorium, dokumentacja i dostępy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy zapewniacie utrzymanie i aktualizacje?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — możemy prowadzić utrzymanie, aktualizacje, monitoring oraz dalszy rozwój w sprintach."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Co jest potrzebne, żeby zacząć?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Opis celu, użytkowników i kluczowych funkcji (must-have). Resztę doprecyzujemy w discovery: przepływy, priorytety i etapowanie."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5MQV8J7Q");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #09090b; /* Zinc 950 */
+        color: #fafafa; /* Zinc 50 */
+      }
+    </style>
+  </head>
+
+  <body class="antialiased selection:bg-white selection:text-black">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a class="font-semibold tracking-tighter text-xl hover:text-zinc-200 transition" href="/">BMM</a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
+          <a href="/#oferta" class="hover:text-white transition">Oferta</a>
+          <a href="/#portfolio" class="hover:text-white transition">Portfolio</a>
+          <a href="/#kontakt" class="hover:text-white transition">Kontakt</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-28 pb-20">
+      <!-- HERO -->
+      <section class="max-w-5xl mx-auto px-6">
+        <div class="flex flex-col gap-10">
+          <div>
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300"
+            >
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              Tworzenie aplikacji mobilnych
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-semibold tracking-tighter text-white leading-[1.1] mt-6">
+              Aplikacje mobilne iOS/Android — od MVP do skalowania
+            </h1>
+
+            <p class="text-zinc-400 text-lg mt-6 leading-relaxed">
+              Projektujemy i budujemy <strong>aplikacje mobilne</strong> (iOS i Android), które mają sens biznesowy:
+              pomagają sprzedawać, zwiększają retencję użytkowników albo automatyzują obsługę i procesy w firmie.
+              Jeśli interesuje Cię <strong>tworzenie aplikacji mobilnych</strong> od zera, zaczynamy od celu i zakresu MVP,
+              dobieramy technologię (PWA / hybrydowa / natywna), wdrażamy kluczowe funkcje oraz analitykę zdarzeń — a
+              potem rozwijamy produkt etapami w oparciu o dane i feedback.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-8">
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                <p class="text-sm font-medium">Dobór technologii</p>
+                <p class="text-sm text-zinc-400 mt-2">
+                  Pomagamy wybrać: PWA vs natywna/hybrydowa — zgodnie z celem i budżetem.
+                </p>
+              </div>
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                <p class="text-sm font-medium">MVP z planem rozwoju</p>
+                <p class="text-sm text-zinc-400 mt-2">
+                  Szybko testujesz rynek, ale bez “wyrzucania do kosza” po testach.
+                </p>
+              </div>
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                <p class="text-sm font-medium">Integracje + utrzymanie</p>
+                <p class="text-sm text-zinc-400 mt-2">
+                  Logowanie, płatności, push, API oraz rozwój i aktualizacje.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 mt-8">
+              <a
+                class="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300"
+                href="/#kontakt"
+              >
+                <span class="text-sm font-medium">Kontakt</span>
+                <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+              </a>
+              <a
+                class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition duration-300 text-zinc-300"
+                href="/#kontakt"
+              >
+                <span class="text-sm font-medium">Wycena / konsultacja</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- INTERNAL LINKS (mutual linking) -->
+          <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 md:p-8">
+            <div class="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
+              <div class="space-y-2">
+                <p class="text-xs tracking-widest uppercase text-zinc-500">Podstrony usług</p>
+                <p class="text-lg font-semibold tracking-tight">Zobacz też pozostałe usługi</p>
+                <p class="text-sm text-zinc-400">
+                  Wszystkie podstrony są ze sobą połączone linkami (dla UX i SEO).
+                </p>
+              </div>
+              <a href="/" class="text-sm text-zinc-400 hover:text-white transition">Wróć na stronę główną →</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
+              <a class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4" href="/aplikacje-mobile/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium text-white">Aplikacje mobile</span>
+                  <span class="text-xs text-emerald-300">Tu jesteś</span>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-web/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Aplikacje web</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/seo/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">SEO</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/strony-internetowe/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Strony internetowe</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sklepy-internetowe/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Sklepy internetowe</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/ui-ux/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">UI / UX</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="max-w-5xl mx-auto px-6 mt-14">
+        <div class="grid lg:grid-cols-12 gap-10">
+          <aside class="lg:col-span-4">
+            <div class="sticky top-24 rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+              <p class="text-xs tracking-widest uppercase text-zinc-500">Na tej stronie</p>
+              <div class="mt-4 flex flex-col gap-2 text-sm text-zinc-400">
+                <a class="hover:text-white transition" href="#kiedy-ma-sens">Kiedy aplikacja ma sens</a>
+                <a class="hover:text-white transition" href="#jakie-tworzymy">Jakie aplikacje tworzymy</a>
+                <a class="hover:text-white transition" href="#pwa-vs-natywna">PWA vs natywna vs hybrydowa</a>
+                <a class="hover:text-white transition" href="#zakres">Zakres wdrożenia</a>
+                <a class="hover:text-white transition" href="#integracje">Integracje i funkcje</a>
+                <a class="hover:text-white transition" href="#proces">Proces współpracy</a>
+                <a class="hover:text-white transition" href="#realizacje">Przykłady realizacji</a>
+                <a class="hover:text-white transition" href="#koszt">Koszt i budżet</a>
+                <a class="hover:text-white transition" href="#faq">FAQ</a>
+                <!-- (CTA/brief removed) -->
+              </div>
+            </div>
+          </aside>
+
+          <div class="lg:col-span-8 space-y-12">
+            <section id="kiedy-ma-sens" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Kiedy aplikacja mobilna ma sens biznesowy</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Aplikacja mobilna jest opłacalna wtedy, gdy wnosi realną przewagę nad stroną WWW: skraca drogę do
+                działania, zwiększa częstotliwość użycia lub daje funkcje, które trudno zrobić w przeglądarce.
+              </p>
+              <ul class="mt-4 space-y-2 text-zinc-300">
+                <li class="flex gap-2">
+                  <iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>
+                  masz usługę/produkt, do którego użytkownik wraca regularnie (retencja),
+                </li>
+                <li class="flex gap-2">
+                  <iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>
+                  potrzebujesz powiadomień push (promocje, przypomnienia, statusy),
+                </li>
+                <li class="flex gap-2">
+                  <iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>
+                  chcesz uprościć proces zakupowy lub obsługowy (zamówienia, rezerwacje),
+                </li>
+                <li class="flex gap-2">
+                  <iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>
+                  pracownicy/partnerzy korzystają z narzędzia w terenie (mobilna obsługa),
+                </li>
+                <li class="flex gap-2">
+                  <iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>
+                  masz MVP i chcesz szybko przetestować rynek lub model subskrypcji.
+                </li>
+              </ul>
+            </section>
+
+            <section id="jakie-tworzymy" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Jakie aplikacje mobilne tworzymy</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Dobieramy rodzaj aplikacji do celu i budżetu. Najczęściej realizujemy:
+              </p>
+
+              <div class="mt-6 space-y-6">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">MVP aplikacji mobilnej (test rynku)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Pierwsza wersja aplikacji ma sprawdzić hipotezę i zbierać dane: rejestracje, aktywacje, kluczowe akcje
+                    użytkownika. Budujemy MVP tak, aby dało się je rozwijać — bez przepisywania wszystkiego od zera.
+                  </p>
+                </div>
+
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">Aplikacje produktowe / sprzedażowe</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Aplikacje, które wspierają sprzedaż: katalog, zakup, subskrypcje, program lojalnościowy, kody rabatowe,
+                    personalizacja. Kluczowe są tu UX, szybkość i pomiar.
+                  </p>
+                </div>
+
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">Aplikacje do obsługi i procesów (field/service)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Narzędzia dla firm: zgłoszenia, zlecenia, checklisty, raporty, dostęp do dokumentów, statusy realizacji.
+                    Tu liczą się role, bezpieczeństwo i integracje.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="pwa-vs-natywna" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">
+                PWA vs aplikacja natywna vs hybrydowa — co wybrać
+              </h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                To najważniejsza decyzja na starcie. Dobrze dobrana technologia oszczędza budżet i skraca czas wdrożenia.
+              </p>
+
+              <div class="mt-6 grid md:grid-cols-3 gap-3">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <p class="text-sm font-semibold">PWA (Progressive Web App)</p>
+                  <p class="text-sm text-zinc-400 mt-2">
+                    Dobre, gdy chcesz szybko przetestować produkt i nie potrzebujesz zaawansowanych funkcji urządzenia.
+                  </p>
+                  <ul class="mt-3 text-sm text-zinc-300 space-y-2">
+                    <li class="flex gap-2"><iconify-icon icon="lucide:plus" class="mt-0.5 text-emerald-400"></iconify-icon>niższy koszt, szybsze wdrożenie</li>
+                    <li class="flex gap-2"><iconify-icon icon="lucide:plus" class="mt-0.5 text-emerald-400"></iconify-icon>jedna wersja produktu</li>
+                    <li class="flex gap-2"><iconify-icon icon="lucide:minus" class="mt-0.5 text-red-400"></iconify-icon>ograniczenia funkcji systemowych</li>
+                  </ul>
+                </div>
+
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <p class="text-sm font-semibold">Aplikacja hybrydowa</p>
+                  <p class="text-sm text-zinc-400 mt-2">
+                    Dobre, gdy chcesz jedną bazę kodu i aplikację w sklepach, ale nadal kontrolować koszty.
+                  </p>
+                  <ul class="mt-3 text-sm text-zinc-300 space-y-2">
+                    <li class="flex gap-2"><iconify-icon icon="lucide:plus" class="mt-0.5 text-emerald-400"></iconify-icon>kompromis koszt vs możliwości</li>
+                    <li class="flex gap-2"><iconify-icon icon="lucide:plus" class="mt-0.5 text-emerald-400"></iconify-icon>publikacja w sklepach</li>
+                    <li class="flex gap-2"><iconify-icon icon="lucide:minus" class="mt-0.5 text-red-400"></iconify-icon>czasem potrzeba natywnych modułów</li>
+                  </ul>
+                </div>
+
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <p class="text-sm font-semibold">Aplikacja natywna</p>
+                  <p class="text-sm text-zinc-400 mt-2">
+                    Dobre, gdy liczy się maksymalna wydajność, pełen dostęp do funkcji urządzenia lub bardzo specyficzne wymagania.
+                  </p>
+                  <ul class="mt-3 text-sm text-zinc-300 space-y-2">
+                    <li class="flex gap-2"><iconify-icon icon="lucide:plus" class="mt-0.5 text-emerald-400"></iconify-icon>najlepsza wydajność</li>
+                    <li class="flex gap-2"><iconify-icon icon="lucide:plus" class="mt-0.5 text-emerald-400"></iconify-icon>pełny dostęp do systemu</li>
+                    <li class="flex gap-2"><iconify-icon icon="lucide:minus" class="mt-0.5 text-red-400"></iconify-icon>zwykle wyższy koszt rozwoju</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 mt-6">
+                <h3 class="text-lg font-semibold tracking-tight">Jak pomagamy wybrać?</h3>
+                <p class="text-zinc-400 mt-3 leading-relaxed">
+                  Na konsultacji przechodzimy przez: funkcje “must-have”, wymagania techniczne, model monetyzacji,
+                  time-to-market i budżet. Dostajesz rekomendację + plan etapowania.
+                </p>
+              </div>
+            </section>
+
+            <section id="zakres" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Zakres wdrożenia — co dostajesz w standardzie</h2>
+              <ul class="mt-4 space-y-2 text-zinc-300">
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Discovery: cel, użytkownicy, zakres MVP i roadmapa rozwoju</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>UX: makiety kluczowych ekranów i przepływów</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>UI: spójny design, mobile-first</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Development: aplikacja + backend/API (jeśli potrzebne)</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Analityka zdarzeń: rejestracje, aktywacje, kluczowe akcje</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Testy: scenariusze użytkownika, stabilizacja</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Wdrożenie: konfiguracja środowisk, publikacja (jeśli w zakresie)</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Przekazanie: dostępy, instrukcja, plan rozwoju</li>
+              </ul>
+            </section>
+
+            <section id="integracje" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Integracje i funkcje (najczęstsze)</h2>
+              <div class="mt-6 space-y-6">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Logowanie i konta użytkowników</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Role, uprawnienia, reset hasła, weryfikacje, stany konta — projektujemy to tak, aby było bezpieczne i
+                    proste w użyciu.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Płatności</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Subskrypcje, płatności jednorazowe, płatności w aplikacji — dobór zależy od modelu biznesowego i
+                    wymagań platform.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Powiadomienia push</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Push to jedno z głównych narzędzi retencji. Projektujemy je nie tylko technicznie, ale też logicznie:
+                    segmenty, reguły, częstotliwość, zdarzenia wyzwalające.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Mapy i geolokalizacja (opcjonalnie)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Jeśli aplikacja działa w terenie: lokalizacje, trasy, obszary, check-in/out. Dobieramy to pod proces i
+                    bezpieczeństwo.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="proces" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Proces współpracy i rozwój etapami</h2>
+              <ol class="mt-4 space-y-2 text-zinc-300 list-decimal pl-5">
+                <li>Brief i cele (MVP, monetyzacja, retencja)</li>
+                <li>Discovery: funkcje must-have, ryzyka, plan etapowania</li>
+                <li>UX/UI: makiety i design</li>
+                <li>Development etapami (moduły) + testy po każdym etapie</li>
+                <li>Wdrożenie i publikacja (jeśli dotyczy)</li>
+                <li>Analiza danych + iteracje (sprinty rozwojowe)</li>
+                <li>Utrzymanie i aktualizacje</li>
+              </ol>
+            </section>
+
+            <section id="realizacje" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Przykłady realizacji</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Poniżej wybrane projekty. Każde case study pokazuje funkcje, logikę i etapowanie.
+              </p>
+              <div class="mt-6 grid sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-medium">[NAZWA] — MVP + analityka zdarzeń</p>
+                  <p class="text-sm text-zinc-400 mt-2">Cel: [cel]</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-medium">[NAZWA] — aplikacja sprzedażowa + płatności</p>
+                  <p class="text-sm text-zinc-400 mt-2">Cel: [cel]</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-medium">[NAZWA] — aplikacja procesowa + role + integracje</p>
+                  <p class="text-sm text-zinc-400 mt-2">Cel: [cel]</p>
+                </div>
+                <a
+                  class="group rounded-2xl border border-white/10 bg-white/5 hover:bg-white hover:text-black transition p-6 flex items-center justify-between"
+                  href="/#portfolio"
+                >
+                  <span class="font-medium">Zobacz portfolio</span>
+                  <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+              </div>
+            </section>
+
+            <section id="koszt" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Ile kosztuje aplikacja mobilna i od czego zależy budżet</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Budżet zależy od: zakresu MVP, liczby ekranów i przepływów, integracji (płatności/push/mapy), wymagań
+                bezpieczeństwa oraz tego, czy budujemy PWA/hybrydę/natywną. Dlatego dzielimy projekt na etapy:
+                MVP (test) → rozwój → skalowanie.
+              </p>
+              <div class="mt-6 grid md:grid-cols-3 gap-3">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-semibold">MVP</p>
+                  <p class="text-sm text-zinc-400 mt-2">Kluczowa funkcja + logowanie + analityka zdarzeń</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-semibold">Growth</p>
+                  <p class="text-sm text-zinc-400 mt-2">Moduły + push + integracje + stabilizacja</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-semibold">Pro</p>
+                  <p class="text-sm text-zinc-400 mt-2">Skalowanie, monitoring, optymalizacje, rozwój sprintami</p>
+                </div>
+              </div>
+            </section>
+
+            <section id="faq" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">FAQ — aplikacje mobilne</h2>
+              <div class="mt-6 space-y-3">
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">1. Ile trwa stworzenie aplikacji mobilnej (MVP)?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Zwykle od kilku do kilkunastu tygodni, zależnie od liczby funkcji i integracji. MVP robimy tak, aby dało
+                    się je rozbudować bez przebudowy fundamentu.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">2. Ile kosztuje aplikacja mobilna?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Koszt wynika z zakresu MVP, integracji i wybranej technologii (PWA/hybrydowa/natywna). Najrozsądniej
+                    zacząć od MVP i roadmapy etapów.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">3. PWA czy aplikacja natywna — co lepsze?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Nie ma jednej odpowiedzi. PWA jest świetne na start i test, natywna bywa konieczna przy wymaganiach
+                    sprzętowych lub wydajnościowych. Pomagamy dobrać rozwiązanie do celu.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">4. Czy robicie aplikacje na iOS i Android?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — projektujemy rozwiązanie tak, aby obejmowało oba systemy i było spójne UX-owo.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">5. Czy pomagacie w publikacji w sklepach?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Jeśli obejmuje to zakres projektu, przygotowujemy wymagane elementy i przeprowadzamy przez proces
+                    publikacji w App Store i Google Play.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">6. Czy aplikacja będzie miała panel administracyjny?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Jeśli jest potrzebny do zarządzania użytkownikami, treściami lub zamówieniami — tak. Panel admina często
+                    budujemy jako część rozwiązania.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">7. Czy da się zrobić aplikację mobilną bez backendu?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Czasem tak (proste MVP), ale większość aplikacji potrzebuje bazy danych i API (konta, historia, płatności,
+                    statusy). Dobór zależy od funkcji.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">8. Czy wdrażacie powiadomienia push?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak. Projektujemy nie tylko technikę, ale i strategię: kiedy wysyłać, do kogo, po jakim zdarzeniu i jak
+                    mierzyć wpływ na retencję.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">9. Czy wdrażacie płatności i subskrypcje?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — dobór zależy od modelu biznesowego. Subskrypcje wymagają dobrze zaprojektowanej logiki konta i dostępu.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">10. Jak mierzycie, czy aplikacja działa?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Wdrażamy analitykę zdarzeń: rejestracje, aktywacje, kluczowe akcje i retencję. Dzięki temu rozwój jest oparty na danych.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">11. Czy mogę rozwijać aplikację etapami?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — to rekomendowany model. Najpierw MVP, potem kolejne moduły zgodnie z roadmapą i danymi z rynku.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">12. Kto jest właścicielem kodu i projektu?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    W standardowym modelu komercyjnym przekazujemy klientowi wytworzone elementy zgodnie z umową: repozytorium, dokumentacja i dostępy.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">13. Czy zapewniacie utrzymanie i aktualizacje?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — możemy prowadzić utrzymanie, aktualizacje, monitoring oraz dalszy rozwój w sprintach.
+                  </p>
+                </details>
+
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">14. Co jest potrzebne, żeby zacząć?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Opis celu, użytkowników i kluczowych funkcji (must-have). Resztę doprecyzujemy w discovery: przepływy, priorytety, etapowanie.
+                  </p>
+                </details>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

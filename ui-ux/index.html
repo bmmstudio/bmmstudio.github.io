@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="pl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Projektowanie UX/UI — makiety i prototypy stron i aplikacji | BMM Studio</title>
+    <meta
+      name="description"
+      content="Projektujemy UX/UI dla stron, sklepów i aplikacji: makiety, prototypy w Figma, projekt interfejsu, audyt UX i przygotowanie pod development."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.bmmpolska.pl/ui-ux/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Projektowanie UX/UI — makiety i prototypy stron i aplikacji | BMM Studio" />
+    <meta
+      property="og:description"
+      content="Projektujemy UX/UI dla stron, sklepów i aplikacji: makiety, prototypy w Figma, projekt interfejsu, audyt UX i przygotowanie pod development."
+    />
+    <meta property="og:url" content="https://www.bmmpolska.pl/ui-ux/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona główna",
+                "item": "https://www.bmmpolska.pl/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "UX/UI",
+                "item": "https://www.bmmpolska.pl/ui-ux/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Projektowanie UX/UI (makiety i prototypy)",
+            "serviceType": "UX/UI Design",
+            "url": "https://www.bmmpolska.pl/ui-ux/",
+            "provider": {
+              "@type": "Organization",
+              "name": "BMM Studio",
+              "url": "https://www.bmmpolska.pl/"
+            },
+            "areaServed": { "@type": "Country", "name": "Poland" }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Ile trwa projekt UX/UI?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Zwykle od kilku do kilkunastu tygodni zależnie od liczby ekranów i złożoności przepływów. Najszybszy jest audyt + quick wins, najdłuższy — pełny system komponentów."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ile kosztuje UX/UI?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Koszt zależy od zakresu (audyt vs pełny projekt), liczby ekranów i tego, czy robimy prototyp i design system. Dlatego rozbijamy pracę na etapy i priorytety."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy robicie tylko UI (wygląd), czy też UX (logika)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Robimy oba. UI bez UX często nie poprawia wyniku. Największy efekt jest wtedy, gdy najpierw porządkujemy flow i strukturę, a potem dopracowujemy wygląd."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy możecie poprawić istniejącą stronę/sklep bez przebudowy od zera?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Audyt UX i poprawki w krytycznych miejscach (CTA, formularz, checkout) często daje szybki wzrost konwersji."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy robicie UX dla sklepów (checkout i karta produktu)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak — to jeden z najważniejszych obszarów w e-commerce. Redukcja tarcia w checkout zwykle ma bezpośredni wpływ na sprzedaż."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy robicie prototypy w Figma?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Prototyp pozwala szybciej zatwierdzić rozwiązanie i ogranicza poprawki w development."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy dostanę pliki i dokumentację do wdrożenia?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Przekazujemy pliki projektowe, komponenty i specyfikację zachowań, aby wdrożenie było przewidywalne."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy możecie współpracować z moim developerem?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Handoff i wsparcie wdrożenia to standardowy element współpracy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy UX/UI wpływa na SEO?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak pośrednio — lepsza struktura treści, czytelność i szybkie działanie strony poprawiają doświadczenie użytkownika, co wspiera wynik."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy robicie testy użyteczności?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Możemy je zrobić na prototypie lub istniejącym produkcie, zależnie od potrzeb i budżetu."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy projektujecie design system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak, jeśli produkt ma być rozwijany. Design system ułatwia utrzymanie spójności i przyspiesza development."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy dostanę warianty mobilne?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Projektujemy mobile-first, a potem dopracowujemy desktop."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy możecie zaprojektować landing pod kampanie?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Landing projektujemy pod jedną ofertę i jeden cel, z naciskiem na konwersję i pomiar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Od czego zaczynamy?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Od celu i krótkiej analizy: co ma zrobić użytkownik, skąd przychodzi i gdzie dziś odpada. Potem proponujemy zakres (audyt / makiety / pełny projekt)."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5MQV8J7Q");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #09090b; /* Zinc 950 */
+        color: #fafafa; /* Zinc 50 */
+      }
+    </style>
+  </head>
+
+  <body class="antialiased selection:bg-white selection:text-black">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a class="font-semibold tracking-tighter text-xl hover:text-zinc-200 transition" href="/">BMM</a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
+          <a href="/#oferta" class="hover:text-white transition">Oferta</a>
+          <a href="/#portfolio" class="hover:text-white transition">Portfolio</a>
+          <a href="/#kontakt" class="hover:text-white transition">Kontakt</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-28 pb-20">
+      <!-- HERO -->
+      <section class="max-w-5xl mx-auto px-6">
+        <div class="flex flex-col gap-10">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              Projektowanie UX/UI
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-semibold tracking-tighter text-white leading-[1.1] mt-6">
+              Projektowanie UX/UI — makiety i prototypy, które skracają drogę do konwersji
+            </h1>
+
+            <p class="text-zinc-400 text-lg mt-6 leading-relaxed">
+              Projekt UX/UI to najszybszy sposób, żeby strona, sklep lub aplikacja zaczęły działać lepiej bez przepalania
+              budżetu na przypadkowe poprawki. Układamy strukturę treści, ścieżki użytkownika i interfejs tak, aby użytkownik
+              szybciej rozumiał ofertę, łatwiej podejmował decyzję i częściej kończył proces (kontakt, zakup, rejestracja).
+              Efekt to mniej tarcia, wyższa konwersja i tańszy development, bo wszystko jest zaplanowane przed kodowaniem.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-8">
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                <p class="text-sm font-medium">UX oparty o cele</p>
+                <p class="text-sm text-zinc-400 mt-2">Biznes i intencje użytkownika, nie “ładny wygląd”.</p>
+              </div>
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                <p class="text-sm font-medium">Figma + prototyp</p>
+                <p class="text-sm text-zinc-400 mt-2">Makiety, prototypy i jasne decyzje przed kodowaniem.</p>
+              </div>
+              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                <p class="text-sm font-medium">Handoff do dev</p>
+                <p class="text-sm text-zinc-400 mt-2">Komponenty, stany i specyfikacja bez “zgadywania”.</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 mt-8">
+              <a
+                class="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300"
+                href="/#kontakt"
+              >
+                <span class="text-sm font-medium">Kontakt</span>
+                <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+              </a>
+              <a
+                class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition duration-300 text-zinc-300"
+                href="/#kontakt"
+              >
+                <span class="text-sm font-medium">Audyt UX / projekt</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- INTERNAL LINKS (mutual linking) -->
+          <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 md:p-8">
+            <div class="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
+              <div class="space-y-2">
+                <p class="text-xs tracking-widest uppercase text-zinc-500">Podstrony usług</p>
+                <p class="text-lg font-semibold tracking-tight">Zobacz też pozostałe usługi</p>
+                <p class="text-sm text-zinc-400">Wszystkie podstrony są ze sobą połączone linkami (dla UX i SEO).</p>
+              </div>
+              <a href="/" class="text-sm text-zinc-400 hover:text-white transition">Wróć na stronę główną →</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-mobile/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Aplikacje mobile</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-web/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Aplikacje webowe</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/seo/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">SEO</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/strony-internetowe/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Strony internetowe</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sklepy-internetowe/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium">Sklepy internetowe</span>
+                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                </div>
+              </a>
+              <a class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4" href="/ui-ux/">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="font-medium text-white">UX / UI</span>
+                  <span class="text-xs text-emerald-300">Tu jesteś</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="max-w-5xl mx-auto px-6 mt-14">
+        <div class="grid lg:grid-cols-12 gap-10">
+          <aside class="lg:col-span-4">
+            <div class="sticky top-24 rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+              <p class="text-xs tracking-widest uppercase text-zinc-500">Na tej stronie</p>
+              <div class="mt-4 flex flex-col gap-2 text-sm text-zinc-400">
+                <a class="hover:text-white transition" href="#co-daje">Co daje UX/UI</a>
+                <a class="hover:text-white transition" href="#co-projektujemy">Co projektujemy</a>
+                <a class="hover:text-white transition" href="#deliverables">Zakres usługi</a>
+                <a class="hover:text-white transition" href="#jak-pracujemy">Jak pracujemy</a>
+                <a class="hover:text-white transition" href="#handoff">Handoff do dev</a>
+                <a class="hover:text-white transition" href="#realizacje">Przykłady realizacji</a>
+                <a class="hover:text-white transition" href="#koszt">Koszt UX/UI</a>
+                <a class="hover:text-white transition" href="#faq">FAQ</a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="lg:col-span-8 space-y-12">
+            <section id="co-daje" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Co daje dobry UX/UI</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Dobry UX/UI nie jest “ładnym wyglądem”. To narzędzie, które skraca czas potrzebny na zrozumienie oferty,
+                redukuje liczbę porzuceń (koszyk, formularz, onboarding), zwiększa liczbę kontaktów i zakupów, obniża koszt
+                zmian w development oraz ułatwia skalowanie dzięki spójnym komponentom i design systemowi.
+              </p>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                W praktyce UX/UI jest jednym z najtańszych miejsc na poprawę wyniku — szczególnie gdy masz ruch, ale słabą
+                konwersję.
+              </p>
+            </section>
+
+            <section id="co-projektujemy" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Co projektujemy (strony, sklepy, aplikacje)</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Zakres UX/UI dopasowujemy do produktu. Poniżej najczęstsze scenariusze.
+              </p>
+
+              <div class="mt-6 space-y-6">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">UX stron WWW (oferta, leady)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Projektujemy strukturę treści i sekcje sprzedażowe tak, aby użytkownik szybko rozumiał: co oferujesz, dla kogo,
+                    dlaczego warto i co ma zrobić dalej. Kluczowe są: pierwsze 5 sekund, jasne CTA i usunięcie obiekcji.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">UX e-commerce (karta produktu, checkout)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    W sklepach największe pieniądze są w karcie produktu, koszyku i checkout. Projektujemy je tak, aby użytkownik nie
+                    miał wątpliwości: co kupuje, kiedy dostanie, ile zapłaci i jak łatwo może zwrócić.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-xl font-semibold tracking-tight">UX aplikacji (flow, onboarding)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    W aplikacjach projektujemy przepływy: rejestracja → aktywacja → kluczowa akcja. Onboarding i jasne “następne kroki”
+                    decydują o retencji. Dobry UX to mniej pytań do supportu i więcej aktywnych użytkowników.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="deliverables" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Zakres usługi — co dostajesz (deliverables)</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">W zależności od potrzeb dostarczamy:</p>
+              <ul class="mt-4 space-y-2 text-zinc-300">
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon><strong>Audyt UX</strong>: problemy, priorytety, rekomendacje i quick wins.</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon><strong>Wireframes / makiety UX</strong>: struktura ekranów i sekcji.</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon><strong>Projekt UI</strong>: wygląd, typografia, komponenty, stany (hover/error/loading).</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon><strong>Prototyp klikalny w Figma</strong>: prezentacja, testy i akceptacja.</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon><strong>Design system (opcjonalnie)</strong>: komponenty i zasady spójności.</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon><strong>Specyfikacja pod development</strong>: gotowe do wdrożenia, bez zgadywania.</li>
+              </ul>
+            </section>
+
+            <section id="jak-pracujemy" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Jak pracujemy (proces)</h2>
+              <div class="mt-6 space-y-6">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Discovery (cel i użytkownicy)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Zbieramy informacje: cel biznesowy, odbiorcy, oferta, ograniczenia, kanały ruchu. Ustalamy metryki sukcesu:
+                    leady, sprzedaż, aktywacje, retencja.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Mapowanie flow (ścieżki użytkownika)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Rozpisujemy kroki i momenty decyzji. Tu wychodzi, gdzie użytkownik “odpada” i co trzeba uprościć.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Wireframes (makiety UX)</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Projektujemy układ treści i ekranów. To etap, który oszczędza najwięcej czasu i pieniędzy w development.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">UI + Design System</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Gdy makiety są spójne, przechodzimy do wyglądu: komponenty, stany, hierarchia wizualna. Jeśli produkt ma rosnąć
+                    — domykamy zasady spójności i komponenty.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <h3 class="text-lg font-semibold tracking-tight">Prototyp i testy</h3>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Budujemy prototyp, zbieramy feedback, dopracowujemy elementy krytyczne (checkout, formularze, onboarding).
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="handoff" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Handoff do development (żeby nie było “zgadywania”)</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">Żeby developer nie musiał zgadywać, przekazujemy:</p>
+              <ul class="mt-4 space-y-2 text-zinc-300">
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>komponenty i style,</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>specyfikację stanów (błędy, loading, walidacje),</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>zasady responsywności,</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>opisy zachowań (np. walidacja, logika koszyka),</li>
+                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>checklistę wdrożeniową i priorytety.</li>
+              </ul>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Efekt: development idzie szybciej, a jakość jest przewidywalna.
+              </p>
+            </section>
+
+            <section id="realizacje" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Przykłady realizacji</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Poniżej wybrane projekty UX/UI. Każde case study pokazuje zakres, logikę i efekt.
+              </p>
+              <div class="mt-6 grid sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-medium">[NAZWA] — audyt UX + poprawa ścieżki</p>
+                  <p class="text-sm text-zinc-400 mt-2">Cel: [cel]</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-medium">[NAZWA] — makiety + prototyp + UI</p>
+                  <p class="text-sm text-zinc-400 mt-2">Cel: [cel]</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-medium">[NAZWA] — redesign checkout/karty produktu</p>
+                  <p class="text-sm text-zinc-400 mt-2">Cel: [cel]</p>
+                </div>
+                <a class="group rounded-2xl border border-white/10 bg-white/5 hover:bg-white hover:text-black transition p-6 flex items-center justify-between" href="/#portfolio">
+                  <span class="font-medium">Zobacz portfolio</span>
+                  <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+              </div>
+            </section>
+
+            <section id="koszt" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Ile kosztuje UX/UI i od czego zależy budżet</h2>
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Budżet zależy od: liczby ekranów/podstron, złożoności flow, liczby wariantów (np. checkout), poziomu design systemu
+                oraz tego, czy robimy audyt/testy. Dlatego często działamy etapami: najpierw quick wins, potem projekt i handoff.
+              </p>
+              <div class="mt-6 grid md:grid-cols-3 gap-3">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-semibold">Audit / Quick Wins</p>
+                  <p class="text-sm text-zinc-400 mt-2">Audyt + lista poprawek + szybkie makiety</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-semibold">Project</p>
+                  <p class="text-sm text-zinc-400 mt-2">Makiety + UI + prototyp + handoff</p>
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                  <p class="text-sm font-semibold">System</p>
+                  <p class="text-sm text-zinc-400 mt-2">Design system + komponenty + wsparcie wdrożenia</p>
+                </div>
+              </div>
+            </section>
+
+            <section id="faq" class="scroll-mt-24">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">FAQ — UX/UI</h2>
+              <div class="mt-6 space-y-3">
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">1. Ile trwa projekt UX/UI?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Zwykle od <strong>kilku</strong> do <strong>kilkunastu</strong> tygodni zależnie od liczby ekranów i złożoności przepływów. Najszybszy jest audyt + quick wins, najdłuższy — pełny system komponentów.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">2. Ile kosztuje UX/UI?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Koszt zależy od zakresu (audyt vs pełny projekt), liczby ekranów i tego, czy robimy prototyp i design system. Dlatego rozbijamy pracę na etapy i priorytety.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">3. Czy robicie tylko UI (wygląd), czy też UX (logika)?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Robimy oba. UI bez UX często nie poprawia wyniku. Największy efekt jest wtedy, gdy najpierw porządkujemy flow i strukturę, a potem dopracowujemy wygląd.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">4. Czy możecie poprawić istniejącą stronę/sklep bez przebudowy od zera?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak. Audyt UX i poprawki w krytycznych miejscach (CTA, formularz, checkout) często daje szybki wzrost konwersji.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">5. Czy robicie UX dla sklepów (checkout i karta produktu)?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak — to jeden z najważniejszych obszarów w e-commerce. Redukcja tarcia w checkout zwykle ma bezpośredni wpływ na sprzedaż.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">6. Czy robicie prototypy w Figma?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak. Prototyp pozwala szybciej zatwierdzić rozwiązanie i ogranicza poprawki w development.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">7. Czy dostanę pliki i dokumentację do wdrożenia?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak. Przekazujemy pliki projektowe, komponenty i specyfikację zachowań, aby wdrożenie było przewidywalne.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">8. Czy możecie współpracować z moim developerem?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak. Handoff i wsparcie wdrożenia to standardowy element współpracy.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">9. Czy UX/UI wpływa na SEO?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak pośrednio — lepsza struktura treści, czytelność i szybkie działanie strony poprawiają doświadczenie użytkownika, co wspiera wynik.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">10. Czy robicie testy użyteczności?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Możemy je zrobić na prototypie lub istniejącym produkcie, zależnie od potrzeb i budżetu.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">11. Czy projektujecie design system?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak, jeśli produkt ma być rozwijany. Design system ułatwia utrzymanie spójności i przyspiesza development.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">12. Czy dostanę warianty mobilne?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak. Projektujemy mobile-first, a potem dopracowujemy desktop.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">13. Czy możecie zaprojektować landing pod kampanie?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Tak. Landing projektujemy pod jedną ofertę i jeden cel, z naciskiem na konwersję i pomiar.
+                  </p>
+                </details>
+                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
+                    <span class="font-medium">14. Od czego zaczynamy?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                    Od celu i krótkiej analizy: co ma zrobić użytkownik, skąd przychodzi i gdzie dziś odpada. Potem proponujemy zakres (audyt / makiety / pełny projekt).
+                  </p>
+                </details>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
