@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager (conditional) -->
+    <script>
+    // Load GTM only if consent given
+    function loadGTM() {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MQV8J7Q');
+    }
+    // Check consent on page load
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      loadGTM();
+    }
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <title>Prowadzenie wizytówki Google — więcej telefonów i ruchu z Map | BMM Studio</title>
+    <meta name="description" content="Prowadzimy wizytówki Google: optymalizacja profilu, posty, zdjęcia, Q&A, strategia opinii i raporty. Większa widoczność w Mapach i więcej klientów.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+    <!-- Fonts from index.html -->
+    <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+    <style>
+        .font-geist { font-family: 'Geist', sans-serif !important; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090b; /* Zinc 950 */
+            color: #fafafa; /* Zinc 50 */
+        }
+        
+        /* Custom Scrollbar Hide */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom details styling */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        details[open] summary ~ * {
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation Overlay (Mobile) -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-6 overflow-y-auto py-12">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-zinc-400 hover:text-white">
+            <iconify-icon icon="lucide:x" width="32"></iconify-icon>
+        </button>
+        
+        <a href="/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Strona Główna</a>
+        
+        <div class="w-full h-px bg-white/10 max-w-xs"></div>
+        
+        <div class="flex flex-col items-center space-y-4">
+            <span class="text-xs font-bold text-zinc-500 uppercase tracking-widest">Oferta</span>
+            <a href="/produkcja-foto/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Produkcja Foto</a>
+            <a href="/produkcja-video/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Produkcja Wideo</a>
+            <a href="/sem/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Google Ads (SEM)</a>
+            <a href="/wizytowki-google/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Wizytówki Google</a>
+            <a href="/szkolenia-z-dofinansowaniem/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Szkolenia (BUR/KFS)</a>
+        </div>
+        
+        <div class="w-full h-px bg-white/10 max-w-xs"></div>
+
+        <a href="/galeria_zdjec/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Galeria</a>
+        <a href="/#historia" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Historia</a>
+        <a href="/#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Kontakt</a>
+    </div>
+
+    <!-- Header / Nav -->
+    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="font-semibold tracking-tighter text-xl hover:text-zinc-400 transition cursor-pointer">BMM</a>
+            <button onclick="toggleMenu()" class="md:hidden text-zinc-400 hover:text-white transition">
+                <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+            </button>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="/" class="hover:text-white transition">Strona Główna</a>
+                
+                <!-- Dropdown -->
+                <div class="relative group h-16 flex items-center">
+                    <button class="hover:text-white transition flex items-center gap-1 py-2">
+                        Oferta <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="p-2 space-y-1">
+                            <a href="/produkcja-foto/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
+                            <a href="/produkcja-video/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
+                            <a href="/sem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Google Ads (SEM)</a>
+                            <a href="/wizytowki-google/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Wizytówki Google</a>
+                            <a href="/szkolenia-z-dofinansowaniem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/galeria_zdjec/" class="hover:text-white transition">Galeria</a>
+                <a href="/#historia" class="hover:text-white transition">Historia</a>
+                <a href="/#kontakt" class="bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition">Darmowa wycena</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex flex-col pt-32 pb-16 px-6 relative items-center justify-center border-b border-white/5">
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Prowadzenie wizytówki Google / Google Maps
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white leading-[1.1]">
+                Prowadzenie wizytówki Google — <br>
+                <span class="text-zinc-500">widoczność w Mapach, opinie i realne zapytania.</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+                Wizytówka Google (Profil Firmy) to często najszybsze źródło leadów lokalnych. Prowadzimy wizytówki w modelu, który daje przewidywalny efekt: porządki w profilu → optymalizacja treści → regularne posty i materiały → strategia opinii → raport.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto text-left md:text-center text-sm text-zinc-300 pt-4">
+                <div class="flex items-center md:justify-center gap-2">
+                    <iconify-icon icon="lucide:map-pin" class="text-emerald-500 shrink-0"></iconify-icon>
+                    Optymalizacja pod Mapy Google
+                </div>
+                <div class="flex items-center md:justify-center gap-2">
+                    <iconify-icon icon="lucide:star" class="text-emerald-500 shrink-0"></iconify-icon>
+                    Strategia opinii i odpowiedzi
+                </div>
+                <div class="flex items-center md:justify-center gap-2">
+                    <iconify-icon icon="lucide:image" class="text-emerald-500 shrink-0"></iconify-icon>
+                    Regularne posty i zdjęcia
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 pt-8">
+                <a href="#kontakt" class="group flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black hover:bg-zinc-200 transition duration-300 font-medium">
+                    <span>Umów konsultację</span>
+                    <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+                <a href="#kontakt" class="group flex items-center gap-2 px-8 py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300 font-medium">
+                    <span>Poproś o audyt wizytówki</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-zinc-900/0 via-zinc-900/0 to-zinc-950/80 pointer-events-none"></div>
+    </section>
+
+    <!-- Co daje wizytówka -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-8">Co daje dobrze prowadzona wizytówka Google?</h2>
+                <p class="text-zinc-400 mb-6 leading-relaxed">
+                    W praktyce wizytówka działa jak lokalny landing page: im jest bardziej kompletna, aktualna i “żywa”, tym częściej Google ją pokazuje i tym lepiej konwertuje.
+                </p>
+                <div class="space-y-6">
+                    <div class="bg-zinc-900/50 p-6 rounded-xl border border-white/5">
+                        <ul class="space-y-3 text-zinc-300">
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:eye" class="text-emerald-500 text-lg"></iconify-icon>
+                                <span>Lepsza widoczność w Mapach Google i wynikach lokalnych</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:phone-call" class="text-emerald-500 text-lg"></iconify-icon>
+                                <span>Więcej telefonów, kliknięć trasy i wejść na stronę</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:shield-check" class="text-emerald-500 text-lg"></iconify-icon>
+                                <span>Większe zaufanie dzięki opiniom i aktualnym informacjom</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:zap" class="text-emerald-500 text-lg"></iconify-icon>
+                                <span>Szybsza decyzja klienta “tu i teraz” (lokalna intencja)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-white/10 relative overflow-hidden">
+                    <!-- Decorative element mimicking a Google Maps card/pin -->
+                    <div class="absolute top-0 right-0 p-32 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-semibold text-white mb-6">Lokalne SEO w pigułce</h3>
+                        <p class="text-zinc-400 mb-8">
+                            Działamy kompleksowo, łącząc optymalizację wizytówki z spójnością danych (NAP) i stroną WWW. Dzięki temu Google widzi Twoją firmę jako wiarygodnego partnera lokalnego.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-black/20 rounded-lg border border-white/5 text-center">
+                                <div class="text-3xl font-bold text-white mb-1">+40%</div>
+                                <div class="text-xs text-zinc-500">Więcej wyświetleń</div>
+                            </div>
+                            <div class="p-4 bg-black/20 rounded-lg border border-white/5 text-center">
+                                <div class="text-3xl font-bold text-white mb-1">+25%</div>
+                                <div class="text-xs text-zinc-500">Więcej połączeń</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Co obejmuje prowadzenie (Nasz Model) -->
+    <section class="py-24 px-6 border-b border-white/5 bg-zinc-900/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Co obejmuje prowadzenie wizytówki?</h2>
+                <p class="text-zinc-400 max-w-2xl mx-auto">Nie robimy “jednorazowego ustawienia”. Prowadzenie profilu to cykliczne działania, które budują widoczność.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Audyt -->
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:clipboard-check" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Audyt i porządki</h3>
+                    <p class="text-zinc-400 text-sm">Sprawdzamy i poprawiamy dane firmy (NAP), kategorie główne i dodatkowe, obszar działania oraz atrybuty. Eliminujemy błędy i duplikaty.</p>
+                </div>
+
+                <!-- Treści -->
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:file-text" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Treści i opisy</h3>
+                    <p class="text-zinc-400 text-sm">Optymalizujemy opis firmy pod lokalne intencje (bez spamu). Uzupełniamy sekcję usług i produktów, dodając elementy budujące zaufanie.</p>
+                </div>
+
+                <!-- Posty -->
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:rss" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Posty i aktualizacje</h3>
+                    <p class="text-zinc-400 text-sm">Publikujemy cyklicznie: oferty, nowości, wydarzenia i posty edukacyjne. Dzięki temu profil "żyje" dla Google i klientów.</p>
+                </div>
+
+                <!-- Zdjęcia -->
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:image-plus" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Zdjęcia i materiały</h3>
+                    <p class="text-zinc-400 text-sm">Regularnie dodajemy zdjęcia wnętrz, produktów, zespołu i realizacji. Dbamy o spójny styl i jakość, co zwiększa klikalność.</p>
+                </div>
+
+                <!-- Q&A -->
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:message-circle-question" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Q&A i komunikacja</h3>
+                    <p class="text-zinc-400 text-sm">Uzupełniamy sekcję pytań i odpowiedzi, redukując bariery decyzyjne (ceny, terminy, dostawa) językiem korzyści.</p>
+                </div>
+
+                <!-- Opinie -->
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:star" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Strategia opinii</h3>
+                    <p class="text-zinc-400 text-sm">Wdrażamy proces pozyskiwania opinii i dbamy o profesjonalne odpowiedzi na każdy komentarz (pozytywny i negatywny).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opinie i Problemy -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+            
+            <!-- Opinie -->
+            <div>
+                <h2 class="text-3xl font-semibold tracking-tight mb-6">Opinie to klucz do zaufania</h2>
+                <p class="text-zinc-400 mb-8 leading-relaxed">
+                    Klienci czytają opinie przed wyborem firmy. Nie chodzi o jednorazowy skok liczby gwiazdek, ale o stały, naturalny przyrost wiarygodnych recenzji.
+                </p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 border border-white/5 rounded-lg bg-zinc-900/50">
+                        <iconify-icon icon="lucide:message-square-plus" class="text-emerald-500 text-xl mt-1"></iconify-icon>
+                        <div>
+                            <h4 class="text-white font-medium mb-1">Proces pozyskiwania</h4>
+                            <p class="text-zinc-400 text-sm">Przygotowujemy instrukcje i linki, aby prośba o opinię była naturalna i skuteczna.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 border border-white/5 rounded-lg bg-zinc-900/50">
+                        <iconify-icon icon="lucide:thumbs-up" class="text-emerald-500 text-xl mt-1"></iconify-icon>
+                        <div>
+                            <h4 class="text-white font-medium mb-1">Profesjonalne odpowiedzi</h4>
+                            <p class="text-zinc-400 text-sm">Odpowiadamy na opinie w imieniu marki, budując relację i pokazując zaangażowanie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problemy -->
+            <div class="bg-zinc-900 p-8 rounded-2xl border border-white/5">
+                <h3 class="text-xl font-medium text-white mb-6 flex items-center gap-2">
+                    <iconify-icon icon="lucide:alert-triangle" class="text-yellow-500"></iconify-icon>
+                    Najczęstsze problemy z wizytówką
+                </h3>
+                <ul class="space-y-4 text-zinc-400 text-sm">
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:arrow-down-right" class="text-red-500 mt-1 shrink-0"></iconify-icon>
+                        <span><strong>Spadek widoczności:</strong> Często wynik niespójnych danych (NAP), złych kategorii lub braku aktywności.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:copy" class="text-red-500 mt-1 shrink-0"></iconify-icon>
+                        <span><strong>Duplikaty:</strong> Rozmywają wyniki i opinie klientów. Weryfikujemy i scalamy takie profile.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:lock" class="text-red-500 mt-1 shrink-0"></iconify-icon>
+                        <span><strong>Zawieszenie wizytówki:</strong> Wymaga szybkiej diagnostyki i kontaktu z supportem Google oraz weryfikacji dokumentów.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:unlink" class="text-red-500 mt-1 shrink-0"></iconify-icon>
+                        <span><strong>Brak spójności (NAP):</strong> Różne adresy/telefony w sieci mylą algorytmy Google i obniżają ranking.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Raportowanie -->
+    <section class="py-24 px-6 border-b border-white/5 bg-zinc-900/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold tracking-tight mb-8">Raportowanie — jasne efekty</h2>
+            <p class="text-zinc-400 mb-12">Raport ma być prosty i decyzyjny. Co miesiąc sprawdzamy:</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-4 bg-zinc-900 rounded-xl border border-white/5">
+                    <div class="text-emerald-500 text-2xl font-bold mb-1"><iconify-icon icon="lucide:eye"></iconify-icon></div>
+                    <div class="text-white text-sm font-medium">Wyświetlenia</div>
+                    <div class="text-zinc-500 text-xs mt-1">Search & Maps</div>
+                </div>
+                <div class="p-4 bg-zinc-900 rounded-xl border border-white/5">
+                    <div class="text-emerald-500 text-2xl font-bold mb-1"><iconify-icon icon="lucide:phone"></iconify-icon></div>
+                    <div class="text-white text-sm font-medium">Połączenia</div>
+                    <div class="text-zinc-500 text-xs mt-1">Realne telefony</div>
+                </div>
+                <div class="p-4 bg-zinc-900 rounded-xl border border-white/5">
+                    <div class="text-emerald-500 text-2xl font-bold mb-1"><iconify-icon icon="lucide:navigation"></iconify-icon></div>
+                    <div class="text-white text-sm font-medium">Trasy dojazdu</div>
+                    <div class="text-zinc-500 text-xs mt-1">Nawigacja</div>
+                </div>
+                <div class="p-4 bg-zinc-900 rounded-xl border border-white/5">
+                    <div class="text-emerald-500 text-2xl font-bold mb-1"><iconify-icon icon="lucide:mouse-pointer-click"></iconify-icon></div>
+                    <div class="text-white text-sm font-medium">Kliknięcia WWW</div>
+                    <div class="text-zinc-500 text-xs mt-1">Wejścia na stronę</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pakiety -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-semibold tracking-tight mb-8 text-center">Ile kosztuje prowadzenie wizytówki?</h2>
+            <p class="text-zinc-400 text-center max-w-2xl mx-auto mb-16">
+                Koszt zależy od liczby lokalizacji, intensywności publikacji i zakresu obsługi opinii.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900">
+                    <h4 class="text-lg font-semibold text-white mb-2">Pakiet Start</h4>
+                    <p class="text-sm text-zinc-400 mb-4">Dla małych firm lokalnych</p>
+                    <hr class="border-white/10 mb-4">
+                    <ul class="text-sm text-zinc-400 space-y-2">
+                        <li>• Audyt i optymalizacja profilu</li>
+                        <li>• Podstawowa aktywność</li>
+                        <li>• Raport miesięczny</li>
+                    </ul>
+                </div>
+                
+                <div class="p-6 border border-emerald-500/30 rounded-xl bg-zinc-900 relative">
+                    <div class="absolute top-4 right-4 text-xs font-bold text-emerald-500 uppercase tracking-wider">Polecany</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Pakiet Growth</h4>
+                    <p class="text-sm text-zinc-400 mb-4">Dla aktywnych biznesów</p>
+                    <hr class="border-white/10 mb-4">
+                    <ul class="text-sm text-zinc-400 space-y-2">
+                        <li>• Regularne posty i zdjęcia</li>
+                        <li>• Strategia opinii i odpowiedzi</li>
+                        <li>• Obsługa sekcji Q&A</li>
+                        <li>• Pełne raportowanie</li>
+                    </ul>
+                </div>
+                
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900">
+                    <h4 class="text-lg font-semibold text-white mb-2">Pakiet Pro</h4>
+                    <p class="text-sm text-zinc-400 mb-4">Dla sieci i wielu lokalizacji</p>
+                    <hr class="border-white/10 mb-4">
+                    <ul class="text-sm text-zinc-400 space-y-2">
+                        <li>• Obsługa wielu lokalizacji</li>
+                        <li>• Pełna strategia Local SEO</li>
+                        <li>• Stałe wsparcie dedykowane</li>
+                        <li>• Zaawansowana analityka</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 border-b border-white/5 bg-zinc-900/20">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Najczęściej zadawane pytania (FAQ)</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Items -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy prowadzenie wizytówki Google realnie zwiększa liczbę klientów?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak, szczególnie w usługach lokalnych. Profil jest widoczny w momencie, gdy użytkownik już szuka rozwiązania — dlatego poprawa profilu często przekłada się na telefony i wizyty.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Ile trwa, żeby zobaczyć efekty?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Pierwsze sygnały zwykle widać po porządkach profilu i regularnej aktywności. Najważniejsze są trendy miesiąc do miesiąca i konsekwencja działań.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Co obejmuje optymalizacja wizytówki?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Porządek w danych, kategorie, opis, usługi/produkty, zdjęcia, posty, Q&A, strategia opinii i raportowanie wyników.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy zajmujecie się opiniami i odpowiedziami?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak. Możemy przygotować standard odpowiedzi i wspierać obsługę opinii, żeby budować zaufanie i ograniczać kryzysy.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Jak zdobywać więcej opinii w Google?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Najlepiej działa prosty, powtarzalny proces: właściwy moment prośby + wygodny link + komunikacja dopasowana do branży. Pomagamy go przygotować.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy posty w wizytówce mają sens?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak — regularne posty i aktualizacje zwiększają aktywność profilu i pomagają w decyzji klienta (oferta, nowości, dowody jakości).
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Jak często dodawać zdjęcia?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Regularnie. Google lubi aktywne profile, a użytkownicy podejmują decyzję na podstawie aktualnych zdjęć. Częstotliwość dobieramy do branży.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy pomagacie, gdy wizytówka spadła w Mapach?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak. Robimy audyt profilu i otoczenia (spójność danych, kategorie, aktywność, treści) oraz plan napraw.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Co z duplikatami wizytówek?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Duplikaty potrafią rozmyć wyniki i opinie. Weryfikujemy sytuację i porządkujemy profil, żeby dane były jednoznaczne.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy prowadzicie wizytówki dla wielu lokalizacji?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak. Dla sieci lokalizacji kluczowe są spójne dane, standard materiałów i raportowanie per punkt.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy to jest to samo co SEO lokalne?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Wizytówka to element SEO lokalnego. Najlepszy efekt jest wtedy, gdy wizytówka jest spójna ze stroną WWW i podstronami usługowymi.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy potrzebuję strony WWW, żeby wizytówka działała?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Nie zawsze, ale strona WWW bardzo pomaga: daje kontekst, linkowanie i konwersję. Jeśli jej nie masz, możemy doradzić minimum.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy mogę sam prowadzić wizytówkę?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak, ale jeśli zależy Ci na regularności i wyniku, zewnętrzna obsługa oszczędza czas i daje lepszą konsekwencję.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy raportujecie wyniki?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak. Raport pokazuje: wyświetlenia, telefony, trasy, kliknięcia WWW, wpływ aktywności i plan działań na kolejny miesiąc.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Ile kosztuje prowadzenie wizytówki Google?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Zależy od zakresu i liczby lokalizacji. Najczęściej koszt rośnie wraz z intensywnością publikacji i zakresem obsługi opinii.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Od czego zaczynamy?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Od audytu profilu i krótkiego briefu (branża, lokalizacja, cele). Potem przygotowujemy plan działań i rytm aktywności.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Kontakt -->
+    <section id="kontakt" class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-8 text-white">Zwiększ widoczność w Mapach</h2>
+            <p class="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">Masz firmę lokalną? Zadbaj o to, żeby klienci trafiali do Ciebie, a nie do konkurencji.</p>
+            
+            <a href="mailto:kontakt@bmmpolska.pl?subject=Zapytanie%20-%20Wizyt%C3%B3wka%20Google" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-lg hover:scale-105 transition duration-300">
+                Poproś o audyt wizytówki
+                <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+            </a>
+        </div>
+        <!-- Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/5 text-center text-zinc-500 text-xs">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+                <div>© 2026 BMM Polska. Wszystkie prawa zastrzeżone.</div>
+                <div class="flex gap-4 items-center">
+                    <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/bmmstudiowroc" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:facebook" width="16"></iconify-icon> Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="text-center flex flex-wrap justify-center gap-4">
+                <a href="/polityka-prywatnosci/" class="hover:text-white transition">Polityka prywatności</a>
+                <span class="text-zinc-700">•</span>
+                <button onclick="manageCookies()" class="hover:text-white transition cursor-pointer">Zarządzaj cookies</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
+        }
+    </script>
+
+    <!-- Cookie Consent Banner (Reused from index) -->
+    <div id="cookie-banner" style="display: none;" class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-zinc-900/95 backdrop-blur-xl border-t border-white/10 transform transition-transform duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div class="flex items-start gap-3 flex-1">
+                <iconify-icon icon="lucide:cookie" class="text-emerald-500 mt-1 shrink-0" width="24"></iconify-icon>
+                <div>
+                    <h3 class="font-semibold text-white mb-1">Używamy cookies</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Ta strona używa plików cookies i Google Analytics do analizy ruchu. Korzystanie ze strony oznacza zgodę na ich użycie. 
+                        <a href="/polityka-prywatnosci/" class="text-emerald-500 hover:text-emerald-400 transition underline">Polityka prywatności</a>
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-3 shrink-0">
+                <button onclick="rejectCookies()" class="px-4 py-2 rounded-lg border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 transition text-sm font-medium whitespace-nowrap">
+                    Odrzuć
+                </button>
+                <button onclick="acceptCookies()" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white transition text-sm font-medium whitespace-nowrap">
+                    Akceptuję
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Cookie logic same as index
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => { document.getElementById('cookie-banner').style.display = 'none'; }, 300);
+            loadGTM();
+        }
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => { document.getElementById('cookie-banner').style.display = 'none'; }, 300);
+        }
+        function manageCookies() {
+            localStorage.removeItem('cookieConsent');
+            localStorage.removeItem('cookieConsentDate');
+            const banner = document.getElementById('cookie-banner');
+            banner.style.display = 'flex';
+            banner.classList.remove('translate-y-full');
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+        });
+    </script>
+</body>
+</html>

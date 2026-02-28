@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager (conditional) -->
+    <script>
+    // Load GTM only if consent given
+    function loadGTM() {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MQV8J7Q');
+    }
+    // Check consent on page load
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      loadGTM();
+    }
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <title>Google Ads (SEM) — kampanie z pomiarem konwersji | BMM Studio</title>
+    <meta name="description" content="Prowadzimy kampanie Google Ads nastawione na wynik: konfiguracja GA4/GTM i konwersji, struktura kampanii, landing pages, optymalizacja CPA/ROAS i raporty.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+    <!-- Fonts from index.html -->
+    <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+    <style>
+        .font-geist { font-family: 'Geist', sans-serif !important; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090b; /* Zinc 950 */
+            color: #fafafa; /* Zinc 50 */
+        }
+        
+        /* Custom Scrollbar Hide */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom details styling */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        details[open] summary ~ * {
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation Overlay (Mobile) -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-6 overflow-y-auto py-12">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-zinc-400 hover:text-white">
+            <iconify-icon icon="lucide:x" width="32"></iconify-icon>
+        </button>
+        
+        <a href="/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Strona Główna</a>
+        
+        <div class="w-full h-px bg-white/10 max-w-xs"></div>
+        
+        <div class="flex flex-col items-center space-y-4">
+            <span class="text-xs font-bold text-zinc-500 uppercase tracking-widest">Oferta</span>
+            <a href="/produkcja-foto/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Produkcja Foto</a>
+            <a href="/produkcja-video/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Produkcja Wideo</a>
+            <a href="/sem/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Google Ads (SEM)</a>
+            <a href="/wizytowki-google/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Wizytówki Google</a>
+            <a href="/szkolenia-z-dofinansowaniem/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Szkolenia (BUR/KFS)</a>
+        </div>
+        
+        <div class="w-full h-px bg-white/10 max-w-xs"></div>
+
+        <a href="/galeria_zdjec/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Galeria</a>
+        <a href="/#historia" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Historia</a>
+        <a href="/#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Kontakt</a>
+    </div>
+
+    <!-- Header / Nav -->
+    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="font-semibold tracking-tighter text-xl hover:text-zinc-400 transition cursor-pointer">BMM</a>
+            <button onclick="toggleMenu()" class="md:hidden text-zinc-400 hover:text-white transition">
+                <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+            </button>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="/" class="hover:text-white transition">Strona Główna</a>
+                
+                <!-- Dropdown -->
+                <div class="relative group h-16 flex items-center">
+                    <button class="hover:text-white transition flex items-center gap-1 py-2">
+                        Oferta <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="p-2 space-y-1">
+                            <a href="/produkcja-foto/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
+                            <a href="/produkcja-video/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
+                            <a href="/sem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Google Ads (SEM)</a>
+                            <a href="/wizytowki-google/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Wizytówki Google</a>
+                            <a href="/szkolenia-z-dofinansowaniem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/galeria_zdjec/" class="hover:text-white transition">Galeria</a>
+                <a href="/#historia" class="hover:text-white transition">Historia</a>
+                <a href="/#kontakt" class="bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition">Darmowa wycena</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex flex-col pt-32 pb-16 px-6 relative items-center justify-center border-b border-white/5">
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Kampanie nastawione na leady i sprzedaż
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white leading-[1.1]">
+                Google Ads (SEM) — <br>
+                <span class="text-zinc-500">kampanie, które naprawdę sprzedają.</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+                Prowadzimy kampanie Google Ads w modelu performance: zaczynamy od celu (lead/sprzedaż), ustawiamy pomiar (GA4 + GTM + konwersje), budujemy strukturę kampanii pod intencje wyszukiwania i dopracowujemy landing page, aby wynik był mierzalny. Dzięki temu optymalizujemy kampanie pod realny efekt (CPA/ROAS), a nie pod liczbę kliknięć.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto text-left md:text-center text-sm text-zinc-300 pt-4">
+                <div class="flex items-center md:justify-center gap-2">
+                    <iconify-icon icon="lucide:check-circle" class="text-emerald-500 shrink-0"></iconify-icon>
+                    Prawidłowy tracking i konwersje
+                </div>
+                <div class="flex items-center md:justify-center gap-2">
+                    <iconify-icon icon="lucide:check-circle" class="text-emerald-500 shrink-0"></iconify-icon>
+                    Struktura kampanii oparta na intencjach
+                </div>
+                <div class="flex items-center md:justify-center gap-2">
+                    <iconify-icon icon="lucide:check-circle" class="text-emerald-500 shrink-0"></iconify-icon>
+                    Landing pages i UX pod wynik
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 pt-8">
+                <a href="#kontakt" class="group flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black hover:bg-zinc-200 transition duration-300 font-medium">
+                    <span>Umów konsultację</span>
+                    <iconify-icon icon="lucide:mouse-pointer-2" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+                <a href="#kontakt" class="group flex items-center gap-2 px-8 py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300 font-medium">
+                    <span>Poproś o audyt kampanii</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-zinc-900/0 via-zinc-900/0 to-zinc-950/80 pointer-events-none"></div>
+    </section>
+
+    <!-- Kiedy SEM ma sens -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-8">Kiedy SEM ma największy sens?</h2>
+                <div class="space-y-6">
+                    <div class="bg-zinc-900/50 p-6 rounded-xl border border-white/5">
+                        <h3 class="text-lg font-medium text-white mb-3">SEM to świetny wybór, gdy:</h3>
+                        <ul class="space-y-2 text-zinc-400 text-sm">
+                            <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-emerald-500"></iconify-icon> chcesz szybko pozyskiwać leady lub sprzedaż</li>
+                            <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-emerald-500"></iconify-icon> masz ofertę, którą ludzie aktywnie wyszukują</li>
+                            <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-emerald-500"></iconify-icon> potrafisz obsłużyć pozyskane zapytania</li>
+                            <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-emerald-500"></iconify-icon> masz stronę/landing, który konwertuje</li>
+                            <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-emerald-500"></iconify-icon> masz marżę, która pozwala skalować kampanie</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-white/10">
+                    <h3 class="text-2xl font-semibold text-white mb-6">Kiedy SEM bywa mniej opłacalny?</h3>
+                    <ul class="space-y-4 text-zinc-400">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:x-circle" class="text-red-500 mt-1 shrink-0"></iconify-icon>
+                            <span>Strona nie ma jasnej oferty i konwersji (trzeba ją poprawić)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:x-circle" class="text-red-500 mt-1 shrink-0"></iconify-icon>
+                            <span>Nie da się mierzyć efektów (brak analityki / konwersji)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:x-circle" class="text-red-500 mt-1 shrink-0"></iconify-icon>
+                            <span>Oferta jest niedopasowana do intencji (np. niszowa bez popytu)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:x-circle" class="text-red-500 mt-1 shrink-0"></iconify-icon>
+                            <span>Proces obsługi leadów jest “zbyt wolny” (tracisz zapytania)</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 pt-6 border-t border-white/10 text-sm text-zinc-300">
+                        <strong>Nasze podejście:</strong> SEM + szybkie poprawki landingów + pomiar, żeby ROI było sensowne od początku.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Co obejmuje prowadzenie -->
+    <section class="py-24 px-6 border-b border-white/5 bg-zinc-900/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Co obejmuje prowadzenie Google Ads?</h2>
+                <p class="text-zinc-400 max-w-2xl mx-auto">Dobre kampanie to nie “ustawienia w panelu”, tylko system: strategia → struktura → pomiar → landing → iteracje.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:layout-grid" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Strategia i struktura kampanii</h3>
+                    <p class="text-zinc-400 mb-4">Ustalamy cel (lead/sprzedaż), segmenty oferty i priorytety. Budujemy strukturę tak, aby różne intencje miały różne komunikaty, łatwo było sterować budżetem, a wyniki były czytelne.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:search" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Słowa kluczowe i intencje</h3>
+                    <p class="text-zinc-400 mb-4">Dobieramy słowa pod intencje zakupowe. Rozdzielamy frazy “gorące” od informacyjnych, kontrolujemy dopasowania i wykluczenia, aby koszt leada był przewidywalny.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:message-square" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Kreacje i komunikaty</h3>
+                    <p class="text-zinc-400 mb-4">Tworzymy komunikaty pod to, czego szuka użytkownik. Skupiamy się na konkretach oferty, przewadze (USP), obietnicy, dowodach i jasnym CTA.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition group">
+                    <div class="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition">
+                        <iconify-icon icon="lucide:monitor" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Landing pages i UX</h3>
+                    <p class="text-zinc-400 mb-4">Największy “zysk” w SEM jest często na stronie docelowej. Projektujemy landing tak, aby oferta była zrozumiała w 5 sekund, a formularz prosty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analityka i konwersje -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-semibold tracking-tight mb-6">Konfiguracja analityki i konwersji</h2>
+                    <p class="text-zinc-400 mb-8 leading-relaxed">
+                        Bez poprawnego pomiaru optymalizacja kampanii nie istnieje. Dlatego w SEM zawsze zaczynamy od analityki. Wdrażamy Google Analytics 4 oraz Google Tag Manager, konfigurujemy zdarzenia i sprawdzamy poprawność danych.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-4 border border-white/5 rounded-lg bg-zinc-900/50">
+                            <iconify-icon icon="lucide:bar-chart-3" class="text-emerald-500 text-xl"></iconify-icon>
+                            <span class="text-zinc-300">GA4 + GTM + zdarzenia (formularz, telefon, mail)</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 border border-white/5 rounded-lg bg-zinc-900/50">
+                            <iconify-icon icon="lucide:target" class="text-emerald-500 text-xl"></iconify-icon>
+                            <span class="text-zinc-300">Konwersje i atrybucja pod cel biznesowy</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 border border-white/5 rounded-lg bg-zinc-900/50">
+                            <iconify-icon icon="lucide:shopping-cart" class="text-emerald-500 text-xl"></iconify-icon>
+                            <span class="text-zinc-300">E-commerce: purchase z wartością koszyka</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-900 p-8 rounded-2xl border border-white/5">
+                    <h3 class="text-xl font-medium text-white mb-6">Co mierzymy standardowo?</h3>
+                    <ul class="space-y-3 text-zinc-400">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> wysłanie formularza kontaktowego</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> kliknięcie w numer telefonu</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> kliknięcie w adres e-mail</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> kliknięcia w kluczowe CTA</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> zakup / dodanie do koszyka</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optymalizacja -->
+    <section class="py-24 px-6 border-b border-white/5 bg-zinc-900/20">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-3xl font-semibold tracking-tight mb-4">Optymalizacja i skalowanie wyników</h2>
+            <p class="text-zinc-400">Kampanie optymalizujemy w cyklu: hipoteza → test → analiza → iteracja.</p>
+        </div>
+        
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="p-6 border border-white/5 rounded-xl bg-zinc-900">
+                <div class="text-emerald-500 mb-4"><iconify-icon icon="lucide:trending-up" width="32"></iconify-icon></div>
+                <h3 class="text-lg font-medium text-white mb-2">CPA / ROAS</h3>
+                <p class="text-sm text-zinc-400">Pracujemy na koszcie pozyskania leada (CPA) lub zwrocie z nakładów (ROAS), jakości leadów i alokacji budżetu.</p>
+            </div>
+            <div class="p-6 border border-white/5 rounded-xl bg-zinc-900">
+                <div class="text-emerald-500 mb-4"><iconify-icon icon="lucide:star" width="32"></iconify-icon></div>
+                <h3 class="text-lg font-medium text-white mb-2">Quality Score</h3>
+                <p class="text-sm text-zinc-400">Poprawiamy wynik jakości (obniżając koszt kliknięcia) przez dopasowanie komunikatu, lepszy landing page i szybkość strony.</p>
+            </div>
+            <div class="p-6 border border-white/5 rounded-xl bg-zinc-900">
+                <div class="text-emerald-500 mb-4"><iconify-icon icon="lucide:repeat" width="32"></iconify-icon></div>
+                <h3 class="text-lg font-medium text-white mb-2">Remarketing</h3>
+                <p class="text-sm text-zinc-400">Domykamy użytkowników, którzy nie wykonali akcji. Działa najlepiej, gdy masz poprawnie ustawione zdarzenia i sensowną ofertę.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audyt i Raportowanie -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+            <!-- Audyt -->
+            <div>
+                <h3 class="text-2xl font-semibold text-white mb-6">Masz już kampanie? Zrób audyt</h3>
+                <p class="text-zinc-400 mb-6">Jeśli Twoje kampanie już działają, ale nie dają wyników, zaczynamy od audytu:</p>
+                <ul class="space-y-2 text-zinc-400 text-sm mb-8">
+                    <li>• struktura konta i kampanii</li>
+                    <li>• słowa kluczowe, dopasowania, wykluczenia</li>
+                    <li>• jakość leadów i konwersji</li>
+                    <li>• tracking i poprawność danych</li>
+                    <li>• landing pages i ścieżka użytkownika</li>
+                </ul>
+                <div class="inline-flex px-4 py-2 rounded bg-zinc-800 text-zinc-300 text-sm">
+                    Rekomendacje: quick wins + plan 30/60/90 dni
+                </div>
+            </div>
+            
+            <!-- Raportowanie -->
+            <div>
+                <h3 class="text-2xl font-semibold text-white mb-6">Raportowanie — jasne dane</h3>
+                <p class="text-zinc-400 mb-6">Raport ma być prosty i decyzyjny. Co miesiąc otrzymujesz:</p>
+                <ul class="space-y-2 text-zinc-400 text-sm mb-8">
+                    <li>• podsumowanie wyników (lead/sprzedaż, koszt, trend)</li>
+                    <li>• wyniki per kampania/segment oferty</li>
+                    <li>• wnioski (co działa, co nie) i plan działań</li>
+                    <li>• rekomendacje dot. strony/landingów</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cennik / Pakiety -->
+    <section class="py-24 px-6 border-b border-white/5 bg-zinc-900/20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-semibold tracking-tight mb-8 text-center">Ile kosztuje Google Ads?</h2>
+            <p class="text-zinc-400 text-center max-w-2xl mx-auto mb-16">
+                Koszt składa się z budżetu reklamowego (dla Google) i obsługi (dla nas). Budżet startowy powinien pozwolić zebrać dane do optymalizacji.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900">
+                    <h4 class="text-lg font-semibold text-white mb-2">Pakiet Start</h4>
+                    <p class="text-sm text-zinc-400 mb-4">Dla małych firm i testów</p>
+                    <hr class="border-white/10 mb-4">
+                    <ul class="text-sm text-zinc-400 space-y-2">
+                        <li>• konfiguracja konta</li>
+                        <li>• kampanie na kluczową ofertę</li>
+                        <li>• podstawowe konwersje</li>
+                    </ul>
+                </div>
+                
+                <div class="p-6 border border-emerald-500/30 rounded-xl bg-zinc-900 relative">
+                    <div class="absolute top-4 right-4 text-xs font-bold text-emerald-500 uppercase tracking-wider">Polecany</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Pakiet Growth</h4>
+                    <p class="text-sm text-zinc-400 mb-4">Dla rosnących biznesów</p>
+                    <hr class="border-white/10 mb-4">
+                    <ul class="text-sm text-zinc-400 space-y-2">
+                        <li>• rozbudowa struktury</li>
+                        <li>• testy A/B</li>
+                        <li>• landing pages</li>
+                        <li>• zaawansowany tracking</li>
+                    </ul>
+                </div>
+                
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900">
+                    <h4 class="text-lg font-semibold text-white mb-2">Pakiet Pro</h4>
+                    <p class="text-sm text-zinc-400 mb-4">Dla e-commerce i dużej skali</p>
+                    <hr class="border-white/10 mb-4">
+                    <ul class="text-sm text-zinc-400 space-y-2">
+                        <li>• skalowanie wyników</li>
+                        <li>• wiele segmentów oferty</li>
+                        <li>• optymalizacja pod ROAS</li>
+                        <li>• pełna obsługa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Najczęściej zadawane pytania (FAQ)</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Kiedy są efekty Google Ads?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Zwykle kampanie mogą generować ruch od razu po uruchomieniu. Wynik (koszt i jakość leada) stabilizuje się po zebraniu danych i iteracjach, dlatego pierwsze tygodnie traktujemy jako fazę testu i optymalizacji.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Ile kosztuje prowadzenie Google Ads?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Zależy od skali konta, liczby kampanii i poziomu pracy (landing/tracking/testy). Dlatego zakres dopasowujemy do celu, a nie sprzedajemy “jeden pakiet dla wszystkich”.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Jaki budżet reklamowy na start?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Zależy od konkurencji i celu. Najważniejsze jest, aby budżet pozwolił zebrać wystarczająco danych do optymalizacji — zbyt mały budżet często nie daje wiarygodnych wniosków.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy Google Ads działa w mojej branży?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Jeśli użytkownicy aktywnie szukają tej usługi/produktu w Google — zwykle tak. Na starcie sprawdzamy popyt i proponujemy strukturę testu.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy potrzebuję nowej strony lub landing page?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Jeśli obecna strona nie konwertuje lub nie ma jasnej oferty — landing page często jest najszybszą poprawą ROI kampanii.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy konfigurujecie analitykę i konwersje?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak. Bez poprawnego pomiaru nie da się sensownie optymalizować kampanii. Wpinamy GA4/GTM, zdarzenia i konwersje pod cel biznesowy.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Jakie konwersje mierzycie?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Najczęściej: formularz, telefon, mail, kliknięcia CTA, rezerwacja, zakup (z wartością). Dobór zależy od modelu biznesowego.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy robicie audyt kampanii, które już działają?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak. Audyt pokazuje quick wins i błędy w strukturze, słowach, dopasowaniach i pomiarze.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy Google Ads zastępuje SEO?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Nie. Ads daje efekt szybko, SEO buduje stabilność. Najlepiej działa połączenie: SEM na start i pozyskanie, SEO na długoterminowy wzrost.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Co wpływa na koszt kliknięcia (CPC)?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Konkurencja, jakość reklamy i strony docelowej, dopasowanie do intencji, a także wynik jakości. Dlatego pracujemy również na landingach i komunikatach.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy optymalizujecie kampanie pod jakość leadów?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak. Sam koszt leada to za mało — liczy się, czy leady są sprzedażowe. Dlatego patrzymy na segmenty, frazy i zachowanie na stronie.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy robicie remarketing?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Jeśli jest sens i poprawnie mierzymy zdarzenia — tak. Remarketing pomaga domykać użytkowników, którzy nie kupili/nie wysłali formularza.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy robicie kampanie produktowe dla e-commerce?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Jeśli to jest zakres współpracy — tak. Warunkiem jest poprawny feed produktowy i pomiar wartości.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Jak często robicie optymalizacje?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Na początku intensywniej (faza testów), później cyklicznie w oparciu o wyniki i priorytety.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Co dostaję w raportach?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Podsumowanie wyniku, trend, rozbicie po kampaniach/segmentach, rekomendacje i plan kolejnych działań.
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Od czego zaczynamy?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Od celu i krótkiego audytu: oferta, strona/landing, pomiar. Potem przygotowujemy strukturę kampanii i plan testu.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Kontakt -->
+    <section id="kontakt" class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-8 text-white">Rozpocznij skuteczne kampanie</h2>
+            <p class="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">Potrzebujesz więcej leadów lub sprzedaży? Sprawdźmy Twój potencjał w Google Ads.</p>
+            
+            <a href="mailto:kontakt@bmmpolska.pl?subject=Zapytanie%20-%20Kampanie%20SEM" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-lg hover:scale-105 transition duration-300">
+                Poproś o audyt
+                <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+            </a>
+        </div>
+        <!-- Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/5 text-center text-zinc-500 text-xs">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+                <div>© 2026 BMM Polska. Wszystkie prawa zastrzeżone.</div>
+                <div class="flex gap-4 items-center">
+                    <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/bmmstudiowroc" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:facebook" width="16"></iconify-icon> Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="text-center flex flex-wrap justify-center gap-4">
+                <a href="/polityka-prywatnosci/" class="hover:text-white transition">Polityka prywatności</a>
+                <span class="text-zinc-700">•</span>
+                <button onclick="manageCookies()" class="hover:text-white transition cursor-pointer">Zarządzaj cookies</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
+        }
+    </script>
+
+    <!-- Cookie Consent Banner (Reused from index) -->
+    <div id="cookie-banner" style="display: none;" class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-zinc-900/95 backdrop-blur-xl border-t border-white/10 transform transition-transform duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div class="flex items-start gap-3 flex-1">
+                <iconify-icon icon="lucide:cookie" class="text-emerald-500 mt-1 shrink-0" width="24"></iconify-icon>
+                <div>
+                    <h3 class="font-semibold text-white mb-1">Używamy cookies</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Ta strona używa plików cookies i Google Analytics do analizy ruchu. Korzystanie ze strony oznacza zgodę na ich użycie. 
+                        <a href="/polityka-prywatnosci/" class="text-emerald-500 hover:text-emerald-400 transition underline">Polityka prywatności</a>
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-3 shrink-0">
+                <button onclick="rejectCookies()" class="px-4 py-2 rounded-lg border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 transition text-sm font-medium whitespace-nowrap">
+                    Odrzuć
+                </button>
+                <button onclick="acceptCookies()" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white transition text-sm font-medium whitespace-nowrap">
+                    Akceptuję
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Cookie logic same as index
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => { document.getElementById('cookie-banner').style.display = 'none'; }, 300);
+            loadGTM();
+        }
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => { document.getElementById('cookie-banner').style.display = 'none'; }, 300);
+        }
+        function manageCookies() {
+            localStorage.removeItem('cookieConsent');
+            localStorage.removeItem('cookieConsentDate');
+            const banner = document.getElementById('cookie-banner');
+            banner.style.display = 'flex';
+            banner.classList.remove('translate-y-full');
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+        });
+    </script>
+</body>
+</html>

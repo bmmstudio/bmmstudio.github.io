@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager (conditional) -->
+    <script>
+    // Load GTM only if consent given
+    function loadGTM() {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MQV8J7Q');
+    }
+    // Check consent on page load
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      loadGTM();
+    }
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <title>Szkolenia z dofinansowaniem (BUR/KFS) — jak uzyskać refundację | BMM Studio</title>
+    <meta name="description" content="Pomagamy przejść proces dofinansowania szkoleń (BUR/KFS): wybór usługi, wymagania, dokumenty, realizacja i rozliczenie. Szkolenia marketing/AI/online.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+    <!-- Fonts from index.html -->
+    <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+    <style>
+        .font-geist { font-family: 'Geist', sans-serif !important; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090b; /* Zinc 950 */
+            color: #fafafa; /* Zinc 50 */
+        }
+        
+        /* Custom Scrollbar Hide */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom details styling */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        details[open] summary ~ * {
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation Overlay (Mobile) -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-6 overflow-y-auto py-12">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-zinc-400 hover:text-white">
+            <iconify-icon icon="lucide:x" width="32"></iconify-icon>
+        </button>
+        
+        <a href="/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Strona Główna</a>
+        
+        <div class="w-full h-px bg-white/10 max-w-xs"></div>
+        
+        <div class="flex flex-col items-center space-y-4">
+            <span class="text-xs font-bold text-zinc-500 uppercase tracking-widest">Oferta</span>
+            <a href="/produkcja-foto/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Produkcja Foto</a>
+            <a href="/produkcja-video/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Produkcja Wideo</a>
+            <a href="/sem/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Google Ads (SEM)</a>
+            <a href="/wizytowki-google/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Wizytówki Google</a>
+            <a href="/szkolenia-z-dofinansowaniem/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Szkolenia (BUR/KFS)</a>
+        </div>
+        
+        <div class="w-full h-px bg-white/10 max-w-xs"></div>
+
+        <a href="/galeria_zdjec/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Galeria</a>
+        <a href="/#historia" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Historia</a>
+        <a href="/#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Kontakt</a>
+    </div>
+
+    <!-- Header / Nav -->
+    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="font-semibold tracking-tighter text-xl hover:text-zinc-400 transition cursor-pointer">BMM</a>
+            <button onclick="toggleMenu()" class="md:hidden text-zinc-400 hover:text-white transition">
+                <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+            </button>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="/" class="hover:text-white transition">Strona Główna</a>
+                
+                <!-- Dropdown -->
+                <div class="relative group h-16 flex items-center">
+                    <button class="hover:text-white transition flex items-center gap-1 py-2">
+                        Oferta <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="p-2 space-y-1">
+                            <a href="/produkcja-foto/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
+                            <a href="/produkcja-video/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
+                            <a href="/sem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Google Ads (SEM)</a>
+                            <a href="/wizytowki-google/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Wizytówki Google</a>
+                            <a href="/szkolenia-z-dofinansowaniem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/galeria_zdjec/" class="hover:text-white transition">Galeria</a>
+                <a href="/#historia" class="hover:text-white transition">Historia</a>
+                <a href="/#kontakt" class="bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition">Darmowa wycena</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex flex-col pt-32 pb-16 px-6 relative items-center justify-center border-b border-white/5">
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Szkolenia Marketing / AI / Performance
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white leading-[1.1]">
+                Szkolenia z dofinansowaniem (BUR / KFS) — <br>
+                <span class="text-zinc-500">krok po kroku.</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+                Jeśli chcesz przeszkolić zespół lub siebie z obszarów takich jak marketing online, social media, AI w biznesie, analityka czy performance, możesz skorzystać z programów dofinansowań. Poniżej wyjaśniamy, jak działa refundacja, jakie są wymagania i jak pomagamy przejść proces.
+            </p>
+
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-sm">
+                <iconify-icon icon="lucide:alert-circle"></iconify-icon>
+                <span>Dofinansowanie zależy od programu i spełnienia kryteriów. Nie gwarantujemy przyznania środków.</span>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 pt-8">
+                <a href="#kontakt" class="group flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black hover:bg-zinc-200 transition duration-300 font-medium">
+                    <span>Sprawdź możliwość</span>
+                    <iconify-icon icon="lucide:search" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+                <a href="#kontakt" class="group flex items-center gap-2 px-8 py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300 font-medium">
+                    <span>Zapytaj o szkolenie</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-zinc-900/0 via-zinc-900/0 to-zinc-950/80 pointer-events-none"></div>
+    </section>
+
+    <!-- Dla kogo -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-8">Dla kogo są szkolenia z dofinansowaniem?</h2>
+                <div class="space-y-6">
+                    <div class="bg-zinc-900/50 p-6 rounded-xl border border-white/5">
+                        <h3 class="text-lg font-medium text-white mb-3">To dobre rozwiązanie, gdy:</h3>
+                        <ul class="space-y-2 text-zinc-400 text-sm">
+                            <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-emerald-500"></iconify-icon> chcesz podnieść kompetencje pracowników</li>
+                            <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-emerald-500"></iconify-icon> wdrażasz nowe narzędzia (AI, automatyzacje)</li>
+                            <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-emerald-500"></iconify-icon> potrzebujesz szybkiego wzrostu w sprzedaży/marketingu</li>
+                            <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-emerald-500"></iconify-icon> chcesz zbudować przewagę bez przepalania budżetu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-white/10">
+                    <h3 class="text-2xl font-semibold text-white mb-6">Najpopularniejsze ścieżki (BUR i KFS)</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-lg font-medium text-white flex items-center gap-2">
+                                <iconify-icon icon="lucide:database" class="text-emerald-500"></iconify-icon> BUR — Baza Usług Rozwojowych
+                            </h4>
+                            <p class="text-sm text-zinc-400 mt-2 leading-relaxed">
+                                Platforma z usługami rozwojowymi (szkolenia, doradztwo), gdzie możliwe jest uzyskanie dofinansowania (często 50-80%) przez operatorów regionalnych.
+                            </p>
+                        </div>
+                        <div class="w-full h-px bg-white/10"></div>
+                        <div>
+                            <h4 class="text-lg font-medium text-white flex items-center gap-2">
+                                <iconify-icon icon="lucide:briefcase" class="text-emerald-500"></iconify-icon> KFS — Krajowy Fundusz Szkoleniowy
+                            </h4>
+                            <p class="text-sm text-zinc-400 mt-2 leading-relaxed">
+                                Wsparcie dla pracodawców. Dofinansowanie wynosi standardowo 80%, a dla mikroprzedsiębiorców nawet 100% (w ramach limitów).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proces (Kroki) -->
+    <section class="py-24 px-6 border-b border-white/5 bg-zinc-900/20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-16 text-center">Jak uzyskać dofinansowanie?</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Krok 1 -->
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900/40">
+                    <div class="text-xs font-mono text-emerald-500 mb-2">Krok 1</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Cel i zakres</h3>
+                    <p class="text-sm text-zinc-400">Ustalamy, czego zespół ma się nauczyć i jaki jest cel biznesowy (np. leady, automatyzacja).</p>
+                </div>
+                <!-- Krok 2 -->
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900/40">
+                    <div class="text-xs font-mono text-emerald-500 mb-2">Krok 2</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Dobór ścieżki</h3>
+                    <p class="text-sm text-zinc-400">Wybieramy BUR, KFS lub operatora regionalnego zależnie od statusu firmy i naborów.</p>
+                </div>
+                <!-- Krok 3 -->
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900/40">
+                    <div class="text-xs font-mono text-emerald-500 mb-2">Krok 3</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Przygotowanie danych</h3>
+                    <p class="text-sm text-zinc-400">Dostarczamy program szkolenia, harmonogram, ofertę i efekty uczenia do wniosku.</p>
+                </div>
+                <!-- Krok 4 -->
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900/40">
+                    <div class="text-xs font-mono text-emerald-500 mb-2">Krok 4</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Wniosek i umowa</h3>
+                    <p class="text-sm text-zinc-400">Składasz wniosek (często online). Po akceptacji podpisujesz umowę o dofinansowanie.</p>
+                </div>
+                <!-- Krok 5 -->
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900/40">
+                    <div class="text-xs font-mono text-emerald-500 mb-2">Krok 5</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Realizacja</h3>
+                    <p class="text-sm text-zinc-400">Przeprowadzamy szkolenie + zbieramy potwierdzenia obecności (wymóg formalny).</p>
+                </div>
+                <!-- Krok 6 -->
+                <div class="p-6 border border-white/5 rounded-xl bg-zinc-900/40">
+                    <div class="text-xs font-mono text-emerald-500 mb-2">Krok 6</div>
+                    <h3 class="text-lg font-medium text-white mb-2">Rozliczenie</h3>
+                    <p class="text-sm text-zinc-400">Refundacja kosztów lub rozliczenie bonami (zależnie od operatora).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moduły szkoleń -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Tematy szkoleń (Moduły)</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 rounded-xl bg-zinc-900 border border-white/5 hover:border-emerald-500/30 transition">
+                    <div class="text-emerald-500 mb-4"><iconify-icon icon="lucide:bot" width="32"></iconify-icon></div>
+                    <h3 class="text-xl font-medium text-white mb-2">AI w biznesie</h3>
+                    <p class="text-sm text-zinc-400">Strategia wdrażania AI, narzędzia (ChatGPT, Midjourney), automatyzacja procesów.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-zinc-900 border border-white/5 hover:border-emerald-500/30 transition">
+                    <div class="text-emerald-500 mb-4"><iconify-icon icon="lucide:smartphone" width="32"></iconify-icon></div>
+                    <h3 class="text-xl font-medium text-white mb-2">Social Media Boost</h3>
+                    <p class="text-sm text-zinc-400">Strategia, tworzenie rolek (Reels/TikTok), planowanie contentu, algorytmy.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-zinc-900 border border-white/5 hover:border-emerald-500/30 transition">
+                    <div class="text-emerald-500 mb-4"><iconify-icon icon="lucide:target" width="32"></iconify-icon></div>
+                    <h3 class="text-xl font-medium text-white mb-2">Performance (Ads)</h3>
+                    <p class="text-sm text-zinc-400">Meta Ads / Google Ads: struktura kampanii, tracking, optymalizacja budżetu.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-zinc-900 border border-white/5 hover:border-emerald-500/30 transition">
+                    <div class="text-emerald-500 mb-4"><iconify-icon icon="lucide:bar-chart-3" width="32"></iconify-icon></div>
+                    <h3 class="text-xl font-medium text-white mb-2">Analityka (GA4)</h3>
+                    <p class="text-sm text-zinc-400">Konfiguracja GA4/GTM, zdarzenia, konwersje, raportowanie i wnioski.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-zinc-900 border border-white/5 hover:border-emerald-500/30 transition">
+                    <div class="text-emerald-500 mb-4"><iconify-icon icon="lucide:search" width="32"></iconify-icon></div>
+                    <h3 class="text-xl font-medium text-white mb-2">SEO Praktyczne</h3>
+                    <p class="text-sm text-zinc-400">Audyt, architektura treści, optymalizacja on-site, proces contentowy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dokumenty i wymagania -->
+    <section class="py-24 px-6 border-b border-white/5 bg-zinc-900/20">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-semibold tracking-tight mb-8 text-center">Dokumenty i rozliczenie</h2>
+            
+            <div class="space-y-8">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center shrink-0 text-emerald-500 font-bold">1</div>
+                    <div>
+                        <h3 class="text-lg font-medium text-white mb-2">Wymagane informacje</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Do wniosku potrzebujesz: danych firmy (status MŚP), danych uczestników, uzasadnienia potrzeby szkoleniowej oraz opisu szkolenia (program, cele, efekty) — ten ostatni dostarczamy my.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center shrink-0 text-emerald-500 font-bold">2</div>
+                    <div>
+                        <h3 class="text-lg font-medium text-white mb-2">Realizacja i obecność</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Podstawą rozliczenia jest potwierdzenie realizacji usługi: listy obecności, ankiety w systemie BUR, certyfikaty. Pilnujemy tego w trakcie szkolenia.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center shrink-0 text-emerald-500 font-bold">3</div>
+                    <div>
+                        <h3 class="text-lg font-medium text-white mb-2">Refundacja</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            W większości programów firma opłaca fakturę, a następnie otrzymuje zwrot (refundację) na konto po zaakceptowaniu dokumentów rozliczeniowych.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 border-b border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Najczęściej zadawane pytania (FAQ)</h2>
+            
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy każdy może dostać dofinansowanie na szkolenie?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Nie zawsze — zależy od programu, operatora i kryteriów. My pomagamy dobrać ścieżkę i przygotować komplet informacji.
+                    </div>
+                </details>
+                <!-- Q2 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">BUR czy KFS — co wybrać?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        KFS jest często wybierany przez pracodawców szkolących pracowników, BUR bywa wykorzystywany w programach refundacyjnych i u operatorów regionalnych.
+                    </div>
+                </details>
+                <!-- Q3 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Jakie jest dofinansowanie w KFS?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Zwykle 80% kosztów, a dla mikroprzedsiębiorcy 100% — w ramach limitów.
+                    </div>
+                </details>
+                <!-- Q4 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Jakie jest dofinansowanie w BUR?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Zależy od programu/operatora, ale spotyka się poziomy dofinansowania rzędu 80% (a czasem 100% dla wybranych grup).
+                    </div>
+                </details>
+                <!-- Q5 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy gwarantujecie przyznanie dofinansowania?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Nie. Dofinansowanie zależy od instytucji i spełnienia kryteriów — my pomagamy w przygotowaniu i doborze ścieżki.
+                    </div>
+                </details>
+                <!-- Q6 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy szkolenia online też mogą być dofinansowane?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Często tak, jeśli program dopuszcza formę zdalną. Zawsze sprawdzamy wymogi konkretnej ścieżki.
+                    </div>
+                </details>
+                <!-- Q7 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy pomagacie w formalnościach wniosku?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Możemy przygotować komplet materiałów o szkoleniu (program, cele, harmonogram, efekty), które są potrzebne w procesie. Samo złożenie zwykle jest po stronie firmy.
+                    </div>
+                </details>
+                <!-- Q8 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Ile trwa uzyskanie dofinansowania?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Zależy od naboru i operatora — w praktyce to kwestia terminów oceny i dostępności środków.
+                    </div>
+                </details>
+                <!-- Q9 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy można szkolić jedną osobę?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak — zależy od zasad programu i limitów na uczestnika.
+                    </div>
+                </details>
+                <!-- Q10 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy można szkolić cały zespół?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak — w wielu przypadkach to standardowy scenariusz.
+                    </div>
+                </details>
+                <!-- Q11 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy szkolenie musi być w BUR?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        W zależności od źródła finansowania. BUR jest kluczowym elementem ekosystemu usług rozwojowych.
+                    </div>
+                </details>
+                <!-- Q12 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy macie szkolenia z AI i marketingu?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak — realizujemy moduły AI w biznesie, marketing online, social media, performance, analitykę, SEO.
+                    </div>
+                </details>
+                <!-- Q13 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy dostaję certyfikat/zaświadczenie?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Możemy wystawić dokument potwierdzający udział i zakres — zależnie od ustaleń i wymogów programu.
+                    </div>
+                </details>
+                <!-- Q14 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy szkolenie może być dopasowane do branży?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak — dopasowujemy przykłady, ćwiczenia i warsztaty pod branżę i procesy firmy.
+                    </div>
+                </details>
+                <!-- Q15 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Co jest najczęstszym błędem w dofinansowaniach?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Niedopasowanie szkolenia do celu i brak kompletnej dokumentacji potwierdzającej realizację (np. obecności/ankiety), plus niepilnowanie terminów.
+                    </div>
+                </details>
+                <!-- Q16 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy łączycie szkolenia z wdrożeniem?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak — możemy zaplanować etap wdrożeniowy (np. tracking GA4/GTM, struktura kampanii, proces contentu), jeśli tego potrzebujesz.
+                    </div>
+                </details>
+                <!-- Q17 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Czy robicie szkolenia stacjonarnie i online?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Tak — forma zależy od zakresu i organizacji zespołu.
+                    </div>
+                </details>
+                <!-- Q18 -->
+                <details class="group bg-zinc-900/30 border border-white/5 rounded-xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-zinc-900 transition select-none">
+                        <h3 class="font-medium text-white pr-8">Od czego zacząć?</h3>
+                        <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 transition-transform group-open:rotate-180"></iconify-icon>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400 border-t border-white/5 mt-2 text-sm leading-relaxed">
+                        Od krótkiej konsultacji: cel, grupa, preferowana forma, terminy. Potem dostajesz propozycję modułów i listę informacji potrzebnych do procesu.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Kontakt -->
+    <section id="kontakt" class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-8 text-white">Przeszkol zespół z dofinansowaniem</h2>
+            <p class="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">Chcesz skorzystać z BUR lub KFS? Napisz, jaki zakres Cię interesuje.</p>
+            
+            <a href="mailto:kontakt@bmmpolska.pl?subject=Zapytanie%20-%20Szkolenia%20z%20Dofinansowaniem" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-lg hover:scale-105 transition duration-300">
+                Zapytaj o szkolenie
+                <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+            </a>
+        </div>
+        <!-- Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/5 text-center text-zinc-500 text-xs">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+                <div>© 2026 BMM Polska. Wszystkie prawa zastrzeżone.</div>
+                <div class="flex gap-4 items-center">
+                    <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/bmmstudiowroc" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:facebook" width="16"></iconify-icon> Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="text-center flex flex-wrap justify-center gap-4">
+                <a href="/polityka-prywatnosci/" class="hover:text-white transition">Polityka prywatności</a>
+                <span class="text-zinc-700">•</span>
+                <button onclick="manageCookies()" class="hover:text-white transition cursor-pointer">Zarządzaj cookies</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
+        }
+    </script>
+
+    <!-- Cookie Consent Banner (Reused from index) -->
+    <div id="cookie-banner" style="display: none;" class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-zinc-900/95 backdrop-blur-xl border-t border-white/10 transform transition-transform duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div class="flex items-start gap-3 flex-1">
+                <iconify-icon icon="lucide:cookie" class="text-emerald-500 mt-1 shrink-0" width="24"></iconify-icon>
+                <div>
+                    <h3 class="font-semibold text-white mb-1">Używamy cookies</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Ta strona używa plików cookies i Google Analytics do analizy ruchu. Korzystanie ze strony oznacza zgodę na ich użycie. 
+                        <a href="/polityka-prywatnosci/" class="text-emerald-500 hover:text-emerald-400 transition underline">Polityka prywatności</a>
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-3 shrink-0">
+                <button onclick="rejectCookies()" class="px-4 py-2 rounded-lg border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 transition text-sm font-medium whitespace-nowrap">
+                    Odrzuć
+                </button>
+                <button onclick="acceptCookies()" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white transition text-sm font-medium whitespace-nowrap">
+                    Akceptuję
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Cookie logic same as index
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => { document.getElementById('cookie-banner').style.display = 'none'; }, 300);
+            loadGTM();
+        }
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => { document.getElementById('cookie-banner').style.display = 'none'; }, 300);
+        }
+        function manageCookies() {
+            localStorage.removeItem('cookieConsent');
+            localStorage.removeItem('cookieConsentDate');
+            const banner = document.getElementById('cookie-banner');
+            banner.style.display = 'flex';
+            banner.classList.remove('translate-y-full');
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+        });
+    </script>
+</body>
+</html>
