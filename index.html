@@ -76,21 +76,24 @@
         
         <a href="/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Strona Główna</a>
         
-        <div class="w-full h-px bg-white/10 max-w-xs"></div>
-        
-        <div class="flex flex-col items-center space-y-4">
-            <span class="text-xs font-bold text-zinc-500 uppercase tracking-widest">Oferta</span>
-            <a href="/produkcja-foto/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Produkcja Foto</a>
-            <a href="/produkcja-video/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Produkcja Wideo</a>
-            <a href="/sem/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Google Ads (SEM)</a>
-            <a href="/wizytowki-google/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Wizytówki Google</a>
-            <a href="/szkolenia-z-dofinansowaniem/" class="text-xl font-medium tracking-tight hover:text-emerald-500 transition">Szkolenia (BUR/KFS)</a>
+        <div class="w-full max-w-xs border-y border-white/10 py-4">
+            <details class="group">
+                <summary class="flex items-center justify-center gap-2 cursor-pointer list-none text-xl font-medium tracking-tight hover:text-emerald-500 transition select-none">
+                    <span>Oferta</span>
+                    <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="mt-4 flex flex-col space-y-3 pl-4 border-l border-white/10 ml-1">
+                    <a href="/produkcja-foto/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Foto</a>
+                    <a href="/produkcja-video/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Wideo</a>
+                    <a href="/sem/" class="text-lg text-zinc-400 hover:text-white transition">Google Ads (SEM)</a>
+                    <a href="/wizytowki-google/" class="text-lg text-zinc-400 hover:text-white transition">Wizytówki Google</a>
+                    <a href="/szkolenia-z-dofinansowaniem/" class="text-lg text-zinc-400 hover:text-white transition">Szkolenia (BUR/KFS)</a>
+                </div>
+            </details>
         </div>
-        
-        <div class="w-full h-px bg-white/10 max-w-xs"></div>
 
         <a href="/galeria_zdjec/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Galeria</a>
-        <a href="/#historia" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Historia</a>
+        <a href="/raporty-bmm/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Raporty</a>
         <a href="/#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Kontakt</a>
     </div>
 
@@ -121,7 +124,7 @@
                 </div>
 
                 <a href="/galeria_zdjec/" class="hover:text-white transition">Galeria</a>
-                <a href="/#historia" class="hover:text-white transition">Historia</a>
+                <a href="/raporty-bmm/" class="hover:text-white transition">Raporty</a>
                 <a href="/#kontakt" class="bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition">Darmowa wycena</a>
             </div>
         </div>
@@ -420,6 +423,51 @@
                                 <div class="flex items-center gap-3">
                                     <iconify-icon icon="lucide:globe" class="text-emerald-500 text-xl"></iconify-icon>
                                     <span class="font-medium">Strony Internetowe</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sklepy-internetowe/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:shopping-cart" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Sklepy Internetowe</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-web/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:layout-template" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Aplikacje Webowe</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-mobile/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:smartphone" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Aplikacje Mobilne</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/seo/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:search-check" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Pozycjonowanie (SEO)</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/ui-ux/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:palette" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">UI / UX Design</span>
                                 </div>
                                 <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
                             </div>
