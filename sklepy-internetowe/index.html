@@ -1,783 +1,653 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Sklepy internetowe — wdrożenie e-commerce pod sprzedaż | BMM Studio</title>
-    <meta
-      name="description"
-      content="Wdrażamy sklepy internetowe gotowe pod sprzedaż: UX, checkout, płatności i dostawy, analityka e-commerce, SEO on-site i przygotowanie pod kampanie."
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://www.bmmpolska.pl/sklepy-internetowe/" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sklepy internetowe — wdrożenie e-commerce pod sprzedaż | BMM Studio" />
-    <meta
-      property="og:description"
-      content="Wdrażamy sklepy internetowe gotowe pod sprzedaż: UX, checkout, płatności i dostawy, analityka e-commerce, SEO on-site i przygotowanie pod kampanie."
-    />
-    <meta property="og:url" content="https://www.bmmpolska.pl/sklepy-internetowe/" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Strona główna",
-                "item": "https://www.bmmpolska.pl/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Sklepy internetowe",
-                "item": "https://www.bmmpolska.pl/sklepy-internetowe/"
-              }
-            ]
-          },
-          {
-            "@type": "Service",
-            "name": "Tworzenie sklepów internetowych (e-commerce)",
-            "serviceType": "Sklepy internetowe",
-            "url": "https://www.bmmpolska.pl/sklepy-internetowe/",
-            "provider": {
-              "@type": "Organization",
-              "name": "BMM Studio",
-              "url": "https://www.bmmpolska.pl/"
-            },
-            "areaServed": { "@type": "Country", "name": "Poland" }
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Ile trwa stworzenie sklepu internetowego?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Najczęściej od kilku do kilkunastu tygodni. Czas zależy od liczby produktów, wariantów i integracji. Duży wpływ ma też jakość danych produktowych (zdjęcia, opisy, atrybuty)."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Ile kosztuje sklep internetowy?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Koszt zależy od zakresu: MVP vs sklep rozbudowany, liczby integracji, filtrów oraz poziomu przygotowania pod SEO i kampanie. Zaczynamy od celu i struktury, a potem dopasowujemy budżet do priorytetów."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy sklep będzie gotowy pod reklamy (Google/Meta)?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — możemy przygotować sklep pod kampanie: tracking e-commerce, konwersje, remarketing oraz dane produktowe potrzebne do działań performance."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy robicie integracje płatności i dostaw?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — wdrażamy i testujemy płatności oraz dostawy tak, aby checkout był szybki i czytelny. Dobór metod zależy od branży i preferencji klientów."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy przenosicie sklep z innej platformy (migracja)?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — przygotowujemy plan migracji obejmujący dane produktów, klientów i zamówień oraz kwestie SEO (adresy URL i przekierowania), aby ograniczyć spadki widoczności."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy pomagacie w przygotowaniu opisów produktów i kategorii?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — możemy tworzyć lub optymalizować opisy kategorii i produktów pod SEO i sprzedaż. W e-commerce treści muszą być unikalne i oparte o intencje."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy wdrażacie analitykę e-commerce i konwersje?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — konfigurujemy zdarzenia e-commerce (koszyk, checkout, zakup) oraz konwersje, aby analizować ścieżkę zakupową i optymalizować sklep oraz kampanie."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy sklep będzie szybki na telefonach?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — optymalizacja mobile to priorytet, bo większość ruchu w e-commerce pochodzi z urządzeń mobilnych. Dbamy o szybkość, UX i czytelność checkoutu."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy mogę sam dodawać produkty i zmieniać treści?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — sklep przygotowujemy tak, aby codzienne działania były proste: dodawanie produktów, zmiana cen, promocji i treści. Dostajesz instrukcję/krótki onboarding."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy zrobicie mi też landing pod kampanie?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — jeśli sklep wymaga landingów pod konkretne produkty lub kolekcje, przygotujemy dodatkowe strony wspierające kampanie i SEO."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy oferujecie opiekę i rozwój po wdrożeniu?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — możemy przejąć utrzymanie, aktualizacje, poprawki oraz rozwój funkcji. W e-commerce stała optymalizacja często daje największy zwrot."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Co jest potrzebne do startu projektu sklepu?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Lista produktów (lub plan oferty), zdjęcia i atrybuty, informacje o wysyłkach/płatnościach oraz cel biznesowy (MVP czy od razu skalowanie). Resztę porządkujemy na etapie architektury."
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
-
-    <!-- Google Tag Manager -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager (conditional) -->
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5MQV8J7Q");
+    // Load GTM only if consent given
+    function loadGTM() {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MQV8J7Q');
+    }
+    // Check consent on page load
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      loadGTM();
+    }
     </script>
     <!-- End Google Tag Manager -->
 
+    <title>Sklepy internetowe — e-commerce, płatności, dostawy, SEO | BMM Studio</title>
+    <meta name="description" content="Projektujemy i wdrażamy sklepy internetowe (e-commerce): koszyk, płatności, dostawy, integracje, SEO techniczne i analityka (GA4/GTM). Sklep gotowy pod kampanie Google i Meta.">
+    <link rel="canonical" href="https://www.bmmpolska.pl/sklepy-internetowe/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sklepy internetowe — e-commerce, płatności, dostawy, SEO | BMM Studio">
+    <meta property="og:description" content="Projektujemy i wdrażamy sklepy internetowe (e-commerce): koszyk, płatności, dostawy, integracje, SEO techniczne i analityka (GA4/GTM). Sklep gotowy pod kampanie Google i Meta.">
+    <meta property="og:url" content="https://www.bmmpolska.pl/sklepy-internetowe/">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #09090b; /* Zinc 950 */
-        color: #fafafa; /* Zinc 50 */
-      }
-    </style>
-  </head>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090b; /* Zinc 950 */
+            color: #fafafa; /* Zinc 50 */
+        }
+        
+        /* Custom Scrollbar Hide */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-  <body class="antialiased selection:bg-white selection:text-black">
+        /* Custom details styling */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
-      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a class="font-semibold tracking-tighter text-xl hover:text-zinc-200 transition" href="/">BMM</a>
-        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
-          <a href="/#oferta" class="hover:text-white transition">Oferta</a>
-          <a href="/galeria_zdjec/" class="hover:text-white transition">Portfolio</a>
-          <a href="/#kontakt" class="hover:text-white transition">Kontakt</a>
+    <!-- Navigation Overlay (Mobile) -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-6 overflow-y-auto py-12">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-zinc-400 hover:text-white">
+            <iconify-icon icon="lucide:x" width="32"></iconify-icon>
+        </button>
+        
+        <a href="/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Strona Główna</a>
+        
+        <div class="w-full max-w-xs border-y border-white/10 py-4">
+            <details class="group">
+                <summary class="flex items-center justify-center gap-2 cursor-pointer list-none text-xl font-medium tracking-tight hover:text-emerald-500 transition select-none">
+                    <span>Oferta</span>
+                    <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="mt-4 flex flex-col space-y-3 pl-4 border-l border-white/10 ml-1">
+                    <a href="/produkcja-foto/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Foto</a>
+                    <a href="/produkcja-video/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Wideo</a>
+                    <a href="/sem/" class="text-lg text-zinc-400 hover:text-white transition">Google Ads (SEM)</a>
+                    <a href="/wizytowki-google/" class="text-lg text-zinc-400 hover:text-white transition">Wizytówki Google</a>
+                    <a href="/szkolenia-z-dofinansowaniem/" class="text-lg text-zinc-400 hover:text-white transition">Szkolenia (BUR/KFS)</a>
+                </div>
+            </details>
         </div>
-      </div>
+
+        <a href="/galeria_zdjec/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Galeria</a>
+        <a href="/raporty-bmm/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Raporty</a>
+        <a href="/#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Kontakt</a>
+    </div>
+
+    <!-- Header / Nav -->
+    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="font-semibold tracking-tighter text-xl hover:text-zinc-400 transition cursor-pointer">BMM</a>
+            <button onclick="toggleMenu()" class="md:hidden text-zinc-400 hover:text-white transition">
+                <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+            </button>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="/" class="hover:text-white transition">Strona Główna</a>
+                
+                <!-- Dropdown -->
+                <div class="relative group h-16 flex items-center">
+                    <button class="hover:text-white transition flex items-center gap-1 py-2">
+                        Oferta <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="p-2 space-y-1">
+                            <a href="/produkcja-foto/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
+                            <a href="/produkcja-video/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
+                            <a href="/sem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Google Ads (SEM)</a>
+                            <a href="/wizytowki-google/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Wizytówki Google</a>
+                            <a href="/szkolenia-z-dofinansowaniem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/galeria_zdjec/" class="hover:text-white transition">Galeria</a>
+                <a href="/raporty-bmm/" class="hover:text-white transition">Raporty</a>
+                <a href="/#kontakt" class="bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition">Darmowa wycena</a>
+            </div>
+        </div>
     </nav>
 
-    <main class="pt-28 pb-20">
-      <!-- HERO -->
-      <section class="max-w-5xl mx-auto px-6">
-        <div class="flex flex-col gap-10">
-          <div>
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex flex-col items-center justify-center pt-32 pb-16 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.03]">
+            <span class="text-[30vw] font-bold tracking-tighter leading-none">ECOMMERCE</span>
+        </div>
+
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8 animate-fade-in-up">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              Wdrożenie e-commerce / sklep online
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Sklepy internetowe (e-commerce) — wdrożenie + integracje + analityka
             </div>
 
-            <h1 class="text-4xl md:text-6xl font-semibold tracking-tighter text-white leading-[1.1] mt-6">
-              Sklepy internetowe, które sprzedają — nie tylko wyglądają
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white leading-[1.1]">
+                Sklepy internetowe, które sprzedają — <br>
+                <span class="text-zinc-500">gotowe pod SEO i kampanie.</span>
             </h1>
 
-            <p class="text-zinc-400 text-lg mt-6 leading-relaxed">
-              Wdrażamy <strong>sklepy internetowe</strong> zaprojektowane pod konwersję: czytelna oferta, dobra karta produktu,
-              sensowna nawigacja i szybki checkout. Od początku przygotowujemy sklep pod SEO oraz kampanie (Google/Meta),
-              wdrażamy analitykę e-commerce i konfigurujemy zdarzenia, dzięki czemu decyzje opierasz na danych, a nie
-              przypuszczeniach.
+            <p class="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+                Tworzymy sklepy internetowe, które są przygotowane pod sprzedaż od pierwszego dnia: dopracowany koszyk i checkout, płatności, dostawy, powiadomienia, porządek w kategoriach i produktach, a do tego SEO techniczne oraz analityka GA4/GTM z pomiarem konwersji. Dzięki temu możesz skalować sprzedaż zarówno organicznie (SEO), jak i płatnie (Google Ads / Meta Ads) — bez zgadywania, co działa.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-8">
-              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                <p class="text-sm font-medium">UX i checkout pod sprzedaż</p>
-                <p class="text-sm text-zinc-400 mt-2">Mniej tarcia, mniej porzuceń koszyka.</p>
-              </div>
-              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                <p class="text-sm font-medium">Integracje + kampanie produktowe</p>
-                <p class="text-sm text-zinc-400 mt-2">Płatności/dostawy + gotowość pod feed.</p>
-              </div>
-              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                <p class="text-sm font-medium">Pomiar e-commerce</p>
-                <p class="text-sm text-zinc-400 mt-2">Zdarzenia, konwersje, checkout i wartość koszyka.</p>
-              </div>
+            <div class="grid md:grid-cols-3 gap-6 pt-8 text-left max-w-4xl mx-auto">
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:shopping-cart" class="text-emerald-500 text-xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Checkout i UX sprzedażowy</h3>
+                    <p class="text-sm text-zinc-400">Minimalizujemy tarcie, żeby użytkownik kończył zakup.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:settings" class="text-blue-500 text-xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Integracje i automatyzacje</h3>
+                    <p class="text-sm text-zinc-400">Płatności, dostawy, faktury, e-maile, magazyn.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <div class="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:bar-chart-2" class="text-purple-500 text-xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Pomiar i optymalizacja</h3>
+                    <p class="text-sm text-zinc-400">GA4/GTM, e-commerce events, raportowanie.</p>
+                </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-3 mt-8">
-              <a
-                class="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300"
-                href="/#kontakt"
-              >
-                <span class="text-sm font-medium">Kontakt</span>
-                <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
-              </a>
-              <a
-                class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition duration-300 text-zinc-300"
-                href="/#kontakt"
-              >
-                <span class="text-sm font-medium">Wycena wdrożenia</span>
-              </a>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#kontakt" class="px-8 py-4 rounded-full bg-white text-black font-medium hover:bg-zinc-200 transition duration-300">
+                    Darmowa wycena
+                </a>
             </div>
-
-          </div>
-
-          <!-- INTERNAL LINKS (mutual linking) -->
-          <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 md:p-8">
-            <div class="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
-              <div class="space-y-2">
-                <p class="text-xs tracking-widest uppercase text-zinc-500">Podstrony usług</p>
-                <p class="text-lg font-semibold tracking-tight">Zobacz też pozostałe usługi</p>
-                <p class="text-sm text-zinc-400">Wszystkie podstrony są ze sobą połączone linkami (dla UX i SEO).</p>
-              </div>
-              <a href="/" class="text-sm text-zinc-400 hover:text-white transition">Wróć na stronę główną →</a>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-mobile/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">Aplikacje mobile</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-web/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">Aplikacje webowe</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/seo/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">SEO</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/strony-internetowe/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">Strony internetowe</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
-              <a class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4" href="/sklepy-internetowe/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium text-white">Sklepy internetowe</span>
-                  <span class="text-xs text-emerald-300">Tu jesteś</span>
-                </div>
-              </a>
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/ui-ux/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">UI / UX</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
-            </div>
-          </div>
         </div>
-      </section>
+        
+        <div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-[#09090b] to-transparent pointer-events-none"></div>
+    </section>
 
-      <!-- CONTENT -->
-      <section class="max-w-5xl mx-auto px-6 mt-14">
-        <div class="grid lg:grid-cols-12 gap-10">
-          <aside class="lg:col-span-4">
-            <div class="sticky top-24 rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-              <p class="text-xs tracking-widest uppercase text-zinc-500">Na tej stronie</p>
-              <div class="mt-4 flex flex-col gap-2 text-sm text-zinc-400">
-                <a class="hover:text-white transition" href="#jakie">Jakie sklepy wdrażamy</a>
-                <a class="hover:text-white transition" href="#kluczowe">Co sprzedaje w e-commerce</a>
-                <a class="hover:text-white transition" href="#zakres">Zakres wdrożenia</a>
-                <a class="hover:text-white transition" href="#seo-reklamy">Sklep pod SEO i reklamy</a>
-                <a class="hover:text-white transition" href="#integracje">Integracje i automatyzacje</a>
-                <a class="hover:text-white transition" href="#proces">Proces współpracy</a>
-                <a class="hover:text-white transition" href="#koszt">Ile kosztuje sklep</a>
-                <a class="hover:text-white transition" href="#faq">FAQ</a>
-                <a class="hover:text-white transition" href="#zaufanie">Zespół i standard wdrożenia</a>
-              </div>
+    <!-- Services Section -->
+    <section class="py-24 max-w-7xl mx-auto px-6 border-t border-white/5">
+        <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-16 text-center">Jakie sklepy tworzymy</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group p-8 rounded-3xl bg-zinc-900/30 border border-white/5 hover:bg-zinc-900/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                    <iconify-icon icon="lucide:store" class="text-emerald-500 text-2xl"></iconify-icon>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Sklep dla marki (D2C)</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                    Sklep dla marki, która chce budować rozpoznawalność i powtarzalne zakupy. Projektujemy karty produktów, cross-sell/upsell i automatyczne procesy (maile, statusy zamówień), żeby sklep działał jak stały kanał sprzedaży.
+                </p>
             </div>
-          </aside>
 
-          <div class="lg:col-span-8 space-y-12">
-            <section id="jakie" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Jakie sklepy internetowe wdrażamy</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Dobór rozwiązania zależy od liczby produktów, integracji i planu skalowania. Najczęściej realizujemy:
-              </p>
-
-              <div class="mt-6 space-y-6">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-xl font-semibold tracking-tight">Sklep startowy (MVP)</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Dla firm, które chcą szybko wystartować i przetestować sprzedaż. Skupiamy się na kluczowych kategoriach,
-                    karcie produktu, checkout i podstawowej analityce.
-                  </p>
+            <div class="group p-8 rounded-3xl bg-zinc-900/30 border border-white/5 hover:bg-zinc-900/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                    <iconify-icon icon="lucide:layout-grid" class="text-emerald-500 text-2xl"></iconify-icon>
                 </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-xl font-semibold tracking-tight">Sklep z rozbudowaną ofertą i filtrami</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Dla sklepów z większą liczbą produktów i potrzebą wygodnego wyszukiwania. Projektujemy logiczną strukturę
-                    kategorii, filtry, sortowania i strony kolekcji.
-                  </p>
+                <h3 class="text-xl font-semibold mb-3">Sklep katalogowy</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                    Dla większej liczby produktów kluczowa jest struktura kategorii, filtry i porządek w indeksacji (SEO). Dbamy o to, aby użytkownik szybko znalazł produkt, a Google poprawnie rozumiało kategorie.
+                </p>
+            </div>
+
+            <div class="group p-8 rounded-3xl bg-zinc-900/30 border border-white/5 hover:bg-zinc-900/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                    <iconify-icon icon="lucide:sliders" class="text-emerald-500 text-2xl"></iconify-icon>
                 </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-xl font-semibold tracking-tight">Sklep pod kampanie i performance</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Jeśli planujesz reklamę, sklep musi być gotowy pod feed produktowy, remarketing, mierzenie wartości koszyka
-                    i zachowań w checkout. Tu największe znaczenie mają: tracking i wydajność.
-                  </p>
+                <h3 class="text-xl font-semibold mb-3">Sklep z wariantami</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                    Produkty z wariantami (rozmiary, kolory, konfiguracje) wymagają dobrze zaprojektowanej karty produktu i logiki wariantów. Projektujemy to tak, aby było czytelne na mobile i nie rozbijało SEO.
+                </p>
+            </div>
+
+            <div class="group p-8 rounded-3xl bg-zinc-900/30 border border-white/5 hover:bg-zinc-900/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                    <iconify-icon icon="lucide:calendar-check" class="text-emerald-500 text-2xl"></iconify-icon>
                 </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-xl font-semibold tracking-tight">Migracja / przebudowa sklepu (opcjonalnie)</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Jeśli obecny sklep ogranicza rozwój (SEO, szybkość, brak integracji), robimy plan migracji, porządkujemy URL-e
-                    i przenosimy dane tak, żeby ograniczyć spadki i utrzymać sprzedaż.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section id="kluczowe" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Co jest kluczowe w sklepie, żeby sprzedawał</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                W e-commerce nie wygrywa ten, kto ma “ładny sklep”, tylko ten, kto skraca drogę do zakupu i usuwa obiekcje.
-              </p>
-
-              <div class="mt-6 space-y-6">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Karta produktu</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Projektujemy kartę produktu tak, by użytkownik szybko dostał: najważniejsze korzyści, warianty, dostępność,
-                    czas dostawy, koszty, zaufanie (opinie/zwroty) i jasny przycisk zakupu.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Kategorie i filtry</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Dobra kategoria to nie tylko lista produktów. To także: opis pod SEO, logiczne podkategorie, filtry, sortowania
-                    i elementy prowadzące do decyzji.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Checkout i płatności/dostawy</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Najczęstszy powód porzuceń koszyka to tarcie: zbyt dużo kroków, nieczytelne koszty, brak preferowanej
-                    dostawy/płatności. Checkout projektujemy prosto, szybko i bez rozpraszaczy.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Zaufanie (opinie, zwroty, dostawa)</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Polityka zwrotów, dostawa, kontakt, zabezpieczenia płatności, opinie i komunikacja zwiększają konwersję —
-                    szczególnie przy droższych produktach.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section id="zakres" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Zakres wdrożenia — co dostajesz w standardzie</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Każdy sklep wdrażamy tak, żeby był gotowy do sprzedaży i rozwoju. Standard obejmuje:
-              </p>
-              <ul class="mt-4 space-y-2 text-zinc-300">
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Analiza celu i oferty: asortyment, marże, bestsellery, segmenty klientów.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Architektura sklepu (UX): struktura kategorii, ścieżki zakupowe, rozmieszczenie CTA.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Projekt UI: spójny design + czytelność na mobile.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Wdrożenie sklepu: produkty, warianty, kategorie, koszyk, checkout.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Integracje podstawowe: płatności, dostawy, e-maile transakcyjne.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>SEO on-site: nagłówki, meta, indeksacja, przyjazne URL-e, linkowanie wewnętrzne.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Analityka e-commerce i konwersje: zdarzenia, checkout, wartość koszyka, podstawowe raportowanie.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Testy i publikacja: testy mobile/desktop, poprawki, uruchomienie.</li>
-              </ul>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Jeśli chcesz, przejmujemy też przygotowanie treści: opisy kategorii, landing pages pod kampanie i content pod SEO.
-              </p>
-            </section>
-
-            <section id="seo-reklamy" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Sklep pod SEO i reklamy</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Sklep może wyglądać świetnie, a mimo to przegrywać w Google i przepalać budżet reklamowy — jeśli brakuje
-                fundamentów SEO i pomiaru.
-              </p>
-
-              <div class="mt-6 space-y-6">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">SEO kategorii i produktów</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Dobre SEO w e-commerce to: porządek w kategoriach, unikalne opisy, logiczne nazwy i adresy URL, poprawne
-                    nagłówki oraz linkowanie wewnętrzne. Dzięki temu sklep buduje widoczność na frazy produktowe i kategoriowe.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Feed produktowy i kampanie</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Jeśli planujesz Google/Meta, sklep musi dostarczać dane produktowe, które da się skalować (warianty, ceny,
-                    dostępność, atrybuty). Bez tego kampanie produktowe są ograniczone albo nieopłacalne.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Tracking e-commerce i konwersje</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    W e-commerce liczy się nie tylko “zakup”, ale też: dodanie do koszyka, rozpoczęcie checkout, wybór dostawy i
-                    płatności oraz porzucenia. Pomiar tych etapów pozwala optymalizować sklep i reklamy na realny wynik.
-                  </p>
-                  <p class="text-zinc-500 text-sm mt-3">
-                    Standardowo opieramy pomiar o GA4 i Google Tag Manager (zgodnie z konfiguracją projektu).
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section id="integracje" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Integracje i automatyzacje</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Integracje mają jeden cel: mniej ręcznej roboty i mniej błędów, czyli większa skala bez chaosu.
-              </p>
-
-              <div class="mt-6 space-y-6">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Płatności, dostawy, faktury</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Wdrażamy i testujemy elementy transakcyjne: płatności, metody dostawy, komunikaty kosztów i e‑maile.
-                    Jeśli potrzebujesz fakturowania lub integracji z narzędziami — dobieramy rozwiązanie do procesów firmy.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Magazyn/CRM/ERP (opcjonalnie)</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Jeśli sklep jest powiązany ze stanami i obsługą zamówień, planujemy integracje tak, żeby dane były spójne i
-                    aktualne (np. eksport/import, API, automatyzacje).
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Automatyzacje sprzedażowe (opcjonalnie)</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Porzucone koszyki, e‑maile po zakupie, rekomendacje produktów i segmentacja klientów potrafią znacząco
-                    poprawić LTV i powtarzalność zakupów.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section id="proces" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Proces współpracy (kroki)</h2>
-              <ol class="mt-4 space-y-2 text-zinc-300 list-decimal pl-5">
-                <li>Cel i zakres: asortyment, integracje, plan kampanii</li>
-                <li>Struktura kategorii + makiety UX checkoutu i karty produktu</li>
-                <li>Projekt UI i akceptacja</li>
-                <li>Wdrożenie + integracje + konfiguracje</li>
-                <li>Produkty/kategorie + testy ścieżek zakupowych</li>
-                <li>SEO on-site + analityka e-commerce + konwersje</li>
-                <li>Publikacja + wsparcie / rozwój (opcjonalnie)</li>
-              </ol>
-            </section>
-
-            <section id="koszt" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Ile kosztuje sklep internetowy i od czego zależy budżet</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Budżet sklepu zależy głównie od: liczby produktów, złożoności wariantów, potrzeby filtrów, liczby integracji
-                (płatności/dostawy/faktury/magazyn), a także od tego, czy tworzymy treści (opisy, SEO kategorii) i przygotowanie pod kampanie.
-              </p>
-              <div class="mt-6 grid md:grid-cols-3 gap-3">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold">Start (MVP)</p>
-                  <p class="text-sm text-zinc-400 mt-2">Kluczowe kategorie + podstawowe integracje + analityka</p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold">Growth</p>
-                  <p class="text-sm text-zinc-400 mt-2">Struktura, filtry, SEO, landing pages, rozszerzony tracking</p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold">Pro</p>
-                  <p class="text-sm text-zinc-400 mt-2">Integracje, automatyzacje, CRO, rozwój etapami</p>
-                </div>
-              </div>
-            </section>
-
-            <section id="faq" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">FAQ — sklepy internetowe</h2>
-              <div class="mt-6 space-y-3">
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">1. Ile trwa stworzenie sklepu internetowego?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Najczęściej od <strong>kilku</strong> do <strong>kilkunastu</strong> tygodni. Czas zależy od liczby produktów, wariantów i integracji. Duży wpływ ma też jakość danych produktowych (zdjęcia, opisy, atrybuty).
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">2. Ile kosztuje sklep internetowy?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Koszt zależy od zakresu: MVP vs sklep rozbudowany, liczby integracji, filtrów oraz poziomu przygotowania pod SEO i kampanie. Zaczynamy od struktury i celu, a potem dopasowujemy budżet do priorytetów.
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">3. Czy sklep będzie gotowy pod reklamy (Google/Meta)?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Tak — przygotujemy sklep pod kampanie: tracking e-commerce, konwersje, remarketing oraz dane produktowe potrzebne do działań performance.
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">4. Czy robicie integracje płatności i dostaw?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Tak — wdrażamy i testujemy płatności i dostawy tak, aby checkout był szybki i czytelny. Dobór metod zależy od branży i preferencji klientów.
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">5. Czy przenosicie sklep z innej platformy (migracja)?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Tak — przygotowujemy plan migracji obejmujący dane produktów, klientów i zamówień oraz kwestie SEO (adresy URL i przekierowania), tak aby ograniczyć spadki widoczności.
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">6. Czy pomagacie w przygotowaniu opisów produktów i kategorii?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Tak — możemy tworzyć lub optymalizować opisy kategorii i produktów pod SEO i sprzedaż. W e-commerce treści są ważne, ale muszą być zrobione mądrze (unikalność i intencje).
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">7. Czy wdrażacie analitykę e-commerce i konwersje?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Tak — konfigurujemy zdarzenia e-commerce (koszyk, checkout, zakup) oraz konwersje, żeby można było analizować ścieżkę i optymalizować działania.
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">8. Czy sklep będzie szybki na telefonach?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Tak — optymalizacja mobile to priorytet, bo większość ruchu w e-commerce pochodzi z urządzeń mobilnych. Dbamy o szybkość, UX i czytelność checkoutu.
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">9. Czy mogę sam dodawać produkty i zmieniać treści?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Tak — sklep jest przygotowany tak, żeby codzienne działania były proste: dodawanie produktów, zmiana cen, promocji, treści. Dostajesz instrukcję/krótki onboarding.
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">10. Czy zrobicie mi też landing pod kampanie?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Tak — jeśli sklep wymaga landingów pod konkretne produkty lub kolekcje, przygotowujemy dodatkowe strony wspierające kampanie i SEO.
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">11. Czy oferujecie opiekę i rozwój po wdrożeniu?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Tak — możemy przejąć utrzymanie, aktualizacje, poprawki oraz rozwój funkcji. W e-commerce stała optymalizacja często daje największy zwrot.
-                  </p>
-                </details>
-
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">12. Co jest potrzebne do startu projektu sklepu?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Lista produktów (lub plan oferty), zdjęcia i podstawowe atrybuty, informacje o wysyłkach/płatnościach oraz cel biznesowy (MVP czy od razu skalowanie). Resztę porządkujemy na etapie architektury.
-                  </p>
-                </details>
-              </div>
-            </section>
-
-            <section id="zaufanie" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Zespół i standard wdrożenia</h2>
-              <div class="mt-6 space-y-3">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold tracking-tight">Kto realizuje wdrożenie</p>
-                  <p class="text-zinc-400 mt-2 leading-relaxed">
-                    Zespół łączy kompetencje: UX, development, analityka i marketing — dzięki temu sklep jest spójny: od karty produktu
-                    po tracking i kampanie.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold tracking-tight">Co dostajesz po wdrożeniu</p>
-                  <p class="text-zinc-400 mt-2 leading-relaxed">
-                    Dostępy, instrukcję/onboarding, podstawową dokumentację konfiguracji oraz plan rozwoju (co robić dalej, żeby rosnąć).
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold tracking-tight">Najczęstsze rezultaty</p>
-                  <ul class="mt-3 space-y-2 text-sm text-zinc-300">
-                    <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>krótsza ścieżka zakupu i mniej porzuceń koszyka,</li>
-                    <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>lepsze dane do reklam (tracking + feed),</li>
-                    <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>wyższa konwersja dzięki poprawie UX i zaufania.</li>
-                  </ul>
-                </div>
-              </div>
-
-            </section>
-          </div>
+                <h3 class="text-xl font-semibold mb-3">Sklep + usługi</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                    Jeśli oprócz produktów sprzedajesz usługi, konsultacje lub rezerwacje — możemy połączyć e-commerce z formularzami i automatyzacjami, zachowując spójny checkout i pomiar.
+                </p>
+            </div>
         </div>
-      </section>
-    </main>
+    </section>
+
+    <!-- Standard Deliverables Section -->
+    <section class="py-24 bg-zinc-900/20 border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-12 text-center">Co dostajesz w standardzie</h2>
+            
+            <div class="bg-zinc-950 border border-white/10 rounded-3xl p-8 md:p-12">
+                <ul class="space-y-4 text-zinc-300 mb-8">
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Projekt UX sklepu: struktura kategorii, karta produktu, koszyk i checkout</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Responsywność + szybkość (Core Web Vitals jako priorytet)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Płatności: BLIK / szybkie przelewy / karty (dobór pod rynek)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Dostawy: kurierzy, paczkomaty, punkty odbioru + konfiguracja stawek</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Powiadomienia: e-maile transakcyjne + statusy zamówień</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>SEO techniczne e-commerce: indeksacja filtrów, canonicale, breadcrumbs, schema</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Analityka: GA4 + GTM + zdarzenia e-commerce (view_item, add_to_cart, purchase)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Przygotowanie pod kampanie: feed / parametry / landing pages (jeśli potrzebne)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Bezpieczeństwo: SSL, podstawowa higiena wdrożenia i kopie</span>
+                    </li>
+                </ul>
+                
+                <div class="pt-8 border-t border-white/10 text-zinc-400 italic">
+                    W e-commerce najczęściej “ucieka wynik” w checkout lub w braku pomiaru. Dlatego standardem jest u nas dopracowanie ścieżki zakupu i wdrożenie zdarzeń e-commerce — żeby optymalizować sprzedaż na danych, a nie na opinii.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="py-24 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-6">Przykładowe wdrożenia i moduły w sklepach internetowych</h2>
+                    <p class="text-zinc-400 text-lg leading-relaxed mb-8">
+                        Nie publikujemy zawsze wszystkich realizacji publicznie. Poniżej przykładowe moduły i wdrożenia, które regularnie implementujemy w sklepach — to najczęstsze elementy, które realnie zwiększają sprzedaż i ułatwiają skalowanie.
+                    </p>
+                    
+                    <div class="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
+                        <h3 class="text-emerald-400 font-semibold mb-2">Realizacje pokazujemy na konsultacji</h3>
+                        <p class="text-emerald-400/80 text-sm leading-relaxed">
+                            Ze względu na NDA i specyfikę branż nie wszystkie realizacje publikujemy publicznie. Podczas krótkiej rozmowy pokażemy przykłady wdrożeń podobnych do Twojego sklepu oraz moduły, które najlepiej podniosą sprzedaż.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl border border-white/5 bg-zinc-900/50 flex items-center gap-3">
+                        <iconify-icon icon="lucide:trending-up" class="text-zinc-500 text-xl"></iconify-icon>
+                        <span class="text-sm font-medium">Cross-sell i upsell</span>
+                    </div>
+                    <div class="p-4 rounded-xl border border-white/5 bg-zinc-900/50 flex items-center gap-3">
+                        <iconify-icon icon="lucide:list" class="text-zinc-500 text-xl"></iconify-icon>
+                        <span class="text-sm font-medium">Porządek w wariantach</span>
+                    </div>
+                    <div class="p-4 rounded-xl border border-white/5 bg-zinc-900/50 flex items-center gap-3">
+                        <iconify-icon icon="lucide:check-circle-2" class="text-zinc-500 text-xl"></iconify-icon>
+                        <span class="text-sm font-medium">Optymalizacja checkout</span>
+                    </div>
+                    <div class="p-4 rounded-xl border border-white/5 bg-zinc-900/50 flex items-center gap-3">
+                        <iconify-icon icon="lucide:mail" class="text-zinc-500 text-xl"></iconify-icon>
+                        <span class="text-sm font-medium">Automatyczne maile</span>
+                    </div>
+                    <div class="p-4 rounded-xl border border-white/5 bg-zinc-900/50 flex items-center gap-3">
+                        <iconify-icon icon="lucide:tag" class="text-zinc-500 text-xl"></iconify-icon>
+                        <span class="text-sm font-medium">Kody rabatowe i promocje</span>
+                    </div>
+                    <div class="p-4 rounded-xl border border-white/5 bg-zinc-900/50 flex items-center gap-3">
+                        <iconify-icon icon="lucide:package" class="text-zinc-500 text-xl"></iconify-icon>
+                        <span class="text-sm font-medium">Integracje (magazyn/CRM)</span>
+                    </div>
+                    <div class="p-4 rounded-xl border border-white/5 bg-zinc-900/50 flex items-center gap-3">
+                        <iconify-icon icon="lucide:search" class="text-zinc-500 text-xl"></iconify-icon>
+                        <span class="text-sm font-medium">SEO kategorii i produktów</span>
+                    </div>
+                    <div class="p-4 rounded-xl border border-white/5 bg-zinc-900/50 flex items-center gap-3">
+                        <iconify-icon icon="lucide:pie-chart" class="text-zinc-500 text-xl"></iconify-icon>
+                        <span class="text-sm font-medium">Raportowanie lejka</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO & Ads Section -->
+    <section class="py-24 bg-zinc-900/20 border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-6">Sklep a SEO i reklamy</h2>
+            <p class="text-zinc-400 text-lg leading-relaxed">
+                Sklep internetowy musi być przygotowany pod dwa źródła sprzedaży: SEO (stabilny ruch) oraz kampanie (szybki wzrost). Jeśli brakuje struktury kategorii, kontrolowanej indeksacji filtrów i poprawnego pomiaru zakupów, to nawet duży budżet reklamowy będzie przepalany. Dlatego wdrożenie sklepu traktujemy jako fundament pod dalszy performance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-24 bg-zinc-900/20 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-8 text-center">Ile kosztuje sklep internetowy</h2>
+            <p class="text-zinc-400 text-center max-w-3xl mx-auto mb-16 leading-relaxed">
+                Koszt sklepu zależy głównie od: liczby produktów i wariantów, liczby kategorii i filtrów, integracji (płatności, dostawy, faktury, magazyn), zakresu SEO e-commerce oraz poziomu analityki i automatyzacji (np. porzucone koszyki). Najlepszy model to start od wersji, która sprzedaje i mierzy wynik, a następnie rozbudowa.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Start -->
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40">
+                    <div class="text-zinc-400 font-medium mb-4">Start</div>
+                    <div class="text-4xl font-bold tracking-tight mb-6">Start</div>
+                    <p class="text-sm text-zinc-400 mb-8 leading-relaxed">
+                        Sklep z podstawową strukturą, kartą produktu, checkout, płatnościami i dostawami + SEO on-site i podstawowy tracking e-commerce.
+                    </p>
+                    <a href="mailto:kontakt@bmmpolska.pl?subject=Wycena%20sklepu%20Start" class="block w-full py-3 rounded-lg border border-white/10 text-center text-sm font-medium hover:bg-white hover:text-black transition">Wyceń Start</a>
+                </div>
+
+                <!-- Growth -->
+                <div class="p-8 rounded-2xl border border-emerald-500/20 bg-zinc-900/60 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-emerald-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">POPULARNY</div>
+                    <div class="text-emerald-500 font-medium mb-4">Growth</div>
+                    <div class="text-4xl font-bold tracking-tight mb-6">Growth</div>
+                    <p class="text-sm text-zinc-300 mb-8 leading-relaxed">
+                        Rozbudowa UX sprzedażowego i modułów: promocje, automatyczne maile, lepsze kategorie/filtry, mocniejsza analityka i przygotowanie pod kampanie.
+                    </p>
+                    <a href="mailto:kontakt@bmmpolska.pl?subject=Wycena%20sklepu%20Growth" class="block w-full py-3 rounded-lg bg-emerald-500 text-black text-center text-sm font-medium hover:bg-emerald-400 transition">Wyceń Growth</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40">
+                    <div class="text-zinc-400 font-medium mb-4">Pro</div>
+                    <div class="text-4xl font-bold tracking-tight mb-6">Pro</div>
+                    <p class="text-sm text-zinc-400 mb-8 leading-relaxed">
+                        Zaawansowane integracje i automatyzacje + rozbudowane SEO e-commerce (kategorie, schema, kontrola indeksacji filtrów) + raportowanie lejka i rozwój pod skalowanie.
+                    </p>
+                    <a href="mailto:kontakt@bmmpolska.pl?subject=Wycena%20sklepu%20Pro" class="block w-full py-3 rounded-lg border border-white/10 text-center text-sm font-medium hover:bg-white hover:text-black transition">Konsultacja Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Najczęściej zadawane pytania</h2>
+        
+        <div class="space-y-4">
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">1. Jaki system sklepu wybieracie i od czego to zależy?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Dobieramy rozwiązanie do liczby produktów, integracji i planu skalowania. Najważniejsze: szybkość, edycja treści, stabilny checkout i możliwość rozbudowy.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">2. Czy integrujecie płatności i dostawy?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — konfigurujemy płatności oraz dostawy (kurier/paczkomaty/punkty) razem z logiką stawek i komunikatów w checkout.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">3. Czy wdrażacie GA4/GTM i zdarzenia e-commerce?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — wdrażamy pomiar zakupów i kluczowych etapów (produkt, koszyk, checkout, purchase), żeby kampanie i SEO można było optymalizować na danych.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">4. Czy robicie SEO dla sklepu internetowego?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — szczególnie ważne są kategorie, produkty, breadcrumbs, schema oraz kontrola indeksacji filtrów.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">5. Czy sklep będzie gotowy pod Google Ads i Meta Ads?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — przygotowujemy strukturę i pomiar tak, aby kampanie dało się optymalizować pod sprzedaż.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">6. Czy mogę samodzielnie dodawać produkty i zmieniać treści?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — sklep projektujemy tak, aby był edytowalny i prosty w obsłudze.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">7. Ile trwa wdrożenie sklepu?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Zależy od zakresu, liczby produktów i integracji. Najszybciej wdraża się wersję startową, a potem rozbudowuje etapami.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">8. Czy pomożecie w przygotowaniu opisów i zdjęć produktów?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — możemy przygotować treści (copy) i produkcję foto/video pod e-commerce i reklamy.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">9. Czy robicie migrację ze starego sklepu?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — planujemy migrację tak, aby zachować SEO (URL-e, przekierowania, indeksacja).
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">10. Czy wdrażacie automatyzacje typu porzucony koszyk?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — zależnie od technologii i zakresu możemy wdrożyć automatyczne scenariusze e-mail.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">11. Czy da się później rozbudować sklep o kolejne funkcje?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — projektujemy pod rozbudowę: moduły, integracje, dodatkowe kategorie i landing pages.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">12. Od czego zaczynamy?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Od krótkiego briefu: branża, liczba produktów, integracje, cel (SEO/Ads), oraz wymagania co do checkout i dostaw.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 border-t border-white/5 bg-zinc-900/20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-8">Zacznij sprzedawać w swoim tempie</h2>
+            <p class="text-zinc-400 text-lg mb-12">
+                Nie musisz mieć gotowej specyfikacji. Zacznijmy od rozmowy o Twoim asortymencie.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="/#kontakt" class="w-full sm:w-auto px-8 py-4 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400 transition duration-300">
+                    Umów konsultację
+                </a>
+                <a href="/#kontakt" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-medium hover:bg-white hover:text-black transition duration-300">
+                    Wyślij brief
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="py-8 border-t border-white/5 text-center text-zinc-500 text-xs">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
-          <div>© 2026 BMM Polska. Wszystkie prawa zastrzeżone.</div>
-          <div class="flex gap-4 items-center">
-            <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
-              <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram
-            </a>
-            <a href="https://www.facebook.com/bmmstudiowroc" target="_blank" class="hover:text-white transition flex items-center gap-2">
-              <iconify-icon icon="lucide:facebook" width="16"></iconify-icon> Facebook
-            </a>
-          </div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+                <div>© 2026 BMM Polska. Wszystkie prawa zastrzeżone.</div>
+                <div class="flex gap-4 items-center">
+                    <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/bmmstudiowroc" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:facebook" width="16"></iconify-icon> Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="text-center flex flex-wrap justify-center gap-4">
+                <a href="/polityka-prywatnosci/" class="hover:text-white transition">Polityka prywatności</a>
+                <span class="text-zinc-700">•</span>
+                <button onclick="manageCookies()" class="hover:text-white transition cursor-pointer">Zarządzaj cookies</button>
+            </div>
         </div>
-        <div class="text-center flex flex-wrap justify-center gap-4">
-          <a href="/polityka-prywatnosci/" class="hover:text-white transition">Polityka prywatności</a>
-          <span class="text-zinc-700">•</span>
-          <button onclick="manageCookies()" class="hover:text-white transition cursor-pointer">Zarządzaj cookies</button>
-        </div>
-      </div>
     </footer>
 
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner" style="display: none;" class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-zinc-900/95 backdrop-blur-xl border-t border-white/10 transform transition-transform duration-300">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <div class="flex items-start gap-3 flex-1">
-          <iconify-icon icon="lucide:cookie" class="text-emerald-500 mt-1 shrink-0" width="24"></iconify-icon>
-          <div>
-            <h3 class="font-semibold text-white mb-1">Używamy cookies</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed">
-              Ta strona używa plików cookies i Google Analytics do analizy ruchu. Korzystanie ze strony oznacza zgodę na ich użycie. 
-              <a href="/polityka-prywatnosci/" class="text-emerald-500 hover:text-emerald-400 transition underline">Polityka prywatności</a>
-            </p>
-          </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div class="flex items-start gap-3 flex-1">
+                <iconify-icon icon="lucide:cookie" class="text-emerald-500 mt-1 shrink-0" width="24"></iconify-icon>
+                <div>
+                    <h3 class="font-semibold text-white mb-1">Używamy cookies</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Ta strona używa plików cookies i Google Analytics do analizy ruchu. Korzystanie ze strony oznacza zgodę na ich użycie. 
+                        <a href="/polityka-prywatnosci/" class="text-emerald-500 hover:text-emerald-400 transition underline">Polityka prywatności</a>
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-3 shrink-0">
+                <button onclick="rejectCookies()" class="px-4 py-2 rounded-lg border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 transition text-sm font-medium whitespace-nowrap">
+                    Odrzuć
+                </button>
+                <button onclick="acceptCookies()" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white transition text-sm font-medium whitespace-nowrap">
+                    Akceptuję
+                </button>
+            </div>
         </div>
-        <div class="flex gap-3 shrink-0">
-          <button onclick="rejectCookies()" class="px-4 py-2 rounded-lg border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 transition text-sm font-medium whitespace-nowrap">
-            Odrzuć
-          </button>
-          <button onclick="acceptCookies()" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white transition text-sm font-medium whitespace-nowrap">
-            Akceptuję
-          </button>
-        </div>
-      </div>
     </div>
 
     <script>
-      // Cookie Consent Management
-      function acceptCookies() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        localStorage.setItem('cookieConsentDate', new Date().toISOString());
-        document.getElementById('cookie-banner').classList.add('translate-y-full');
-        setTimeout(() => {
-          document.getElementById('cookie-banner').style.display = 'none';
-        }, 300);
-      }
-
-      function rejectCookies() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        localStorage.setItem('cookieConsentDate', new Date().toISOString());
-        document.getElementById('cookie-banner').classList.add('translate-y-full');
-        setTimeout(() => {
-          document.getElementById('cookie-banner').style.display = 'none';
-        }, 300);
-      }
-
-      function manageCookies() {
-        // Clear previous consent
-        localStorage.removeItem('cookieConsent');
-        localStorage.removeItem('cookieConsentDate');
-        // Show banner again
-        const banner = document.getElementById('cookie-banner');
-        banner.style.display = 'flex';
-        banner.classList.remove('translate-y-full');
-        // Scroll to bottom to show banner
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-      }
-
-      // Check if consent already given
-      window.addEventListener('DOMContentLoaded', function() {
-        const consent = localStorage.getItem('cookieConsent');
-        if (!consent) {
-          document.getElementById('cookie-banner').style.display = 'flex';
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
         }
-      });
+
+
+        // Timeline Animation (Scroll Event)
+        document.addEventListener('scroll', () => {
+            const steps = document.querySelectorAll('.timeline-step');
+            const triggerBottom = window.innerHeight * 0.7; // Activate when element is in top 70% of screen
+
+            steps.forEach(step => {
+                const box = step.getBoundingClientRect();
+                if (box.top < triggerBottom) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+        });
+
+        // Init timeline check on load
+        window.dispatchEvent(new Event('scroll'));
+
+        // Cookie Consent Management
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }, 300);
+            loadGTM();
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }, 300);
+        }
+
+        function manageCookies() {
+            // Clear previous consent
+            localStorage.removeItem('cookieConsent');
+            localStorage.removeItem('cookieConsentDate');
+            // Show banner again
+            const banner = document.getElementById('cookie-banner');
+            banner.style.display = 'flex';
+            banner.classList.remove('translate-y-full');
+            // Scroll to bottom to show banner
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        // Check if consent already given
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+        });
     </script>
-  </body>
+</body>
 </html>

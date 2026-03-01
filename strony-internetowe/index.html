@@ -1,674 +1,749 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Strony internetowe dla firm — projekt + wdrożenie + SEO | BMM Studio</title>
-    <meta
-      name="description"
-      content="Projektujemy i wdrażamy szybkie strony WWW gotowe pod SEO i kampanie. UX, treści, analityka, formularze, optymalizacja. Zobacz realizacje."
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://www.bmmpolska.pl/strony-internetowe/" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Strony internetowe dla firm — projekt + wdrożenie + SEO | BMM Studio" />
-    <meta
-      property="og:description"
-      content="Projektujemy i wdrażamy szybkie strony WWW gotowe pod SEO i kampanie. UX, treści, analityka, formularze, optymalizacja. Zobacz realizacje."
-    />
-    <meta property="og:url" content="https://www.bmmpolska.pl/strony-internetowe/" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Strona główna",
-                "item": "https://www.bmmpolska.pl/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Strony internetowe",
-                "item": "https://www.bmmpolska.pl/strony-internetowe/"
-              }
-            ]
-          },
-          {
-            "@type": "Service",
-            "name": "Tworzenie stron internetowych dla firm",
-            "serviceType": "Strony internetowe",
-            "url": "https://www.bmmpolska.pl/strony-internetowe/",
-            "provider": {
-              "@type": "Organization",
-              "name": "BMM Studio",
-              "url": "https://www.bmmpolska.pl/"
-            },
-            "areaServed": { "@type": "Country", "name": "Poland" }
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Ile trwa zrobienie strony internetowej?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Najczęściej od kilku do kilkunastu tygodni w zależności od zakresu, liczby podstron i dostępności treści. Najdłużej zwykle trwa dopięcie oferty i treści — dlatego na starcie ustalamy strukturę i materiały."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy mogę sam edytować treści na stronie?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — strona jest przygotowana tak, żebyś mógł edytować podstawowe elementy (teksty, zdjęcia, sekcje) bez proszenia o każdą zmianę. Dostajesz też krótką instrukcję."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy w standardzie jest SEO?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "W standardzie wdrażamy SEO on-site: struktura nagłówków, meta, indeksacja, logiczny układ treści, podstawowe linkowanie wewnętrzne oraz techniczne porządki. Dalsze pozycjonowanie to osobny etap."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy strona będzie gotowa pod kampanie reklamowe?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — możemy przygotować stronę pod konwersje: formularze, CTA, wersje landingów oraz pomiar zdarzeń i konwersji. Dzięki temu reklamy optymalizujesz na wynik, a nie kliknięcia."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Co powinno znaleźć się na stronie firmowej, żeby sprzedawała?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Czytelna oferta, sekcje „dla kogo”, konkretne korzyści, proces współpracy, dowody (portfolio/opinie), mocne CTA oraz szybki kontakt. Dodatkowo FAQ i sekcje odpowiadające na obiekcje."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy robicie teksty na stronę?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — przygotowujemy treści sprzedażowe i/lub SEO, dopasowane do oferty i intencji klientów. To często najszybsza droga, żeby strona zaczęła działać."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy poprawiacie istniejące strony, czy tylko robicie nowe?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Robimy oba scenariusze. Jeśli fundament jest sensowny — optymalizujemy UX, treści, szybkość i SEO. Jeśli strona ogranicza rozwój — rekomendujemy przebudowę."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Jak mierzycie efekty strony?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ustalamy cele (lead, sprzedaż, zapis, telefon) i konfigurujemy pomiar zdarzeń oraz konwersji. Dzięki temu wiesz, które źródła ruchu i które podstrony pracują na wynik."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy zapewniacie utrzymanie i aktualizacje?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak — możesz zostać na stałej opiece: aktualizacje, bezpieczeństwo, drobne zmiany, monitoring oraz rozwój treści i landingów."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Co jest potrzebne do startu projektu?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Wystarczy krótki opis oferty, przykłady konkurencji/stron, logo/brand (jeśli jest) i informacja o celu (lead czy sprzedaż). Resztę domykamy na etapie struktury i makiet."
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
-
-    <!-- Google Tag Manager -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager (conditional) -->
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5MQV8J7Q");
+    // Load GTM only if consent given
+    function loadGTM() {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MQV8J7Q');
+    }
+    // Check consent on page load
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      loadGTM();
+    }
     </script>
     <!-- End Google Tag Manager -->
 
+    <title>Strony internetowe dla firm — projekt, wdrożenie, SEO i analityka | BMM Studio</title>
+    <meta name="description" content="Projektujemy i wdrażamy strony WWW dla firm: landing page, strona ofertowa, firmowa. SEO on-site, szybkość, GA4/GTM i pomiar konwersji. Wrocław i cała Polska.">
+    <link rel="canonical" href="https://www.bmmpolska.pl/strony-internetowe/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Strony internetowe dla firm — projekt, wdrożenie, SEO i analityka | BMM Studio">
+    <meta property="og:description" content="Projektujemy i wdrażamy strony WWW dla firm: landing page, strona ofertowa, firmowa. SEO on-site, szybkość, GA4/GTM i pomiar konwersji. Wrocław i cała Polska.">
+    <meta property="og:url" content="https://www.bmmpolska.pl/strony-internetowe/">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #09090b; /* Zinc 950 */
-        color: #fafafa; /* Zinc 50 */
-      }
-    </style>
-  </head>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090b; /* Zinc 950 */
+            color: #fafafa; /* Zinc 50 */
+        }
+        
+        /* Custom Scrollbar Hide */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-  <body class="antialiased selection:bg-white selection:text-black">
+        /* Custom details styling */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MQV8J7Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
-      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a class="font-semibold tracking-tighter text-xl hover:text-zinc-200 transition" href="/">BMM</a>
-        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
-          <a href="/#oferta" class="hover:text-white transition">Oferta</a>
-          <a href="/galeria_zdjec/" class="hover:text-white transition">Portfolio</a>
-          <a href="/#kontakt" class="hover:text-white transition">Kontakt</a>
+    <!-- Navigation Overlay (Mobile) -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-6 overflow-y-auto py-12">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-zinc-400 hover:text-white">
+            <iconify-icon icon="lucide:x" width="32"></iconify-icon>
+        </button>
+        
+        <a href="/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Strona Główna</a>
+        
+        <div class="w-full max-w-xs border-y border-white/10 py-4">
+            <details class="group">
+                <summary class="flex items-center justify-center gap-2 cursor-pointer list-none text-xl font-medium tracking-tight hover:text-emerald-500 transition select-none">
+                    <span>Oferta</span>
+                    <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="mt-4 flex flex-col space-y-3 pl-4 border-l border-white/10 ml-1">
+                    <a href="/produkcja-foto/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Foto</a>
+                    <a href="/produkcja-video/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Wideo</a>
+                    <a href="/sem/" class="text-lg text-zinc-400 hover:text-white transition">Google Ads (SEM)</a>
+                    <a href="/wizytowki-google/" class="text-lg text-zinc-400 hover:text-white transition">Wizytówki Google</a>
+                    <a href="/szkolenia-z-dofinansowaniem/" class="text-lg text-zinc-400 hover:text-white transition">Szkolenia (BUR/KFS)</a>
+                </div>
+            </details>
         </div>
-      </div>
+
+        <a href="/galeria_zdjec/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Galeria</a>
+        <a href="/raporty-bmm/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Raporty</a>
+        <a href="/#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Kontakt</a>
+    </div>
+
+    <!-- Header / Nav -->
+    <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="font-semibold tracking-tighter text-xl hover:text-zinc-400 transition cursor-pointer">BMM</a>
+            <button onclick="toggleMenu()" class="md:hidden text-zinc-400 hover:text-white transition">
+                <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+            </button>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="/" class="hover:text-white transition">Strona Główna</a>
+                
+                <!-- Dropdown -->
+                <div class="relative group h-16 flex items-center">
+                    <button class="hover:text-white transition flex items-center gap-1 py-2">
+                        Oferta <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="p-2 space-y-1">
+                            <a href="/produkcja-foto/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
+                            <a href="/produkcja-video/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
+                            <a href="/sem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Google Ads (SEM)</a>
+                            <a href="/wizytowki-google/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Wizytówki Google</a>
+                            <a href="/szkolenia-z-dofinansowaniem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/galeria_zdjec/" class="hover:text-white transition">Galeria</a>
+                <a href="/raporty-bmm/" class="hover:text-white transition">Raporty</a>
+                <a href="/#kontakt" class="bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition">Darmowa wycena</a>
+            </div>
+        </div>
     </nav>
 
-    <main class="pt-28 pb-20">
-      <!-- HERO -->
-      <section class="max-w-5xl mx-auto px-6">
-        <div class="flex flex-col gap-10">
-          <div>
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex flex-col items-center justify-center pt-32 pb-16 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.03]">
+            <span class="text-[30vw] font-bold tracking-tighter leading-none">WEBSITE</span>
+        </div>
+
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8 animate-fade-in-up">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              Projektowanie i wdrożenie stron WWW
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Strony internetowe dla firm — projekt + wdrożenie + SEO
             </div>
 
-            <h1 class="text-4xl md:text-6xl font-semibold tracking-tighter text-white leading-[1.1] mt-6">
-              Strony internetowe, które generują zapytania i sprzedaż
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white leading-[1.1]">
+                Strony internetowe, które generują zapytania i sprzedaż
             </h1>
 
-            <p class="text-zinc-400 text-lg mt-6 leading-relaxed">
-              Tworzymy <strong>strony internetowe</strong> dla firm, które mają być narzędziem biznesowym — nie tylko “ładną
-              wizytówką”. Projektujemy strukturę treści, UX i sekcje sprzedażowe tak, żeby użytkownik szybko rozumiał ofertę i
-              podejmował działanie. W standardzie dbamy o techniczne podstawy SEO, szybkość oraz wdrożenie analityki, dzięki
-              czemu od początku wiesz, co działa i skąd biorą się leady.
+            <p class="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+                Tworzymy strony internetowe dla firm, które mają być narzędziem sprzedaży i pozyskiwania leadów — nie tylko „ładną wizytówką”. Projektujemy strukturę treści, UX i sekcje sprzedażowe tak, aby użytkownik szybko rozumiał ofertę i podejmował działanie (kontakt, zapis, zakup). W standardzie wdrażamy SEO on-site, optymalizację szybkości oraz analitykę GA4/GTM i pomiar konwersji, dzięki czemu od początku wiesz, co działa i skąd biorą się zapytania.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-8">
-              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                <p class="text-sm font-medium">SEO + kampanie</p>
-                <p class="text-sm text-zinc-400 mt-2">Od razu pod wynik, nie “na później”.</p>
-              </div>
-              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                <p class="text-sm font-medium">UX + oferta + CTA</p>
-                <p class="text-sm text-zinc-400 mt-2">Projektowane pod konwersję.</p>
-              </div>
-              <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                <p class="text-sm font-medium">Pomiar</p>
-                <p class="text-sm text-zinc-400 mt-2">Zdarzenia i konwersje — bez zgadywania.</p>
-              </div>
+            <div class="grid md:grid-cols-3 gap-6 pt-8 text-left max-w-4xl mx-auto">
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:search" class="text-emerald-500 text-xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">SEO + kampanie</h3>
+                    <p class="text-sm text-zinc-400">Fundament pod pozycjonowanie i reklamy od pierwszego dnia.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:layout" class="text-blue-500 text-xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">UX + oferta + CTA</h3>
+                    <p class="text-sm text-zinc-400">Struktura, która skraca drogę do kontaktu lub zakupu.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <div class="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:bar-chart-2" class="text-purple-500 text-xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Pomiar</h3>
+                    <p class="text-sm text-zinc-400">GA4/GTM, zdarzenia i konwersje — bez zgadywania.</p>
+                </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-3 mt-8">
-              <a
-                class="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300"
-                href="/#kontakt"
-              >
-                <span class="text-sm font-medium">Kontakt</span>
-                <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
-              </a>
-              <a
-                class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition duration-300 text-zinc-300"
-                href="/#kontakt"
-              >
-                <span class="text-sm font-medium">Wycena projektu</span>
-              </a>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#kontakt" class="px-8 py-4 rounded-full bg-white text-black font-medium hover:bg-zinc-200 transition duration-300">
+                    Darmowa wycena
+                </a>
             </div>
+        </div>
+        
+        <div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-[#09090b] to-transparent pointer-events-none"></div>
+    </section>
 
-          </div>
-
-          <!-- INTERNAL LINKS (mutual linking) -->
-          <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 md:p-8">
+    <!-- Internal Links Section -->
+    <section class="max-w-5xl mx-auto px-6 mb-14">
+        <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 md:p-8">
             <div class="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
-              <div class="space-y-2">
-                <p class="text-xs tracking-widest uppercase text-zinc-500">Podstrony usług</p>
-                <p class="text-lg font-semibold tracking-tight">Zobacz też pozostałe usługi</p>
-                <p class="text-sm text-zinc-400">Wszystkie podstrony są ze sobą połączone linkami (dla UX i SEO).</p>
-              </div>
-              <a href="/" class="text-sm text-zinc-400 hover:text-white transition">Wróć na stronę główną →</a>
+                <div class="space-y-2">
+                    <p class="text-xs tracking-widest uppercase text-zinc-500">Podstrony usług</p>
+                    <p class="text-lg font-semibold tracking-tight">Zobacz też pozostałe usługi</p>
+                    <p class="text-sm text-zinc-400">Wszystkie podstrony są ze sobą połączone linkami (dla UX i SEO).</p>
+                    <p class="text-sm text-zinc-500">To pomaga budować widoczność na frazy usługowe: strony WWW, sklepy internetowe, SEO, Google Ads i Meta Ads.</p>
+                </div>
+                <a href="/" class="text-sm text-zinc-400 hover:text-white transition">Wróć na stronę główną →</a>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-mobile/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">Aplikacje mobile</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-web/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">Aplikacje webowe</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/seo/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">SEO</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
-              <a class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4" href="/strony-internetowe/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium text-white">Strony internetowe</span>
-                  <span class="text-xs text-emerald-300">Tu jesteś</span>
-                </div>
-              </a>
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sklepy-internetowe/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">Sklepy internetowe</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
-              <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/ui-ux/">
-                <div class="flex items-center justify-between gap-3">
-                  <span class="font-medium">UI / UX</span>
-                  <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                </div>
-              </a>
+                <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-mobile/">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="font-medium">Aplikacje mobile</span>
+                        <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                    </div>
+                </a>
+                <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-web/">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="font-medium">Aplikacje webowe</span>
+                        <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                    </div>
+                </a>
+                <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/seo/">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="font-medium">SEO</span>
+                        <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                    </div>
+                </a>
+                <a class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4" href="/strony-internetowe/">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="font-medium text-white">Strony internetowe</span>
+                        <span class="text-xs text-emerald-300">Tu jesteś</span>
+                    </div>
+                </a>
+                <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sklepy-internetowe/">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="font-medium">Sklepy internetowe</span>
+                        <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                    </div>
+                </a>
+                <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/ui-ux/">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="font-medium">UI / UX</span>
+                        <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                    </div>
+                </a>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- CONTENT -->
-      <section class="max-w-5xl mx-auto px-6 mt-14">
-        <div class="grid lg:grid-cols-12 gap-10">
-          <aside class="lg:col-span-4">
-            <div class="sticky top-24 rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-              <p class="text-xs tracking-widest uppercase text-zinc-500">Na tej stronie</p>
-              <div class="mt-4 flex flex-col gap-2 text-sm text-zinc-400">
-                <a class="hover:text-white transition" href="#jakie">Jakie strony tworzymy</a>
-                <a class="hover:text-white transition" href="#standard">Co dostajesz w standardzie</a>
-                <a class="hover:text-white transition" href="#seo-reklamy">Strona a SEO i reklamy</a>
-                <a class="hover:text-white transition" href="#proces">Proces współpracy</a>
-                <a class="hover:text-white transition" href="#koszt">Ile kosztuje strona</a>
-                <a class="hover:text-white transition" href="#faq">FAQ</a>
-                <a class="hover:text-white transition" href="#zaufanie">Zespół i standard realizacji</a>
-              </div>
+    <!-- Services Section -->
+    <section class="py-24 max-w-7xl mx-auto px-6 border-t border-white/5" id="jakie">
+        <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-16 text-center">Jakie strony internetowe tworzymy</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group p-8 rounded-3xl bg-zinc-900/30 border border-white/5 hover:bg-zinc-900/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                    <iconify-icon icon="lucide:building-2" class="text-emerald-500 text-2xl"></iconify-icon>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Strona firmowa</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                    To najlepszy wybór, jeśli chcesz budować zaufanie i regularnie zbierać zapytania. Projektujemy stronę tak, żeby w pierwszych sekundach było jasne: co oferujesz, dla kogo i dlaczego warto. Kluczowe sekcje to: oferta, korzyści, proces współpracy, dowody (portfolio/opinie) oraz proste CTA.
+                </p>
             </div>
-          </aside>
 
-          <div class="lg:col-span-8 space-y-12">
-            <section id="jakie" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Jakie strony internetowe tworzymy</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Dobieramy typ strony do celu: leady, sprzedaż, prezentacja oferty lub wsparcie kampanii. Poniżej najczęstsze
-                scenariusze, które realizujemy.
-              </p>
+            <div class="group p-8 rounded-3xl bg-zinc-900/30 border border-white/5 hover:bg-zinc-900/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                    <iconify-icon icon="lucide:target" class="text-emerald-500 text-2xl"></iconify-icon>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Landing page</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                    Landing page pod reklamę musi być maksymalnie konkretny: jedna oferta, jeden cel, jeden główny argument. Projektujemy landing pod konwersję (formularz/telefon/rezerwacja) oraz wdrażamy pomiar, aby kampanie Google Ads i Meta Ads można było optymalizować na wynik.
+                </p>
+            </div>
 
-              <div class="mt-6 space-y-6">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-xl font-semibold tracking-tight">Strona firmowa</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    To najlepszy wybór, jeśli chcesz zbudować zaufanie i konsekwentnie zbierać zapytania. Kluczowe są: wyraźna
-                    oferta, sekcje “dlaczego my”, proces współpracy, dowody (portfolio/opinie) i proste CTA.
-                  </p>
+            <div class="group p-8 rounded-3xl bg-zinc-900/30 border border-white/5 hover:bg-zinc-900/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                    <iconify-icon icon="lucide:layout-list" class="text-emerald-500 text-2xl"></iconify-icon>
                 </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-xl font-semibold tracking-tight">Landing page pod kampanie</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Strona pod reklamę musi być maksymalnie konkretna: jedna oferta, jeden cel, jasny argument i minimum
-                    rozpraszaczy. Projektujemy landing tak, żeby dowoził konwersję i był gotowy do mierzenia wyników.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-xl font-semibold tracking-tight">Strona usługowa / oferta</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Jeśli masz kilka usług, potrzebujesz architektury treści pod SEO: logiczne nagłówki, FAQ i linkowanie
-                    wewnętrzne. Dzięki temu strona nie rankuje “na raz”, tylko buduje widoczność etapami.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-xl font-semibold tracking-tight">Strona pod rekrutację / employer branding (opcjonalnie)</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Jeśli rekrutujesz, warto mieć miejsce, które pokazuje kulturę pracy, proces i benefity oraz zbiera aplikacje
-                    bez tarcia. To odciąża dział HR i poprawia jakość zgłoszeń.
-                  </p>
-                </div>
-              </div>
-            </section>
+                <h3 class="text-xl font-semibold mb-3">Strona usługowa</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                    Jeśli masz kilka usług, budujemy architekturę treści pod SEO: logiczne nagłówki, sekcje odpowiadające na pytania klientów, FAQ i linkowanie wewnętrzne. Dzięki temu strona rośnie etapami — każda podstrona “pracuje” na widoczność i leady.
+                </p>
+            </div>
 
-            <section id="standard" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Co dostajesz w standardzie</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Niezależnie od zakresu, każda strona ma spełniać 3 warunki: być czytelna, szybka i mierzalna. Dlatego standard
-                obejmuje:
-              </p>
-              <ul class="mt-4 space-y-2 text-zinc-300">
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Analiza celu i treści: co sprzedajemy, komu i jaką ścieżką użytkownik ma iść.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Struktura UX: układ sekcji, hierarchia informacji, punkty konwersji (CTA).</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Wdrożenie responsywne: pełna optymalizacja pod mobile.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Szybkość i technikalia: kompresja mediów, ładowanie, porządek w zasobach.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Podstawy SEO on-site: nagłówki H1–H3, meta, indeksacja, linkowanie, przyjazne URL-e.</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Analityka i konwersje: pomiar i zdarzenia (formularz, telefon, mail, CTA).</li>
-                <li class="flex gap-2"><iconify-icon icon="lucide:check" class="mt-0.5 text-emerald-400"></iconify-icon>Publikacja i przekazanie: instrukcja edycji + wsparcie po wdrożeniu (opcjonalnie opieka).</li>
-              </ul>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Jeśli chcesz, bierzemy też odpowiedzialność za copywriting (treści sprzedażowe i SEO), żeby nie budować strony
-                na “lorem ipsum”.
-              </p>
-            </section>
-
-            <section id="seo-reklamy" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Strona WWW a SEO i reklamy</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Najczęstszy problem firm: “mamy stronę, ale nie działa”. Powód zwykle jest jeden — strona nie była projektowana
-                pod intencje użytkownika i pod kanały pozyskania ruchu.
-              </p>
-
-              <div class="mt-6 space-y-6">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">SEO on-site — minimum, bez którego strona nie urośnie</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Na start robimy fundamenty: logiczne nagłówki, sekcje odpowiadające na pytania klientów, poprawne meta,
-                    porządną strukturę podstron oraz linkowanie wewnętrzne. To warunek, żeby później SEO (content, rozbudowa
-                    usług, portfolio) miało na czym rosnąć.
-                  </p>
+            <div class="group p-8 rounded-3xl bg-zinc-900/30 border border-white/5 hover:bg-zinc-900/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                    <iconify-icon icon="lucide:users" class="text-emerald-500 text-2xl"></iconify-icon>
                 </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Tracking i konwersje (żeby reklama miała sens)</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Jeśli planujesz kampanie, strona musi mieć przygotowane: wersje CTA, formularze, zdarzenia i mierzenie
-                    konwersji. W przeciwnym razie optymalizacja reklam sprowadza się do “wydaje mi się”.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <h3 class="text-lg font-semibold tracking-tight">Szybkość i UX (dlaczego wpływa na wynik)</h3>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Użytkownik nie będzie czekał, aż strona się załaduje. A jeśli nie rozumie oferty w kilka sekund — nie kliknie.
-                    Dlatego projektujemy “pierwszy ekran” i ścieżkę użytkownika tak, żeby skracać dystans do kontaktu lub zakupu.
-                  </p>
-                </div>
-              </div>
+                <h3 class="text-xl font-semibold mb-3">Rekrutacja / Kariera</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                    Jeśli rekrutujesz, warto mieć miejsce, które pokazuje kulturę pracy, proces i benefity oraz zbiera aplikacje bez tarcia. Dodatkowo integrujemy formularze aplikacji i podstawowy tracking, żeby mierzyć skuteczność ruchu.
+                </p>
+            </div>
+        </div>
+    </section>
 
-              <p class="text-zinc-400 mt-6 leading-relaxed">
-                Jeśli potrzebujesz od razu e-commerce, zobacz też
-                <a class="underline underline-offset-4 hover:text-white transition" href="/sklepy-internetowe/">sklepy internetowe</a>.
-                Dla wzrostu widoczności polecamy
-                <a class="underline underline-offset-4 hover:text-white transition" href="/seo/">SEO</a>,
-                a dla produktów cyfrowych —
-                <a class="underline underline-offset-4 hover:text-white transition" href="/aplikacje-web/">aplikacje webowe</a>.
-              </p>
-            </section>
-
-            <section id="proces" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Proces współpracy</h2>
-              <ol class="mt-4 space-y-2 text-zinc-300 list-decimal pl-5">
-                <li>Krótka rozmowa i cele (lead/sprzedaż/ruch)</li>
-                <li>Analiza i propozycja struktury (UX + sekcje)</li>
-                <li>Treści (od Ciebie lub tworzymy je my)</li>
-                <li>Projekt UI + akceptacja</li>
-                <li>Wdrożenie + konfiguracje + optymalizacja szybkości</li>
-                <li>Pomiar konwersji + testy + poprawki</li>
-                <li>Publikacja + wsparcie po wdrożeniu</li>
-              </ol>
-            </section>
-
-            <section id="koszt" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Ile kosztuje strona internetowa</h2>
-              <p class="text-zinc-400 mt-4 leading-relaxed">
-                Koszt strony zależy głównie od: liczby podstron, ilości treści, poziomu UX, integracji oraz tego, czy robimy
-                copywriting i przygotowanie pod SEO/kampanie. Dlatego wyceniamy projekt na bazie celu i struktury — a nie “na oko”.
-              </p>
-              <div class="mt-6 grid md:grid-cols-3 gap-3">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold">Start</p>
-                  <p class="text-sm text-zinc-400 mt-2">Strona firmowa / landing w podstawowym zakresie</p>
+    <!-- Standard Deliverables Section -->
+    <section class="py-24 bg-zinc-900/20 border-y border-white/5" id="standard">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-12 text-center">Co dostajesz w standardzie</h2>
+            
+            <div class="bg-zinc-950 border border-white/10 rounded-3xl p-8 md:p-12">
+                <ul class="space-y-4 text-zinc-300 mb-8">
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Analiza celu i treści: co sprzedajemy, komu i jaką ścieżką użytkownik ma iść.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Struktura UX: układ sekcji, hierarchia informacji, punkty konwersji (CTA).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Wdrożenie responsywne: pełna optymalizacja pod mobile.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Szybkość i technikalia: kompresja mediów, ładowanie, porządek w zasobach.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Podstawy SEO on-site: nagłówki H1–H3, meta, indeksacja, linkowanie, przyjazne URL-e.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Analityka i konwersje: pomiar i zdarzenia (formularz, telefon, mail, CTA).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Publikacja i przekazanie: instrukcja edycji + wsparcie po wdrożeniu (opcjonalnie opieka).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Bezpieczeństwo i podstawy techniczne: SSL, porządek w wersjach, podstawowa higiena wdrożenia.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <iconify-icon icon="lucide:check-circle" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                        <span>Przygotowanie pod rozbudowę: możliwość dodawania kolejnych podstron usługowych i treści bez przebudowy.</span>
+                    </li>
+                </ul>
+                
+                <div class="pt-8 border-t border-white/10 text-zinc-400 italic">
+                    Jeśli chcesz, bierzemy też odpowiedzialność za copywriting (treści sprzedażowe i SEO), żeby nie budować strony na “lorem ipsum”.
                 </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold">Growth</p>
-                  <p class="text-sm text-zinc-400 mt-2">Strona ofertowa + landing pages + lepsze SEO on-site</p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold">Pro</p>
-                  <p class="text-sm text-zinc-400 mt-2">Architektura pod SEO, integracje, rozbudowany tracking, rozwój etapami</p>
-                </div>
-              </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
-            <section id="faq" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">FAQ — strony internetowe</h2>
-              <div class="mt-6 space-y-3">
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">1. Ile trwa zrobienie strony internetowej?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
+    <!-- SEO & Ads Section -->
+    <section class="py-24 max-w-7xl mx-auto px-6" id="seo-reklamy">
+        <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-6 text-center">Strona WWW a SEO i reklamy</h2>
+        <p class="text-zinc-400 text-center max-w-3xl mx-auto mb-16 leading-relaxed">
+            Najczęściej problemem jest brak dopasowania do intencji: użytkownik nie znajduje odpowiedzi na pytania (cena, proces, terminy), nie widzi dowodów jakości i nie ma jasnego CTA. Dlatego projektujemy stronę pod konkretne scenariusze pozyskania ruchu: SEO, kampanie reklamowe oraz social media.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                <h3 class="text-lg font-semibold tracking-tight">SEO on-site — minimum, bez którego strona nie urośnie</h3>
+                <p class="text-zinc-400 mt-3 leading-relaxed text-sm">
+                    Na start robimy fundamenty: logiczne nagłówki, sekcje odpowiadające na pytania klientów, poprawne meta, porządną strukturę podstron oraz linkowanie wewnętrzne. To warunek, żeby później SEO miało na czym rosnąć.
+                </p>
+            </div>
+            <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                <h3 class="text-lg font-semibold tracking-tight">Tracking i konwersje (żeby reklama miała sens)</h3>
+                <p class="text-zinc-400 mt-3 leading-relaxed text-sm">
+                    Jeśli planujesz kampanie, strona musi mieć przygotowane: wersje CTA, formularze, zdarzenia i mierzenie konwersji. W przeciwnym razie optymalizacja reklam sprowadza się do “wydaje mi się”.
+                </p>
+            </div>
+            <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
+                <h3 class="text-lg font-semibold tracking-tight">Szybkość i UX (dlaczego wpływa na wynik)</h3>
+                <p class="text-zinc-400 mt-3 leading-relaxed text-sm">
+                    Użytkownik nie będzie czekał, aż strona się załaduje. A jeśli nie rozumie oferty w kilka sekund — nie kliknie. Dlatego projektujemy “pierwszy ekran” i ścieżkę użytkownika tak, żeby skracać dystans do kontaktu lub zakupu.
+                </p>
+            </div>
+        </div>
+        
+        <p class="text-zinc-400 mt-8 text-center text-sm">
+            Jeśli potrzebujesz od razu e-commerce, zobacz też <a class="underline hover:text-white transition" href="/sklepy-internetowe/">sklepy internetowe</a>. Dla wzrostu widoczności polecamy <a class="underline hover:text-white transition" href="/seo/">SEO</a>, a dla produktów cyfrowych — <a class="underline hover:text-white transition" href="/aplikacje-web/">aplikacje webowe</a>.
+        </p>
+    </section>
+
+    <!-- Examples / Realizations (Replaced) -->
+    <section class="py-24 bg-zinc-900/20 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-16 text-center">Przykłady realizacji (modelowe)</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Case 1 -->
+                <div class="p-8 rounded-2xl border border-white/10 bg-zinc-950/50">
+                    <div class="text-emerald-500 font-medium text-xs uppercase tracking-wider mb-4">Strona firmowa</div>
+                    <h3 class="text-xl font-semibold mb-2">Klient usługowy / B2B</h3>
+                    <p class="text-sm text-zinc-400 mb-6">Strona firmowa + UX + tracking</p>
+                    
+                    <div class="space-y-4 text-sm text-zinc-300">
+                        <div>
+                            <span class="text-zinc-500 block text-xs uppercase tracking-wider mb-1">Cel</span>
+                            Zwiększyć liczbę zapytań z formularza i telefonu
+                        </div>
+                        <div>
+                            <span class="text-zinc-500 block text-xs uppercase tracking-wider mb-1">Zakres</span>
+                            Struktura oferty, sekcje sprzedażowe, CTA, wdrożenie GA4/GTM, konfiguracja zdarzeń
+                        </div>
+                        <div>
+                            <span class="text-zinc-500 block text-xs uppercase tracking-wider mb-1">Efekt</span>
+                            Wzrost liczby zapytań, spadek odrzuceń, szybsze ładowanie
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="p-8 rounded-2xl border border-white/10 bg-zinc-950/50">
+                    <div class="text-blue-500 font-medium text-xs uppercase tracking-wider mb-4">Landing Page</div>
+                    <h3 class="text-xl font-semibold mb-2">Kampania Google Ads</h3>
+                    <p class="text-sm text-zinc-400 mb-6">Landing page pod kampanie + optymalizacja</p>
+                    
+                    <div class="space-y-4 text-sm text-zinc-300">
+                        <div>
+                            <span class="text-zinc-500 block text-xs uppercase tracking-wider mb-1">Cel</span>
+                            Leady z Google Ads / Meta Ads
+                        </div>
+                        <div>
+                            <span class="text-zinc-500 block text-xs uppercase tracking-wider mb-1">Zakres</span>
+                            Landing 1 oferta, social proof, FAQ, formularz, pomiar konwersji, warianty CTA
+                        </div>
+                        <div>
+                            <span class="text-zinc-500 block text-xs uppercase tracking-wider mb-1">Efekt</span>
+                            Wysoki współczynnik konwersji, gotowe pod skalowanie budżetu
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="p-8 rounded-2xl border border-white/10 bg-zinc-950/50">
+                    <div class="text-purple-500 font-medium text-xs uppercase tracking-wider mb-4">Strona SEO</div>
+                    <h3 class="text-xl font-semibold mb-2">Rozbudowana oferta</h3>
+                    <p class="text-sm text-zinc-400 mb-6">Strona usługowa pod SEO + content</p>
+                    
+                    <div class="space-y-4 text-sm text-zinc-300">
+                        <div>
+                            <span class="text-zinc-500 block text-xs uppercase tracking-wider mb-1">Cel</span>
+                            Widoczność na frazy usługowe i długie ogony (FAQ)
+                        </div>
+                        <div>
+                            <span class="text-zinc-500 block text-xs uppercase tracking-wider mb-1">Zakres</span>
+                            Architektura usług, linkowanie wewnętrzne, meta, nagłówki, sekcje pod intencje
+                        </div>
+                        <div>
+                            <span class="text-zinc-500 block text-xs uppercase tracking-wider mb-1">Efekt</span>
+                            Stabilny wzrost ruchu organicznego i zapytań z Google
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-24 max-w-7xl mx-auto px-6 border-b border-white/5" id="koszt">
+        <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-8 text-center">Ile kosztuje strona internetowa</h2>
+        <p class="text-zinc-400 text-center max-w-3xl mx-auto mb-6 leading-relaxed">
+            Koszt strony zależy głównie od: liczby podstron, ilości treści, poziomu UX, integracji oraz tego, czy robimy copywriting i przygotowanie pod SEO/kampanie. Dlatego wyceniamy projekt na bazie celu i struktury — a nie “na oko”.
+        </p>
+        <p class="text-zinc-500 text-center max-w-3xl mx-auto mb-16 text-sm">
+            Najczęściej wycena zależy od: (1) liczby podstron i języków, (2) stopnia dopracowania treści (copywriting), (3) wymagań SEO i struktury usług, (4) integracji (CRM, formularze, płatności, newsletter), (5) poziomu trackingu (cele, zdarzenia, e-commerce).
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Start -->
+            <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40">
+                <div class="text-zinc-400 font-medium mb-4">Start</div>
+                <div class="text-4xl font-bold tracking-tight mb-6">Start</div>
+                <p class="text-sm text-zinc-400 mb-8 leading-relaxed">
+                    Strona firmowa lub landing page w podstawowym zakresie: kluczowe sekcje sprzedażowe, responsywność, szybkość, SEO on-site oraz podstawowy tracking (formularz/telefon/CTA).
+                </p>
+                <a href="/#kontakt" class="block w-full py-3 rounded-lg border border-white/10 text-center text-sm font-medium hover:bg-white hover:text-black transition">Wyceń Start</a>
+            </div>
+
+            <!-- Growth -->
+            <div class="p-8 rounded-2xl border border-emerald-500/20 bg-zinc-900/60 relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-emerald-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">POPULARNY</div>
+                <div class="text-emerald-500 font-medium mb-4">Growth</div>
+                <div class="text-4xl font-bold tracking-tight mb-6">Growth</div>
+                <p class="text-sm text-zinc-300 mb-8 leading-relaxed">
+                    Strona ofertowa + landing pages: lepsza architektura treści pod SEO, rozbudowane sekcje ofertowe, więcej wariantów CTA, mocniejszy tracking i przygotowanie pod kampanie.
+                </p>
+                <a href="/#kontakt" class="block w-full py-3 rounded-lg bg-emerald-500 text-black text-center text-sm font-medium hover:bg-emerald-400 transition">Wyceń Growth</a>
+            </div>
+
+            <!-- Pro -->
+            <div class="p-8 rounded-2xl border border-white/5 bg-zinc-900/40">
+                <div class="text-zinc-400 font-medium mb-4">Pro</div>
+                <div class="text-4xl font-bold tracking-tight mb-6">Pro</div>
+                <p class="text-sm text-zinc-400 mb-8 leading-relaxed">
+                    Rozbudowana architektura SEO (podstrony usługowe + FAQ), integracje i rozbudowany pomiar konwersji. Projekt gotowy do skalowania: kolejne landing pages, treści i rozwój etapami.
+                </p>
+                <a href="/#kontakt" class="block w-full py-3 rounded-lg border border-white/10 text-center text-sm font-medium hover:bg-white hover:text-black transition">Konsultacja Pro</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 max-w-4xl mx-auto px-6" id="faq">
+        <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Najczęściej zadawane pytania</h2>
+        
+        <div class="space-y-4">
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">1. Ile trwa zrobienie strony internetowej?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
                     Najczęściej od <strong>kilku</strong> do <strong>kilkunastu</strong> tygodni w zależności od zakresu, liczby podstron i dostępności treści. Najdłużej zwykle trwa dopięcie oferty i treści — dlatego na starcie ustalamy strukturę i wymagane materiały.
-                  </p>
-                </details>
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">2. Czy mogę sam edytować treści na stronie?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">2. Czy mogę sam edytować treści na stronie?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
                     Tak — strona jest przygotowana tak, żebyś mógł edytować podstawowe elementy (teksty, zdjęcia, sekcje) bez proszenia o każdą zmianę. Dodatkowo dostajesz krótką instrukcję.
-                  </p>
-                </details>
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">3. Czy w standardzie jest SEO?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">3. Czy w standardzie jest SEO?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
                     W standardzie wdrażamy SEO on-site: struktura nagłówków, meta, indeksacja, logiczny układ treści, podstawowe linkowanie wewnętrzne oraz techniczne porządki. Dalsze pozycjonowanie to osobny etap.
-                  </p>
-                </details>
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">4. Czy strona będzie gotowa pod kampanie reklamowe?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">4. Czy strona będzie gotowa pod kampanie reklamowe?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
                     Tak — przygotujemy stronę pod konwersje: formularze, CTA, wersje landingów oraz pomiar zdarzeń i konwersji. Dzięki temu reklamy można optymalizować na wynik, a nie na kliknięcia.
-                  </p>
-                </details>
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">5. Co powinno być na stronie firmowej, żeby sprzedawała?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">5. Co powinno znaleźć się na stronie firmowej, żeby sprzedawała?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
                     Czytelna oferta, sekcje “dla kogo”, konkretne korzyści, proces współpracy, dowody (portfolio/opinie), mocne CTA oraz szybki kontakt. Dodatkowo FAQ i sekcje odpowiadające na typowe obiekcje klientów.
-                  </p>
-                </details>
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">6. Czy robicie teksty na stronę?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">6. Czy robicie teksty na stronę?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
                     Tak — możemy przygotować treści sprzedażowe i/lub SEO, dopasowane do oferty i intencji klientów. To często najszybsza droga do tego, żeby strona “zaczęła działać”.
-                  </p>
-                </details>
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">7. Czy poprawiacie istniejące strony, czy tylko robicie nowe?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Robimy oba scenariusze. Jeśli fundament jest sensowny — optymalizujemy UX, treści, szybkość i SEO. Jeśli strona jest ograniczeniem — rekomendujemy przebudowę.
-                  </p>
-                </details>
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">8. Jak mierzycie efekty strony?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">7. Czy poprawiacie istniejące strony, czy tylko robicie nowe?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Robimy oba scenariusze. Jeśli fundament jest sensowny — optymalizujemy UX, treści, szybkość i SEO. Jeśli strona ogranicza rozwój — rekomendujemy przebudowę.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">8. Jak mierzycie efekty strony?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
                     Ustalamy cele (lead, sprzedaż, zapis, telefon) i konfigurujemy pomiar zdarzeń oraz konwersji. Dzięki temu wiesz, które źródła ruchu i które podstrony pracują na wynik.
-                  </p>
-                </details>
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">9. Czy zapewniacie utrzymanie i aktualizacje?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">9. Czy zapewniacie utrzymanie i aktualizacje?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
                     Tak — możesz zostać na stałej opiece: aktualizacje, bezpieczeństwo, drobne zmiany, monitoring oraz rozwój treści i landingów.
-                  </p>
-                </details>
-                <details class="group rounded-2xl border border-white/5 bg-zinc-950/40 p-5">
-                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4">
-                    <span class="font-medium">10. Co jest potrzebne do startu projektu?</span>
-                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></iconify-icon>
-                  </summary>
-                  <p class="text-zinc-400 mt-3 leading-relaxed">
-                    Wystarczy: krótki opis oferty, przykłady konkurencji/stron, logo/brand (jeśli jest) i informacja, jaki jest cel (lead czy sprzedaż). Resztę domykamy na etapie struktury i makiet.
-                  </p>
-                </details>
-              </div>
-            </section>
+                </div>
+            </details>
 
-            <section id="zaufanie" class="scroll-mt-24">
-              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Zespół i standard realizacji</h2>
-              <div class="mt-6 space-y-3">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold tracking-tight">Kto realizuje projekt</p>
-                  <p class="text-zinc-400 mt-2 leading-relaxed">
-                    Projekt prowadzimy łącząc: UX, development, SEO/analitykę i marketing. Dzięki temu strona jest spójna od treści,
-                    przez szybkość, po pomiar i konwersję.
-                  </p>
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">10. Co jest potrzebne do startu projektu?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Wystarczy krótki opis oferty, przykłady konkurencji/stron, logo/brand (jeśli jest) i informacja o celu (lead czy sprzedaż). Resztę domykamy na etapie struktury i makiet.
                 </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold tracking-tight">Jak pracujemy</p>
-                  <p class="text-zinc-400 mt-2 leading-relaxed">
-                    Dostajesz jasny proces, szybkie decyzje i iteracje. Priorytet to dowiezienie efektu biznesowego, nie “ładnych slajdów”.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6">
-                  <p class="text-sm font-semibold tracking-tight">Materiały i prawa</p>
-                  <p class="text-zinc-400 mt-2 leading-relaxed">
-                    Po wdrożeniu przekazujemy dostępy, instrukcję edycji i ustalenia dot. utrzymania zgodnie z umową.
-                  </p>
-                </div>
-              </div>
-            </section>
+            </details>
 
-          </div>
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">11. Czy robicie strony w WordPress / Webflow / headless?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Dobieramy technologię do celu i zakresu. Najważniejsze jest, żeby strona była szybka, edytowalna i gotowa pod SEO oraz analitykę.
+                </div>
+            </details>
+
+            <details class="group rounded-2xl border border-white/5 bg-zinc-900/30 overflow-hidden">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition">
+                    <span class="font-medium pr-8">12. Czy mogę później rozbudować stronę o kolejne usługi i podstrony pod SEO?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="text-zinc-400 transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                    Tak — projektujemy strukturę tak, aby rozbudowa usług i treści była prosta i nie wymagała przebudowy całej strony.
+                </div>
+            </details>
         </div>
-      </section>
-    </main>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 border-t border-white/5 bg-zinc-900/20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter mb-8">Zmień stronę w narzędzie sprzedaży</h2>
+            <p class="text-zinc-400 text-lg mb-12">
+                Nie musisz mieć gotowych tekstów. Zacznijmy od rozmowy o celu Twojej strony.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="/#kontakt" class="w-full sm:w-auto px-8 py-4 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400 transition duration-300">
+                    Umów konsultację
+                </a>
+                <a href="/#kontakt" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-medium hover:bg-white hover:text-black transition duration-300">
+                    Wyślij brief
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="py-8 border-t border-white/5 text-center text-zinc-500 text-xs">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
-          <div>© 2026 BMM Polska. Wszystkie prawa zastrzeżone.</div>
-          <div class="flex gap-4 items-center">
-            <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
-              <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram
-            </a>
-            <a href="https://www.facebook.com/bmmstudiowroc" target="_blank" class="hover:text-white transition flex items-center gap-2">
-              <iconify-icon icon="lucide:facebook" width="16"></iconify-icon> Facebook
-            </a>
-          </div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+                <div>© 2026 BMM Polska. Wszystkie prawa zastrzeżone.</div>
+                <div class="flex gap-4 items-center">
+                    <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/bmmstudiowroc" target="_blank" class="hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:facebook" width="16"></iconify-icon> Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="text-center flex flex-wrap justify-center gap-4">
+                <a href="/polityka-prywatnosci/" class="hover:text-white transition">Polityka prywatności</a>
+                <span class="text-zinc-700">•</span>
+                <button onclick="manageCookies()" class="hover:text-white transition cursor-pointer">Zarządzaj cookies</button>
+            </div>
         </div>
-        <div class="text-center flex flex-wrap justify-center gap-4">
-          <a href="/polityka-prywatnosci/" class="hover:text-white transition">Polityka prywatności</a>
-          <span class="text-zinc-700">•</span>
-          <button onclick="manageCookies()" class="hover:text-white transition cursor-pointer">Zarządzaj cookies</button>
-        </div>
-      </div>
     </footer>
 
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner" style="display: none;" class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-zinc-900/95 backdrop-blur-xl border-t border-white/10 transform transition-transform duration-300">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <div class="flex items-start gap-3 flex-1">
-          <iconify-icon icon="lucide:cookie" class="text-emerald-500 mt-1 shrink-0" width="24"></iconify-icon>
-          <div>
-            <h3 class="font-semibold text-white mb-1">Używamy cookies</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed">
-              Ta strona używa plików cookies i Google Analytics do analizy ruchu. Korzystanie ze strony oznacza zgodę na ich użycie. 
-              <a href="/polityka-prywatnosci/" class="text-emerald-500 hover:text-emerald-400 transition underline">Polityka prywatności</a>
-            </p>
-          </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div class="flex items-start gap-3 flex-1">
+                <iconify-icon icon="lucide:cookie" class="text-emerald-500 mt-1 shrink-0" width="24"></iconify-icon>
+                <div>
+                    <h3 class="font-semibold text-white mb-1">Używamy cookies</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Ta strona używa plików cookies i Google Analytics do analizy ruchu. Korzystanie ze strony oznacza zgodę na ich użycie. 
+                        <a href="/polityka-prywatnosci/" class="text-emerald-500 hover:text-emerald-400 transition underline">Polityka prywatności</a>
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-3 shrink-0">
+                <button onclick="rejectCookies()" class="px-4 py-2 rounded-lg border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 transition text-sm font-medium whitespace-nowrap">
+                    Odrzuć
+                </button>
+                <button onclick="acceptCookies()" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white transition text-sm font-medium whitespace-nowrap">
+                    Akceptuję
+                </button>
+            </div>
         </div>
-        <div class="flex gap-3 shrink-0">
-          <button onclick="rejectCookies()" class="px-4 py-2 rounded-lg border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 transition text-sm font-medium whitespace-nowrap">
-            Odrzuć
-          </button>
-          <button onclick="acceptCookies()" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white transition text-sm font-medium whitespace-nowrap">
-            Akceptuję
-          </button>
-        </div>
-      </div>
     </div>
 
     <script>
-      // Cookie Consent Management
-      function acceptCookies() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        localStorage.setItem('cookieConsentDate', new Date().toISOString());
-        document.getElementById('cookie-banner').classList.add('translate-y-full');
-        setTimeout(() => {
-          document.getElementById('cookie-banner').style.display = 'none';
-        }, 300);
-      }
-
-      function rejectCookies() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        localStorage.setItem('cookieConsentDate', new Date().toISOString());
-        document.getElementById('cookie-banner').classList.add('translate-y-full');
-        setTimeout(() => {
-          document.getElementById('cookie-banner').style.display = 'none';
-        }, 300);
-      }
-
-      function manageCookies() {
-        // Clear previous consent
-        localStorage.removeItem('cookieConsent');
-        localStorage.removeItem('cookieConsentDate');
-        // Show banner again
-        const banner = document.getElementById('cookie-banner');
-        banner.style.display = 'flex';
-        banner.classList.remove('translate-y-full');
-        // Scroll to bottom to show banner
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-      }
-
-      // Check if consent already given
-      window.addEventListener('DOMContentLoaded', function() {
-        const consent = localStorage.getItem('cookieConsent');
-        if (!consent) {
-          document.getElementById('cookie-banner').style.display = 'flex';
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
         }
-      });
+
+
+        // Timeline Animation (Scroll Event)
+        document.addEventListener('scroll', () => {
+            const steps = document.querySelectorAll('.timeline-step');
+            const triggerBottom = window.innerHeight * 0.7; // Activate when element is in top 70% of screen
+
+            steps.forEach(step => {
+                const box = step.getBoundingClientRect();
+                if (box.top < triggerBottom) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+        });
+
+        // Init timeline check on load
+        window.dispatchEvent(new Event('scroll'));
+
+        // Cookie Consent Management
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }, 300);
+            loadGTM();
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+            setTimeout(() => {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }, 300);
+        }
+
+        function manageCookies() {
+            // Clear previous consent
+            localStorage.removeItem('cookieConsent');
+            localStorage.removeItem('cookieConsentDate');
+            // Show banner again
+            const banner = document.getElementById('cookie-banner');
+            banner.style.display = 'flex';
+            banner.classList.remove('translate-y-full');
+            // Scroll to bottom to show banner
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        // Check if consent already given
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+        });
     </script>
-  </body>
+</body>
 </html>
