@@ -1,0 +1,9 @@
+# GitHub Pages / BMM — allow social previews and indexing
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: *
+Allow: /
