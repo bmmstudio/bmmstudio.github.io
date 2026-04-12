@@ -265,7 +265,22 @@
             </details>
         </div>
 
-        <a href="/galeria_zdjec/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Galeria</a>
+        <div class="w-full max-w-xs border-b border-white/10 py-4">
+            <details class="group">
+                <summary class="flex items-center justify-center gap-2 cursor-pointer list-none text-xl font-medium tracking-tight hover:text-emerald-500 transition select-none">
+                    <span>Galeria</span>
+                    <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open:rotate-180"></iconify-icon>
+                </summary>
+                <div class="mt-4 flex flex-col space-y-3 pl-4 border-l border-white/10 ml-1">
+                    <a href="/galeria_zdjec/" class="text-lg text-zinc-400 hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="lucide:camera" width="16"></iconify-icon> Foto
+                    </a>
+                    <a href="/galeria_zdjec/#rolki-instagram" class="text-lg text-zinc-400 hover:text-white transition flex items-center gap-2">
+                        <iconify-icon icon="mdi:instagram" width="16"></iconify-icon> Wideo / Rolki
+                    </a>
+                </div>
+            </details>
+        </div>
         <a href="/raporty-bmm/" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Raporty</a>
         <a href="/#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Kontakt</a>
     </div>
