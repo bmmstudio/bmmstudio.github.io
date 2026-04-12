@@ -1,9 +1,24 @@
-# GitHub Pages / BMM — allow social previews and indexing
+# BMM Studio — crawling & indexing rules
+
+# Social media preview bots
 User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Facebot
 Allow: /
 
+# AI search bots (Perplexity, Bing AI, Google AI Overviews)
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Allow all other bots (Googlebot, GPTBot, ClaudeBot, etc.)
 User-agent: *
 Allow: /
+
+Sitemap: https://www.bmmpolska.pl/sitemap.xml
