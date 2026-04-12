@@ -55,12 +55,26 @@
         }
 
         /* Marquee Animation */
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
         }
-        .animate-scroll {
-            animation: scroll 10s linear infinite;
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 8s linear infinite;
+            will-change: transform;
+        }
+        @media (max-width: 767px) {
+            .carousel-track {
+                animation-duration: 14s;
+            }
+        }
+        .carousel-set {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding-right: 3rem;
         }
         
         /* Timeline Active State */
@@ -91,12 +105,20 @@
                     <span>Oferta</span>
                     <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open:rotate-180"></iconify-icon>
                 </summary>
-                <div class="mt-4 flex flex-col space-y-3 pl-4 border-l border-white/10 ml-1">
-                    <a href="/produkcja-foto/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Foto</a>
-                    <a href="/produkcja-video/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Wideo</a>
-                    <a href="/sem/" class="text-lg text-zinc-400 hover:text-white transition">Google Ads (SEM)</a>
-                    <a href="/wizytowki-google/" class="text-lg text-zinc-400 hover:text-white transition">Wizytówki Google</a>
-                    <a href="/szkolenia-z-dofinansowaniem/" class="text-lg text-zinc-400 hover:text-white transition">Szkolenia (BUR/KFS)</a>
+                <div class="mt-4 flex flex-col space-y-2 pl-4 border-l border-white/10 ml-1">
+                    <p class="text-xs uppercase tracking-widest text-zinc-600 pb-1">Strony &amp; Aplikacje</p>
+                    <a href="/strony-internetowe/" class="text-base text-zinc-400 hover:text-white transition">Strony Internetowe</a>
+                    <a href="/sklepy-internetowe/" class="text-base text-zinc-400 hover:text-white transition">Sklepy Internetowe</a>
+                    <a href="/aplikacje-web/" class="text-base text-zinc-400 hover:text-white transition">Aplikacje Webowe</a>
+                    <a href="/aplikacje-mobile/" class="text-base text-zinc-400 hover:text-white transition">Aplikacje Mobilne</a>
+                    <a href="/ui-ux/" class="text-base text-zinc-400 hover:text-white transition">UI / UX Design</a>
+                    <p class="text-xs uppercase tracking-widest text-zinc-600 pt-2 pb-1">Marketing &amp; Produkcja</p>
+                    <a href="/seo/" class="text-base text-zinc-400 hover:text-white transition">Pozycjonowanie (SEO)</a>
+                    <a href="/sem/" class="text-base text-zinc-400 hover:text-white transition">Google Ads (SEM)</a>
+                    <a href="/wizytowki-google/" class="text-base text-zinc-400 hover:text-white transition">Wizytówki Google</a>
+                    <a href="/produkcja-foto/" class="text-base text-zinc-400 hover:text-white transition">Produkcja Foto</a>
+                    <a href="/produkcja-video/" class="text-base text-zinc-400 hover:text-white transition">Produkcja Wideo</a>
+                    <a href="/szkolenia-z-dofinansowaniem/" class="text-base text-zinc-400 hover:text-white transition">Szkolenia (BUR/KFS)</a>
                 </div>
             </details>
         </div>
@@ -106,10 +128,15 @@
         <a href="/#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Kontakt</a>
     </div>
 
+    <!-- Mobile Static Logo Header -->
+    <div class="md:hidden flex items-center px-4 h-16 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <a href="/"><img src="photos/BMM_favicon.png" alt="BMM Studio" class="h-12 w-auto"></a>
+    </div>
+
     <!-- Header / Nav -->
     <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="/" class="font-semibold tracking-tighter text-xl hover:text-zinc-400 transition cursor-pointer">BMM</a>
+        <div class="max-w-7xl mx-auto px-6 h-16 md:h-[9rem] flex items-center justify-between">
+            <a href="/" class="hidden md:flex items-center"><img src="photos/BMM_favicon.png" alt="BMM Studio" class="h-12 md:h-[9rem] w-auto"></a>
             <button onclick="toggleMenu()" class="md:hidden text-zinc-400 hover:text-white transition">
                 <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
             </button>
@@ -121,13 +148,25 @@
                     <button class="hover:text-white transition flex items-center gap-1 py-2">
                         Oferta <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
                     </button>
-                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
-                        <div class="p-2 space-y-1">
-                            <a href="/produkcja-foto/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
-                            <a href="/produkcja-video/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
-                            <a href="/sem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Google Ads (SEM)</a>
-                            <a href="/wizytowki-google/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Wizytówki Google</a>
-                            <a href="/szkolenia-z-dofinansowaniem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-[520px] bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="p-4 grid grid-cols-2 gap-x-4">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-zinc-600 mb-2 px-2">Strony &amp; Aplikacje</p>
+                                <a href="/strony-internetowe/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Strony Internetowe</a>
+                                <a href="/sklepy-internetowe/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Sklepy Internetowe</a>
+                                <a href="/aplikacje-web/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Aplikacje Webowe</a>
+                                <a href="/aplikacje-mobile/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Aplikacje Mobilne</a>
+                                <a href="/ui-ux/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">UI / UX Design</a>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-zinc-600 mb-2 px-2">Marketing &amp; Produkcja</p>
+                                <a href="/seo/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Pozycjonowanie (SEO)</a>
+                                <a href="/sem/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Google Ads (SEM)</a>
+                                <a href="/wizytowki-google/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Wizytówki Google</a>
+                                <a href="/produkcja-foto/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
+                                <a href="/produkcja-video/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
+                                <a href="/szkolenia-z-dofinansowaniem/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -140,7 +179,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col overflow-hidden pt-16 pr-6 pl-6 relative items-center justify-center">
+    <section class="min-h-screen flex flex-col overflow-hidden pt-0 md:pt-36 pr-6 pl-6 relative items-center justify-center">
         <!-- Background Logo -->
         <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.03]">
             <span class="text-[40vw] font-bold tracking-tighter leading-none">BMM</span>
@@ -190,26 +229,29 @@
             </div>
             
             <!-- Logo Carousel -->
-            <div class="md:col-span-3 overflow-hidden relative group">
-                <div class="flex animate-scroll hover:[animation-play-state:paused] gap-12 items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                    <!-- Logos -->
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:hexagon" width="32"></iconify-icon><span class="text-xl font-bold tracking-tight">ENKLAWA</span></div>
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:triangle" width="32"></iconify-icon><span class="text-xl font-bold tracking-tight">AMBASADA</span></div>
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:circle" width="32"></iconify-icon><span class="text-xl font-bold tracking-tight">POZIOM</span></div>
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:square" width="32"></iconify-icon><span class="text-xl font-bold tracking-tight">FORMA PYŁNNA</span></div>
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:zap" width="32"></iconify-icon><span class="text-xl font-bold tracking-tight">GIRO</span></div>
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:waves" width="32"></iconify-icon><span class="text-xl font-bold tracking-tight">CHAOBAO STORIES</span></div>
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:boxes" width="32"></iconify-icon><span class="text-xl font-bold tracking-tight">PROSTO Z MOSTU</span></div>
-                    <!-- New Companies -->
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:coffee" width="32"></iconify-icon><span class="font-bold tracking-tight text-xl">ENKLAWA</span></div>
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:hash" width="32"></iconify-icon><span class="font-bold tracking-tight text-xl">92</span></div>
-                    <!-- Duplicate -->
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:hexagon" width="32"></iconify-icon><span class="font-bold tracking-tight text-xl">PALOMA</span></div>
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:triangle" width="32"></iconify-icon><span class="font-bold tracking-tight text-xl">SOLLEIM</span></div>
-                    <div class="flex items-center gap-2 shrink-0"><iconify-icon icon="lucide:circle" width="32"></iconify-icon><span class="font-bold tracking-tight text-xl">REDIGO</span></div>
+            <div class="md:col-span-3 overflow-hidden relative" style="height:4rem;">
+                <div class="carousel-track">
+                    <!-- Set 1 -->
+                    <div class="carousel-set">
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/Giro.png" alt="Giro" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/ambasada czcionka DecoCaps c.jpg" alt="Ambasada" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/forma.png" alt="Forma Płynna" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/logo chao bao.jpg" alt="Chao Bao Stories" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/poziom.png" alt="Poziom" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/prosto.png" alt="Prosto z Mostu" class="h-full w-auto max-w-[160px] object-contain"></div>
+                    </div>
+                    <!-- Set 2 (duplicate for seamless loop) -->
+                    <div class="carousel-set" aria-hidden="true">
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/Giro.png" alt="Giro" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/ambasada czcionka DecoCaps c.jpg" alt="Ambasada" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/forma.png" alt="Forma Płynna" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/logo chao bao.jpg" alt="Chao Bao Stories" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/poziom.png" alt="Poziom" class="h-full w-auto max-w-[160px] object-contain"></div>
+                        <div class="shrink-0 flex items-center justify-center h-16"><img src="photos/photos-carousel/prosto.png" alt="Prosto z Mostu" class="h-full w-auto max-w-[160px] object-contain"></div>
+                    </div>
                 </div>
-                <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#09090b] to-transparent z-10"></div>
-                <div class="z-10 bg-gradient-to-l from-[#09090b] to-transparent w-20 absolute top-0 right-0 bottom-0"></div>
+                <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#09090b] to-transparent z-10"></div>
+                <div class="z-10 bg-gradient-to-l from-[#09090b] to-transparent w-16 absolute top-0 right-0 bottom-0"></div>
             </div>
         </div>
     </section>
@@ -272,27 +314,32 @@
                     <div class="snap-center shrink-0 w-[85vw] sm:w-[300px] md:w-[350px] group">
                         <div class="bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden relative">
                             <div class="aspect-[4/3] bg-zinc-800 relative">
-                                <img src="photos-web/niebo.webp" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="Restauracja w Oławie">
+                                <img src="photos-web/niebo.webp" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700" alt="NiEbO Oława">
                                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
                                 <div class="absolute bottom-4 left-4">
-                                    <h3 class="text-lg font-medium text-white">Restauracja w Oławie</h3>
-                                    <p class="text-xs text-zinc-400">Klasa poza wielkim miastem</p>
+                                    <h3 class="text-lg font-medium text-white">NiEbO Oława</h3>
+                                    <p class="text-xs text-zinc-400">Materiały premium dla restauracji</p>
                                 </div>
                             </div>
+                            <div class="px-4 pt-3 pb-2">
+                                <p class="text-xs text-zinc-400 leading-relaxed">Content, który oddaje klimat miejsca, kuchnię i doświadczenie gości.</p>
+                            </div>
                             <details class="group/details">
-                                <summary class="cursor-pointer p-4 flex items-center justify-between text-sm font-medium hover:text-white text-zinc-300 transition select-none">
+                                <summary class="cursor-pointer px-4 pb-4 pt-1 flex items-center justify-between text-sm font-medium hover:text-white text-zinc-300 transition select-none">
                                     Zobacz szczegóły
                                     <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open/details:rotate-180"></iconify-icon>
                                 </summary>
                                 <div class="px-4 pb-4 text-xs text-zinc-400 leading-relaxed border-t border-white/5 pt-3 space-y-2">
-                                    <p><strong>Wyzwanie:</strong> Wprowadzenie na rynek nowego lokalu w Oławie, który standardem i ofertą dorównuje najlepszym restauracjom we Wrocławiu. Celem było przełamanie stereotypu, że miejsca z klasą powstają tylko w metropoliach.</p>
-                                    <p><strong>Nasze działania:</strong> W BMM Studio postawiliśmy na storytelling kulinarny. Zamiast standardowej reklamy, oddaliśmy głos tym, którzy tworzą serce tego miejsca - profesjonalnym kucharzom.</p>
+                                    <p><strong>Wyzwanie:</strong> Stworzyć komunikację wizualną dla restauracji, która wyróżnia się skalą, estetyką i doświadczeniem, jakie oferuje gościom. Kluczowe było pokazanie nie tylko samego jedzenia, ale również klimatu lokalu i jego premium charakteru.</p>
+                                    <p><strong>Nasza rola:</strong> Odpowiadaliśmy za przygotowanie materiałów contentowych skoncentrowanych na wizerunku miejsca, prezentacji dań oraz uchwyceniu atmosfery obecnej podczas wizyt gości.</p>
+                                    <p><strong>Zakres działań:</strong></p>
                                     <ul class="list-disc pl-4 space-y-1">
-                                        <li><strong>Content Marketing:</strong> Zrealizowaliśmy materiały video i foto pokazujące kunszt szefów kuchni.</li>
-                                        <li><strong>Relacje z wydarzeń:</strong> Towarzyszyliśmy gościom podczas ekskluzywnych kolacji degustacyjnych.</li>
-                                        <li><strong>Pozycjonowanie marki:</strong> Budowaliśmy obraz Nieba jako miejsca spotkań z duszą.</li>
+                                        <li>content foto i video lokalu</li>
+                                        <li>ujęcia dań i detali kulinarnych</li>
+                                        <li>materiały pokazujące klimat miejsca i doświadczenie gości</li>
+                                        <li>budowanie spójnego, estetycznego wizerunku marki w kanałach online</li>
                                     </ul>
-                                    <p><strong>Efekt:</strong> Stworzyliśmy spójny, apetyczny i elegancki wizerunek lokalu, który przyciąga gości szukających autentycznych kulinarnych doznań.</p>
+                                    <p><strong>Efekt:</strong> Powstały materiały, które prezentują NiEbO Oława jako dopracowane, estetyczne miejsce gastronomiczne z wyrazistym charakterem i atrakcyjną oprawą wizualną.</p>
                                 </div>
                             </details>
                         </div>
@@ -355,136 +402,6 @@
 
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Offer / Services -->
-    <section class="border-y bg-zinc-900/30 border-white/5 pt-24 pb-24" id="oferta">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 text-center max-w-2xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Jak Możemy Ci Pomóc?</h2>
-                <p class="text-zinc-400">Dostarczamy rozwiązania skrojone na miarę. Niezależnie czy potrzebujesz wsparcia w marketingu, czy dedykowanego rozwiązania IT.</p>
-            </div>
-
-            <!-- SEO sub-pages -->
-            <div class="max-w-4xl mx-auto mb-10">
-                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 md:p-8">
-                    <div class="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
-                        <div class="space-y-2">
-                            <p class="text-xs tracking-widest uppercase text-zinc-500">Czym się zajmujemy?</p>
-                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight">Szczegóły usług</h3>
-                            <p class="text-sm text-zinc-400">Sprawdź nasze usługi i zobacz, jakie rozwiązania oferujemy.</p>
-                        </div>
-                        <a href="#kontakt" class="shrink-0 group inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300">
-                            <span class="text-sm font-medium">Zapytaj o wycenę</span>
-                            <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
-                        </a>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/produkcja-foto/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:camera" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Produkcja Foto</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/produkcja-video/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:video" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Produkcja Wideo</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sem/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:megaphone" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Google Ads (SEM)</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/wizytowki-google/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:map-pin" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Wizytówki Google</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/szkolenia-z-dofinansowaniem/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:graduation-cap" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Szkolenia (BUR/KFS)</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/strony-internetowe/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:globe" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Strony Internetowe</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sklepy-internetowe/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:shopping-cart" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Sklepy Internetowe</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-web/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:layout-template" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Aplikacje Webowe</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-mobile/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:smartphone" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Aplikacje Mobilne</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/seo/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:search-check" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">Pozycjonowanie (SEO)</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/ui-ux/">
-                            <div class="flex items-center justify-between gap-3">
-                                <div class="flex items-center gap-3">
-                                    <iconify-icon icon="lucide:palette" class="text-emerald-500 text-xl"></iconify-icon>
-                                    <span class="font-medium">UI / UX Design</span>
-                                </div>
-                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -605,6 +522,136 @@
         </div>
     </section>
 
+    <!-- Offer / Services -->
+    <section class="border-y bg-zinc-900/30 border-white/5 pt-24 pb-24" id="oferta">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Jak Możemy Ci Pomóc?</h2>
+                <p class="text-zinc-400">Dostarczamy rozwiązania skrojone na miarę. Niezależnie czy potrzebujesz wsparcia w marketingu, czy dedykowanego rozwiązania IT.</p>
+            </div>
+
+            <!-- SEO sub-pages -->
+            <div class="max-w-4xl mx-auto mb-10">
+                <div class="rounded-2xl border border-white/5 bg-zinc-950/40 p-6 md:p-8">
+                    <div class="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
+                        <div class="space-y-2">
+                            <p class="text-xs tracking-widest uppercase text-zinc-500">Czym się zajmujemy?</p>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight">Szczegóły usług</h3>
+                            <p class="text-sm text-zinc-400">Sprawdź nasze usługi i zobacz, jakie rozwiązania oferujemy.</p>
+                        </div>
+                        <a href="#kontakt" class="shrink-0 group inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition duration-300">
+                            <span class="text-sm font-medium">Zapytaj o wycenę</span>
+                            <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/strony-internetowe/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:globe" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Strony Internetowe</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/seo/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:search-check" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Pozycjonowanie (SEO)</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/produkcja-video/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:video" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Produkcja Wideo</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sklepy-internetowe/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:shopping-cart" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Sklepy Internetowe</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/sem/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:megaphone" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Google Ads (SEM)</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/produkcja-foto/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:camera" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Produkcja Foto</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-web/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:layout-template" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Aplikacje Webowe</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/wizytowki-google/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:map-pin" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Wizytówki Google</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/szkolenia-z-dofinansowaniem/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:graduation-cap" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Szkolenia (BUR/KFS)</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/aplikacje-mobile/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:smartphone" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">Aplikacje Mobilne</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                        <a class="group rounded-xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/70 transition p-4" href="/ui-ux/">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <iconify-icon icon="lucide:palette" class="text-emerald-500 text-xl"></iconify-icon>
+                                    <span class="font-medium">UI / UX Design</span>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right" class="text-zinc-500 group-hover:text-white transition"></iconify-icon>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="border-white/5 border-t pt-24 pb-24" id="kontakt">
         <div class="grid lg:grid-cols-2 gap-16 max-w-7xl mr-auto ml-auto pr-6 pl-6 gap-x-16 gap-y-16">
@@ -651,7 +698,7 @@
     <footer class="py-8 border-t border-white/5 text-center text-zinc-500 text-xs">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
-                <div>© 2026 BMM Polska. Wszystkie prawa zastrzeżone.</div>
+                <div>© 2025 BMM Studio Sp. z o.o. Wszystkie prawa zastrzeżone.</div>
                 <div class="flex gap-4 items-center">
                     <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
                         <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram

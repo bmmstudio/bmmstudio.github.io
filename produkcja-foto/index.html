@@ -84,12 +84,20 @@
                     <span>Oferta</span>
                     <iconify-icon icon="lucide:chevron-down" class="transition-transform group-open:rotate-180"></iconify-icon>
                 </summary>
-                <div class="mt-4 flex flex-col space-y-3 pl-4 border-l border-white/10 ml-1">
-                    <a href="/produkcja-foto/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Foto</a>
-                    <a href="/produkcja-video/" class="text-lg text-zinc-400 hover:text-white transition">Produkcja Wideo</a>
-                    <a href="/sem/" class="text-lg text-zinc-400 hover:text-white transition">Google Ads (SEM)</a>
-                    <a href="/wizytowki-google/" class="text-lg text-zinc-400 hover:text-white transition">Wizytówki Google</a>
-                    <a href="/szkolenia-z-dofinansowaniem/" class="text-lg text-zinc-400 hover:text-white transition">Szkolenia (BUR/KFS)</a>
+                <div class="mt-4 flex flex-col space-y-2 pl-4 border-l border-white/10 ml-1">
+                    <p class="text-xs uppercase tracking-widest text-zinc-600 pb-1">Strony &amp; Aplikacje</p>
+                    <a href="/strony-internetowe/" class="text-base text-zinc-400 hover:text-white transition">Strony Internetowe</a>
+                    <a href="/sklepy-internetowe/" class="text-base text-zinc-400 hover:text-white transition">Sklepy Internetowe</a>
+                    <a href="/aplikacje-web/" class="text-base text-zinc-400 hover:text-white transition">Aplikacje Webowe</a>
+                    <a href="/aplikacje-mobile/" class="text-base text-zinc-400 hover:text-white transition">Aplikacje Mobilne</a>
+                    <a href="/ui-ux/" class="text-base text-zinc-400 hover:text-white transition">UI / UX Design</a>
+                    <p class="text-xs uppercase tracking-widest text-zinc-600 pt-2 pb-1">Marketing &amp; Produkcja</p>
+                    <a href="/seo/" class="text-base text-zinc-400 hover:text-white transition">Pozycjonowanie (SEO)</a>
+                    <a href="/sem/" class="text-base text-zinc-400 hover:text-white transition">Google Ads (SEM)</a>
+                    <a href="/wizytowki-google/" class="text-base text-zinc-400 hover:text-white transition">Wizytówki Google</a>
+                    <a href="/produkcja-foto/" class="text-base text-zinc-400 hover:text-white transition">Produkcja Foto</a>
+                    <a href="/produkcja-video/" class="text-base text-zinc-400 hover:text-white transition">Produkcja Wideo</a>
+                    <a href="/szkolenia-z-dofinansowaniem/" class="text-base text-zinc-400 hover:text-white transition">Szkolenia (BUR/KFS)</a>
                 </div>
             </details>
         </div>
@@ -99,10 +107,15 @@
         <a href="/#kontakt" onclick="toggleMenu()" class="text-2xl font-medium tracking-tight hover:text-emerald-500 transition">Kontakt</a>
     </div>
 
+    <!-- Mobile Static Logo Header -->
+    <div class="md:hidden flex items-center px-4 h-16 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <a href="/"><img src="../photos/BMM_favicon.png" alt="BMM Studio" class="h-12 w-auto"></a>
+    </div>
+
     <!-- Header / Nav -->
     <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="/" class="font-semibold tracking-tighter text-xl hover:text-zinc-400 transition cursor-pointer">BMM</a>
+        <div class="max-w-7xl mx-auto px-6 h-16 md:h-[9rem] flex items-center justify-between">
+            <a href="/" class="hidden md:flex items-center"><img src="../photos/BMM_favicon.png" alt="BMM Studio" class="h-12 md:h-[9rem] w-auto"></a>
             <button onclick="toggleMenu()" class="md:hidden text-zinc-400 hover:text-white transition">
                 <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
             </button>
@@ -114,13 +127,25 @@
                     <button class="hover:text-white transition flex items-center gap-1 py-2">
                         Oferta <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
                     </button>
-                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
-                        <div class="p-2 space-y-1">
-                            <a href="/produkcja-foto/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
-                            <a href="/produkcja-video/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
-                            <a href="/sem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Google Ads (SEM)</a>
-                            <a href="/wizytowki-google/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Wizytówki Google</a>
-                            <a href="/szkolenia-z-dofinansowaniem/" class="block px-4 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-[520px] bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="p-4 grid grid-cols-2 gap-x-4">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-zinc-600 mb-2 px-2">Strony &amp; Aplikacje</p>
+                                <a href="/strony-internetowe/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Strony Internetowe</a>
+                                <a href="/sklepy-internetowe/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Sklepy Internetowe</a>
+                                <a href="/aplikacje-web/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Aplikacje Webowe</a>
+                                <a href="/aplikacje-mobile/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Aplikacje Mobilne</a>
+                                <a href="/ui-ux/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">UI / UX Design</a>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-zinc-600 mb-2 px-2">Marketing &amp; Produkcja</p>
+                                <a href="/seo/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Pozycjonowanie (SEO)</a>
+                                <a href="/sem/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Google Ads (SEM)</a>
+                                <a href="/wizytowki-google/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Wizytówki Google</a>
+                                <a href="/produkcja-foto/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
+                                <a href="/produkcja-video/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
+                                <a href="/szkolenia-z-dofinansowaniem/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,7 +158,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-[80vh] flex flex-col pt-32 pb-16 px-6 relative items-center justify-center border-b border-white/5">
+    <section class="min-h-[80vh] flex flex-col pt-16 md:pt-36 pb-16 px-6 relative items-center justify-center border-b border-white/5">
         <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-zinc-300">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -407,16 +432,16 @@
                 </div>
                 <div class="space-y-4">
                     <div class="p-6 border border-white/5 rounded-xl bg-zinc-900">
-                        <h4 class="text-lg font-semibold text-white mb-2">Pakiet Start</h4>
+                        <h4 class="text-lg font-semibold text-white mb-2">BASIC</h4>
                         <p class="text-sm text-zinc-400">Krótka sesja + podstawowa obróbka + paczka zdjęć</p>
                     </div>
                     <div class="p-6 border border-emerald-500/30 rounded-xl bg-zinc-900 relative">
                         <div class="absolute top-4 right-4 text-xs font-bold text-emerald-500 uppercase tracking-wider">Polecany</div>
-                        <h4 class="text-lg font-semibold text-white mb-2">Pakiet Growth</h4>
+                        <h4 class="text-lg font-semibold text-white mb-2">Standard</h4>
                         <p class="text-sm text-zinc-400">Większa liczba ujęć + lifestyle + formaty pod social/ads</p>
                     </div>
                     <div class="p-6 border border-white/5 rounded-xl bg-zinc-900">
-                        <h4 class="text-lg font-semibold text-white mb-2">Pakiet Pro</h4>
+                        <h4 class="text-lg font-semibold text-white mb-2">Pro</h4>
                         <p class="text-sm text-zinc-400">E-commerce/serie produktów + pełna spójność + warianty + szybkie terminy</p>
                     </div>
                 </div>
@@ -613,7 +638,7 @@
     <footer class="py-8 border-t border-white/5 text-center text-zinc-500 text-xs">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
-                <div>© 2026 BMM Polska. Wszystkie prawa zastrzeżone.</div>
+                <div>© 2025 BMM Studio Sp. z o.o. Wszystkie prawa zastrzeżone.</div>
                 <div class="flex gap-4 items-center">
                     <a href="https://www.instagram.com/bmmstudiowroc/" target="_blank" class="hover:text-white transition flex items-center gap-2">
                         <iconify-icon icon="lucide:instagram" width="16"></iconify-icon> Instagram

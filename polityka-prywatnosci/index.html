@@ -21,10 +21,15 @@
 </head>
 <body class="antialiased selection:bg-white selection:text-black">
 
+    <!-- Mobile Static Logo Header -->
+    <div class="md:hidden flex items-center px-4 h-16 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <a href="/"><img src="../photos/BMM_favicon.png" alt="BMM Studio" class="h-12 w-auto"></a>
+    </div>
+
     <!-- Header / Nav -->
     <nav class="fixed top-0 w-full z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="/" class="font-semibold tracking-tighter text-xl hover:text-zinc-400 transition">BMM</a>
+        <div class="max-w-7xl mx-auto px-6 h-16 md:h-[9rem] flex items-center justify-between">
+            <a href="/" class="hidden md:flex items-center"><img src="../photos/BMM_favicon.png" alt="BMM Studio" class="h-12 md:h-[9rem] w-auto"></a>
             <div class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
                 <a href="/#oferta" class="hover:text-white transition">Oferta</a>
                 <a href="/galeria_zdjec/" class="hover:text-white transition">Portfolio</a>
@@ -57,7 +62,11 @@
                         <p class="pl-4">
                             <strong class="text-white">BMM Polska</strong><br>
                             Email: kontakt@bmmpolska.pl<br>
-                            Strona: www.bmmpolska.pl
+                            Strona: www.bmmpolska.pl<br><br>
+                            KRS: 0001098402<br>
+                            NIP: 8971936240<br><br>
+                            Adres: ul. PL. SOLNY nr. 14 lok. 3<br>
+                            WROCŁAW, kod 50-062
                         </p>
                     </div>
                 </section>
@@ -207,7 +216,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="text-sm text-zinc-500">
-                    © 2026 BMM Polska. Wszystkie prawa zastrzeżone.
+                    © 2025 BMM Studio Sp. z o.o. Wszystkie prawa zastrzeżone.
                 </div>
                 <div class="flex gap-6 text-sm text-zinc-500">
                     <a href="/polityka-prywatnosci/" class="hover:text-white transition">Polityka prywatności</a>
