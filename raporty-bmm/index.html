@@ -167,6 +167,7 @@
                                 <a href="/produkcja-foto/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
                                 <a href="/produkcja-video/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
                                 <a href="/szkolenia-z-dofinansowaniem/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                            </div>
                             <div>
                                 <p class="text-[10px] uppercase tracking-widest text-zinc-600 mb-2 px-2">Galeria</p>
                                 <a href="/galeria_zdjec/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Zdjęcia</a>
@@ -175,7 +176,21 @@
                         </div>
                     </div>
                 </div>
-                <a href="/galeria_zdjec/" class="hover:text-white transition">Galeria</a>
+                <div class="relative group h-16 md:h-[9rem] flex items-center">
+                    <button class="hover:text-white transition flex items-center gap-1 py-2">
+                        Galeria <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
+                    </button>
+                    <div class="absolute top-full left-0 mt-0 w-44 bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="p-2 space-y-1">
+                            <a href="/galeria_zdjec/" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">
+                                <iconify-icon icon="lucide:camera" width="14"></iconify-icon> Foto
+                            </a>
+                            <a href="/galeria_zdjec/#rolki-instagram" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">
+                                <iconify-icon icon="mdi:instagram" width="14"></iconify-icon> Wideo / Rolki
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <a href="/raporty-bmm/" class="text-white transition">Raporty</a>
                 <a href="/#kontakt" class="bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition">Darmowa wycena</a>
             </div>

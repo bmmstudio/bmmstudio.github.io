@@ -37,6 +37,17 @@
             color: #fafafa; /* Zinc 50 */
         }
         
+
+        /* Instagram embed dark theme */
+        .instagram-media,
+        .instagram-media iframe {
+            background: #18181b !important;
+            border-radius: 12px !important;
+        }
+        .instagram-embed-wrapper iframe {
+            border-radius: 12px !important;
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.08) !important;
+        }
         /* Custom Scrollbar Hide */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -145,6 +156,7 @@
                                 <a href="/produkcja-foto/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Foto</a>
                                 <a href="/produkcja-video/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Produkcja Wideo</a>
                                 <a href="/szkolenia-z-dofinansowaniem/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Szkolenia (BUR/KFS)</a>
+                            </div>
                             <div>
                                 <p class="text-[10px] uppercase tracking-widest text-zinc-600 mb-2 px-2">Galeria</p>
                                 <a href="/galeria_zdjec/" class="block px-2 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">Zdjęcia</a>
@@ -154,7 +166,21 @@
                     </div>
                 </div>
 
-                <a href="/galeria_zdjec/" class="hover:text-white transition">Galeria</a>
+                <div class="relative group h-16 md:h-[9rem] flex items-center">
+                    <button class="hover:text-white transition flex items-center gap-1 py-2">
+                        Galeria <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
+                    </button>
+                    <div class="absolute top-full left-0 mt-0 w-44 bg-[#09090b] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="p-2 space-y-1">
+                            <a href="/galeria_zdjec/" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">
+                                <iconify-icon icon="lucide:camera" width="14"></iconify-icon> Foto
+                            </a>
+                            <a href="/galeria_zdjec/#rolki-instagram" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/5 hover:text-emerald-500 transition text-sm">
+                                <iconify-icon icon="mdi:instagram" width="14"></iconify-icon> Wideo / Rolki
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <a href="/raporty-bmm/" class="hover:text-white transition">Raporty</a>
                 <a href="/#kontakt" class="bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition">Darmowa wycena</a>
             </div>
@@ -187,7 +213,7 @@
     <main class="py-16 px-4 md:px-6 max-w-7xl mx-auto space-y-24">
         
         <!-- Filter/Nav (Optional - currently just a visual separator) -->
-        <div class="flex flex-wrap justify-center gap-2 md:gap-4 text-sm text-zinc-400 sticky top-20 z-30 py-4 bg-zinc-950/80 backdrop-blur-md -mx-4 px-4 border-b border-white/5 mb-12">
+        <div class="flex flex-wrap justify-center gap-2 md:gap-4 text-sm text-zinc-400 sticky top-16 z-30 py-4 bg-zinc-950/80 backdrop-blur-md -mx-4 px-4 border-b border-white/5 mb-12">
             <a href="#ambasada" class="hover:text-white transition cursor-pointer px-3 py-1 rounded-full hover:bg-white/5">Ambasada</a>
             <a href="#chao-bao" class="hover:text-white transition cursor-pointer px-3 py-1 rounded-full hover:bg-white/5">Chao Bao</a>
             <a href="#enklawa" class="hover:text-white transition cursor-pointer px-3 py-1 rounded-full hover:bg-white/5">Enklawa</a>
@@ -488,13 +514,13 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Hotel Wena</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DVbgz-hiquE/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DVbgz-hiquE/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSIQ04piO0q/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSIQ04piO0q/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DR2dBtrAVqW/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DR2dBtrAVqW/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -502,10 +528,10 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Stara Szkoła — OSTR Barber</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C-DUsTyiTF1/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C-DUsTyiTF1/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C8UgFlqCLDU/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C8UgFlqCLDU/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -513,7 +539,7 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Sushi</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DColVERAH6d/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DColVERAH6d/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -521,19 +547,19 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Beach Bary</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DMstjiZM01r/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DMstjiZM01r/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DM8B5rEM9Xf/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DM8B5rEM9Xf/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKcUKsosD5D/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKcUKsosD5D/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DJ33MpOqRRh/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DJ33MpOqRRh/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DM8ANAbKqAI/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DM8ANAbKqAI/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -541,7 +567,7 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Niebo Restauracja</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKQG4paiMNk/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKQG4paiMNk/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -549,13 +575,13 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Enklawa Kawiarnia</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C7068_1MbM5/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C7068_1MbM5/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DFFLyEcvXBR/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DFFLyEcvXBR/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQ9lqTNDfMo/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQ9lqTNDfMo/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -563,10 +589,10 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Neobab</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C8EpKpSMcPe/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C8EpKpSMcPe/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C8KEbvUsP4r/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C8KEbvUsP4r/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -574,13 +600,13 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Pod Papugami</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCGmnlVPI2w/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCGmnlVPI2w/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCCeUuhCtGY/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCCeUuhCtGY/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCJgVPapZ99/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCJgVPapZ99/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -588,13 +614,13 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Siwy Dym — Cykl Komediowy</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DTD0JQBjBIn/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DTD0JQBjBIn/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DT8ZoG_DkYe/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DT8ZoG_DkYe/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DTivcBcjFnI/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DTivcBcjFnI/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -602,7 +628,7 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Ciao Bao</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DHor8k3q1Ix/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DHor8k3q1Ix/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -610,10 +636,10 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Giro</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DAqfmiNMnU2/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DAqfmiNMnU2/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DHERBagisVC/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DHERBagisVC/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -621,10 +647,10 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Sufra Wrocław</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C71OonYs2N-/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C71OonYs2N-/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C9hVgB2sK2m/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C9hVgB2sK2m/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -632,10 +658,10 @@
                 <h3 class="text-lg font-semibold text-white mb-6 pb-3 border-b border-white/5">Bar Ambasada</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRktdVECDDG/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRktdVECDDG/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                     <div class="instagram-embed-wrapper w-full max-w-[340px] mx-auto">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQwt9KQjD6z/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQwt9KQjD6z/" data-instgrm-version="14" style="background:#18181b;border:0;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,0.08);margin:0;max-width:340px;min-width:260px;padding:0;width:100%;"></blockquote>
                     </div>
                 </div>
             </div>
